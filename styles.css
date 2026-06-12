@@ -788,6 +788,23 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: auto;
 }
 
+.cs-image-figure {
+  margin: 36px 0;
+}
+
+.cs-image-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition);
+}
+
+.cs-image-figure a:hover img {
+  border-color: var(--accent-border);
+}
+
 .card-photo img {
   position: absolute;
   inset: 0;
