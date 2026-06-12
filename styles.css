@@ -792,6 +792,26 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin: 36px 0;
 }
 
+.cs-figure-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.cs-figure-badge-accent {
+  color: var(--accent);
+  background: var(--accent-muted);
+  border-color: var(--accent-border);
+}
+
 .cs-image-figure img {
   display: block;
   width: 100%;
