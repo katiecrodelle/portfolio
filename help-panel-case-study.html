@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Katie DeVoe used behavioral data and journey mapping to turn Constant Contact's help panel into a retention engine — intercepting cancel intent with graduated alternatives." />
+  <title>Help Panel Retention — Katie DeVoe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <header class="cs-hero">
+    <div class="container">
+      <nav class="cs-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="cs-breadcrumb-sep" aria-hidden="true">/</span>
+        <span>Case Study</span>
+      </nav>
+
+      <div class="cs-meta">
+        <span class="cs-badge">Case Study &middot; In Progress</span>
+        <span class="cs-company">Constant Contact</span>
+        <span class="cs-year">2026 &ndash; Present</span>
+      </div>
+
+      <h1 class="cs-title">Turning the Help Panel into a Retention Engine</h1>
+      <p class="cs-subtitle">
+        How I used behavioral data and journey mapping to expose a churn problem hiding in plain sight &mdash; and designed a graduated retention experience to intercept cancel intent before it becomes cancellation.
+      </p>
+
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-value">52.7%</div>
+          <div class="cs-stat-label">Of cancel searchers churn &mdash; the baseline we&rsquo;re moving</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">$232.5K</div>
+          <div class="cs-stat-label">Monthly revenue at risk in the Declining cohort alone</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">3%</div>
+          <div class="cs-stat-label">Of cancel searchers ever find the pause option today</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">51%+</div>
+          <div class="cs-stat-label">Of the active base sits in at-risk segments</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CASE STUDY BODY -->
+  <main class="cs-body" style="padding-top: 48px;">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- TABLE OF CONTENTS -->
+        <aside class="cs-toc" aria-label="Table of contents">
+          <p class="cs-toc-title">Contents</p>
+          <nav class="cs-toc-list">
+            <a href="#overview">Overview</a>
+            <a href="#problem">The Problem</a>
+            <a href="#research">Research Approach</a>
+            <a href="#journeys">Journey Mapping</a>
+            <a href="#findings">Key Findings</a>
+            <a href="#design">Design Response</a>
+            <a href="#roadmap">Milestone Roadmap</a>
+            <a href="#business-case">Business Case</a>
+            <a href="#measurement">Measurement</a>
+            <a href="#status">Status &amp; Next</a>
+            <a href="#reflection">Reflection</a>
+          </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="cs-content">
+
+          <!-- OVERVIEW -->
+          <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
+            <p class="cs-section-label">Overview</p>
+            <h2 class="cs-section-title" id="overview-title">A help panel that was quietly helping users leave</h2>
+            <p class="cs-body-text">
+              On the Customer Happiness Squad at Constant Contact, I&rsquo;m leading design on a retention-focused initiative targeting churn across the existing customer base &mdash; partnering with a senior product manager and grounding every decision in behavioral data.
+            </p>
+            <p class="cs-body-text">
+              The starting insight was uncomfortable: the product&rsquo;s in-app help panel &mdash; the surface users turn to at their most decisive moments &mdash; was <strong>optimized for helping users cancel rather than reconsider</strong>. When someone searched &ldquo;cancel,&rdquo; the cancel article was the most prominent result. The pause option was buried. There were no alternatives, no value reinforcement, no recognition of the user&rsquo;s situation.
+            </p>
+            <p class="cs-body-text">
+              This case study covers the data analysis, journey mapping, and milestone-based design strategy I&rsquo;m using to turn that surface into a retention engine &mdash; with a roadmap that ends in AI-powered, conversational retention.
+            </p>
+          </section>
+
+          <!-- THE PROBLEM -->
+          <section class="cs-section fade-up" id="problem" aria-labelledby="problem-title">
+            <p class="cs-section-label">The Problem</p>
+            <h2 class="cs-section-title" id="problem-title">Over half the active base sits in at-risk segments</h2>
+            <p class="cs-body-text">
+              Cohort segmentation revealed that three at-risk segments make up more than 51% of the active base. Two stood out as the highest-priority targets:
+            </p>
+
+            <div class="workflow-grid" role="list">
+              <div class="workflow-card fade-up" role="listitem">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">&#128201;</div>
+                  <div>
+                    <div class="workflow-card-title">Declining users</div>
+                    <div class="workflow-card-subtitle">28.8% of base &middot; 7.5-year average tenure &middot; $232.5K/month at risk</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">
+                  Long-tenured customers whose sending has dropped 74%. Nearly 1,400 have stopped sending entirely while still paying. Their mindset: <em>&ldquo;I used to get value from this, but something changed.&rdquo;</em> They open help with the lowest click engagement of any cohort &mdash; and the panel offers no recognition of their situation, no &ldquo;what&rsquo;s new,&rdquo; no easy path back.
+                </p>
+              </div>
+
+              <div class="workflow-card fade-up" role="listitem">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">&#127793;</div>
+                  <div>
+                    <div class="workflow-card-title">Growing users</div>
+                    <div class="workflow-card-subtitle">22.7% of base &middot; 71.5% high churn probability in first 90 days</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">
+                  The most engaged help seekers (2.51 average clicks &mdash; the highest), actively expanding into automation, SMS, and landing pages. Their mindset: <em>&ldquo;Figure out what works. Let me try different campaign types.&rdquo;</em> But the help content has no progressive learning paths, no feature recommendations, and no &ldquo;why&rdquo; or &ldquo;when&rdquo; context &mdash; so they stall at exactly the moment they should be sticking.
+                </p>
+              </div>
+            </div>
+
+            <div class="callout callout-accent fade-up">
+              <p>Cutting across both cohorts is the <strong>cancel-intent moment</strong>: 2,883 users searched &ldquo;cancel&rdquo; in 90 days. They average 6.6 years of tenure &mdash; these are not impulsive users. And 47.3% of them end up staying, which means <strong>nearly half are persuadable</strong>. The help panel just isn&rsquo;t doing the persuading.</p>
+            </div>
+          </section>
+
+          <!-- RESEARCH APPROACH -->
+          <section class="cs-section fade-up" id="research" aria-labelledby="research-title">
+            <p class="cs-section-label">Research Approach</p>
+            <h2 class="cs-section-title" id="research-title">Behavioral data first, then journeys built on top of it</h2>
+            <p class="cs-body-text">
+              Rather than starting from assumptions or stakeholder anecdotes, I built the case from product analytics &mdash; querying help panel behavior, cohort segmentation, and churn outcomes directly from the data warehouse (Snowflake, with Claude as an analysis partner). That produced a foundation no one could argue with:
+            </p>
+
+            <div class="role-list fade-up" role="list">
+              <div class="role-item" role="listitem"><strong>Where cancel intent originates</strong> &mdash; 72% of cancel searches happen on settings or billing pages. Users are already in cancellation mode before they open help.</div>
+              <div class="role-item" role="listitem"><strong>What the search returns</strong> &mdash; &ldquo;Cancel your account&rdquo; is the #1 clicked article (920 clicks). The pause article got 53 views. Only 3% of cancel searchers ever click it.</div>
+              <div class="role-item" role="listitem"><strong>What users do next</strong> &mdash; 37% click the cancel article, but 41% either navigate away or close the panel without action. The majority are still in a consideration phase when the experience gives up on them.</div>
+              <div class="role-item" role="listitem"><strong>Who stays vs. who goes</strong> &mdash; Retained cancel searchers pay nearly 2&times; more ($95 vs. $48/month) and are measurably more active. But their help and support usage is nearly identical to those who churned &mdash; the panel is equally ineffective for both.</div>
+            </div>
+
+            <div class="pull-quote fade-up">
+              <p>&ldquo;Help and support usage is nearly identical between retained and canceled users. The current help panel is equally ineffective for both &mdash; which means any improvement is untapped territory.&rdquo;</p>
+            </div>
+
+            <p class="cs-body-text">
+              I paired the quantitative work with competitive benchmarking, which showed that proven retention patterns &mdash; pause options, reason-based routing, graduated offramps &mdash; are standard elsewhere and simply absent from our experience.
+            </p>
+          </section>
+
+          <!-- JOURNEY MAPPING -->
+          <section class="cs-section fade-up" id="journeys" aria-labelledby="journeys-title">
+            <p class="cs-section-label">Journey Mapping</p>
+            <h2 class="cs-section-title" id="journeys-title">Three journeys, one shared spine</h2>
+            <p class="cs-body-text">
+              I mapped three current-state journeys &mdash; <strong>Declining</strong>, <strong>Growing</strong>, and the cross-cutting <strong>Cancel Intent</strong> journey &mdash; each through the same six-stage lens: trigger, entry, discovery, engagement, resolution, and outcome. Using a shared spine made the cohorts directly comparable and let every stage pair an emotional state with the data signals behind it.
+            </p>
+            <p class="cs-body-text">
+              The cancel-intent journey became the centerpiece, because it has the clearest baseline (52.7% churn), a measurable population, and the highest single-moment revenue impact. Stage by stage, it documents how the experience fails:
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Trigger</strong> &mdash; A tipping point: a billing charge, accumulated friction, or failed support. 26% of cancel searchers had 6+ support contacts in the prior 30 days &mdash; for them, searching &ldquo;cancel&rdquo; is the end of a long, frustrating road.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>Entry</strong> &mdash; They open help from account settings (34%), billing (27%), or payment plan (11%) pages. Intent is already legible from context &mdash; and ignored.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Discovery</strong> &mdash; The search surfaces the cancel article first. No &ldquo;before you cancel&rdquo; framing, no alternatives, no personalization. The pause option is functionally invisible.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>Engagement</strong> &mdash; 37% proceed to the cancel article; 18% close the panel with no action at all. The 63% who don&rsquo;t click cancel get no help reconsidering.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">5</div>
+                <div><strong>Resolution</strong> &mdash; Even retained users overwhelmingly read the cancel article. They looked at how to leave and chose to stay &mdash; without the product giving them a reason to.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">6</div>
+                <div><strong>Outcome</strong> &mdash; 52.7% churn, 47.3% stay, and the help experience does not meaningfully influence which side a user lands on. Retained users may simply search &ldquo;cancel&rdquo; again.</div>
+              </div>
+            </div>
+
+            <div class="cs-image-placeholder fade-up" aria-label="Placeholder for journey map artifacts">
+              <div class="cs-image-placeholder-inner">
+                <div class="placeholder-icon" aria-hidden="true">&#128506;</div>
+                <div class="placeholder-text">
+                  <strong>Journey map artifacts</strong>
+                  Screenshot placeholder &mdash; Declining, Growing, and Cancel Intent journey maps with stage-by-stage data signals
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- KEY FINDINGS -->
+          <section class="cs-section fade-up" id="findings" aria-labelledby="findings-title">
+            <p class="cs-section-label">Key Findings</p>
+            <h2 class="cs-section-title" id="findings-title">The findings that reframed the conversation</h2>
+
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">63%</div>
+                <div class="outcome-label">Of cancel searchers don&rsquo;t click the cancel article &mdash; they&rsquo;re still deciding</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">2&times;</div>
+                <div class="outcome-label">Retained cancel searchers pay nearly double the invoice of those who leave</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">71.5%</div>
+                <div class="outcome-label">High churn probability for Growing users in their first 90 days</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 24px;">
+              Together, these moved the framing from &ldquo;the help panel needs better content&rdquo; to <strong>&ldquo;the cancel moment is the highest-leverage retention surface in the product, and we&rsquo;re forfeiting it.&rdquo;</strong> Help panel users also demonstrate substantially higher lifetime value than the base &mdash; making this surface disproportionately worth investing in.
+            </p>
+          </section>
+
+          <!-- DESIGN RESPONSE -->
+          <section class="cs-section fade-up" id="design" aria-labelledby="design-title">
+            <p class="cs-section-label">Design Response</p>
+            <h2 class="cs-section-title-lg" id="design-title">A graduated offramp instead of a binary choice</h2>
+            <p class="cs-body-text">
+              The core design principle: <strong>cancellation should be the last step of a graduated flow, not the first result of a search.</strong> Today the user&rsquo;s choice is binary &mdash; cancel or give up looking. The redesigned experience introduces a sequence of lower-commitment alternatives, each surfaced with respect for the user&rsquo;s intent:
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Pause</strong> &mdash; made first-class instead of buried: a clear CTA with transparent terms, and a re-engagement trigger at the user&rsquo;s chosen timeframe so pausing has a structured return path.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>Downgrade</strong> &mdash; plan right-sizing options that address the price-value mismatch directly, instead of pretending it doesn&rsquo;t exist.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Talk to a specialist</strong> &mdash; a warm path for the 8% already seeking human help, and an acknowledgment of friction for the high-support users who&rsquo;ve earned it.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>Cancel</strong> &mdash; still fully available and respectful. With reason capture and a targeted save offer as the final, data-informed intervention.</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text">
+              For users who stay, the design pairs the offramp with <strong>value reinforcement</strong> &mdash; personalized summaries like &ldquo;Over 6 years, you&rsquo;ve sent X campaigns to Y contacts&rdquo; &mdash; and for Declining users, &ldquo;getting back on track&rdquo; content with a low-effort &ldquo;send a quick campaign&rdquo; path back to value. Search disambiguation also separates &ldquo;cancel my account&rdquo; from &ldquo;cancel an automation,&rdquo; which currently pollutes the signal.
+            </p>
+
+            <div class="cs-image-placeholder fade-up" aria-label="Placeholder for design prototypes">
+              <div class="cs-image-placeholder-inner">
+                <div class="placeholder-icon" aria-hidden="true">&#127912;</div>
+                <div class="placeholder-text">
+                  <strong>M1 prototypes</strong>
+                  Screenshot placeholder &mdash; interactive desktop and mobile prototypes of the graduated retention flow
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MILESTONE ROADMAP -->
+          <section class="cs-section fade-up" id="roadmap" aria-labelledby="roadmap-title">
+            <p class="cs-section-label">Milestone Roadmap</p>
+            <h2 class="cs-section-title" id="roadmap-title">Three milestones, ending in conversational AI retention</h2>
+            <p class="cs-body-text">
+              I structured the design strategy as three shippable milestones, each valuable on its own and each laying groundwork for the next. This let leadership fund the work incrementally rather than betting on one big redesign &mdash; and it connects directly to the AI Assistant initiative I design for elsewhere in the product.
+            </p>
+
+            <div class="workflow-grid" role="list">
+              <div class="workflow-card fade-up" role="listitem">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">&#128295;</div>
+                  <div>
+                    <div class="workflow-card-title">M1 &mdash; Foundation Reset</div>
+                    <div class="workflow-card-subtitle">Fix the surface &middot; no new infrastructure required</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">
+                  Surface pause, downgrade, and specialist options alongside the cancel article. Add &ldquo;before you cancel&rdquo; framing inside the article itself. Disambiguate cancel searches. Remove dead ends so every article has a clear next step. Target: pause visibility from 3% to 15%+, and a measurable dent in the 18% who close the panel without acting.
+                </p>
+              </div>
+
+              <div class="workflow-card fade-up" role="listitem">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">&#129517;</div>
+                  <div>
+                    <div class="workflow-card-title">M2 &mdash; Context-Aware</div>
+                    <div class="workflow-card-subtitle">The panel knows who it&rsquo;s talking to</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">
+                  Detect cancel-intent signals and declining-usage patterns, and adapt the experience: personalized value summaries, plan right-sizing, the full graduated retention flow, and re-engagement triggers for paused accounts. For Growing users, learning paths, feature recommendations tied to their usage, and success-metric motivation (&ldquo;Your open rate is 45% &mdash; segmentation can improve it&rdquo;).
+                </p>
+              </div>
+
+              <div class="workflow-card fade-up" role="listitem">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">&#10024;</div>
+                  <div>
+                    <div class="workflow-card-title">M3 &mdash; AI-Ready</div>
+                    <div class="workflow-card-subtitle">Conversational retention via the AI Assistant</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">
+                  The AI Assistant detects cancel intent from behavior before the search happens, opens a soft conversation without assuming intent, negotiates alternatives (plan adjustments, trials, specialist calls), and hands off to a retention specialist with full context instead of a cold ticket &mdash; then follows up afterward. This is where the help panel work and my AI Assistant work converge.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- BUSINESS CASE -->
+          <section class="cs-section fade-up" id="business-case" aria-labelledby="business-title">
+            <p class="cs-section-label">Business Case</p>
+            <h2 class="cs-section-title" id="business-title">Modeling the revenue, not just the experience</h2>
+            <p class="cs-body-text">
+              To fund the roadmap, I built the leadership case in revenue terms. The analyzed cancel cohort loses $39.8K/month in canceled subscriptions against $70.8K/month retained. Modeling churn-rate improvements against the full cancel-searching population:
+            </p>
+
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">~$20.7K</div>
+                <div class="outcome-label">Quarterly revenue saved at a 5-point churn improvement (M1 target)</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">~$41.5K</div>
+                <div class="outcome-label">Quarterly at a 10-point improvement (M2 target)</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">~$62.2K</div>
+                <div class="outcome-label">Quarterly at a 15-point improvement (M3 target)</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 24px;">
+              These are deliberately conservative, scoped only to the directly measurable cancel cohort &mdash; they exclude the $232.5K/month at risk in the broader Declining segment, where re-engagement interventions compound the upside. Framing design work this way changed the conversation from &ldquo;UX cleanup&rdquo; to a funded retention initiative.
+            </p>
+          </section>
+
+          <!-- MEASUREMENT -->
+          <section class="cs-section fade-up" id="measurement" aria-labelledby="measurement-title">
+            <p class="cs-section-label">Measurement</p>
+            <h2 class="cs-section-title" id="measurement-title">Every intervention has a number attached</h2>
+            <p class="cs-body-text">
+              Because the baseline analysis was so granular, each milestone ships with success metrics already defined &mdash; baseline and target, per cohort:
+            </p>
+
+            <div class="role-list fade-up" role="list">
+              <div class="role-item" role="listitem"><strong>Churn among cancel searchers</strong> &mdash; 52.7% baseline, the headline number the whole initiative moves.</div>
+              <div class="role-item" role="listitem"><strong>Pause article click rate</strong> &mdash; from 3% toward 15%+, the clearest test of whether alternatives are genuinely visible.</div>
+              <div class="role-item" role="listitem"><strong>Panel close rate after a cancel search</strong> &mdash; from 18% down, measuring whether we&rsquo;ve removed dead ends.</div>
+              <div class="role-item" role="listitem"><strong>Declining users who send within 7 days of an intervention</strong> &mdash; a new metric we&rsquo;re establishing, testing whether re-engagement actually re-engages.</div>
+              <div class="role-item" role="listitem"><strong>Growing-cohort churn in the 31&ndash;90 day band</strong> &mdash; from 71.5% high-probability down, via learning paths and faster answers.</div>
+              <div class="role-item" role="listitem"><strong>Pause adoption and 30-day re-churn post-intervention</strong> &mdash; new metrics to verify we&rsquo;re retaining people, not just deferring their exit.</div>
+            </div>
+          </section>
+
+          <!-- STATUS & NEXT -->
+          <section class="cs-section fade-up" id="status" aria-labelledby="status-title">
+            <p class="cs-section-label">Status &amp; What&rsquo;s Next</p>
+            <h2 class="cs-section-title" id="status-title">Where the work stands</h2>
+            <p class="cs-body-text">
+              The research, journey maps, UX audit, competitive benchmarking, and leadership data deck are complete. Interactive M1 prototypes for desktop and mobile are built and in front of stakeholders. Next:
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Ship M1 and validate the baseline movement</strong> &mdash; pause visibility, close rate, and cancel-article click-through are all directly instrumentable from day one.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>Design the M2 detection and personalization layer</strong> &mdash; working with data science on cancel-intent signals and declining-usage triggers.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Converge with the AI Assistant</strong> &mdash; the M3 conversational retention experience shares trust patterns, escalation design, and tone-of-voice work with my AI Assistant workstreams.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- REFLECTION -->
+          <section class="cs-section fade-up" id="reflection" aria-labelledby="reflection-title">
+            <p class="cs-section-label">Reflection</p>
+            <h2 class="cs-section-title" id="reflection-title">What this work is teaching me</h2>
+
+            <div class="reflection-box fade-up">
+              <h3 class="reflection-box-title">Data made the design argument unanswerable</h3>
+              <p class="cs-body-text">
+                The single most effective move in this project wasn&rsquo;t a screen &mdash; it was querying the churn data myself before proposing anything. When you can say &ldquo;only 3% of cancel searchers ever see the pause option, and the 47% who stay pay twice as much as the ones who leave,&rdquo; the design conversation changes. Nobody debates whether the problem is real; they debate how fast we can ship the fix.
+              </p>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 32px;">
+              I&rsquo;m also learning that retention design is fundamentally about <strong>respecting user intent while widening their options</strong>. The goal is never to hide the cancel button &mdash; dark patterns would poison the exact trust this initiative depends on. It&rsquo;s to make sure a 7-year customer having a hard month sees a pause button before a cancel button, and a human before a dead end.
+            </p>
+            <p class="cs-body-text">
+              And structurally, milestone-based roadmaps are how design strategy survives contact with funding cycles. Three independently shippable milestones got a yes that one monolithic redesign never would have.
+            </p>
+
+            <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
+              <a href="index.html" class="btn-secondary">
+                <span>&#8592;</span> Back to portfolio
+              </a>
+              <a href="mailto:kcrodelle@gmail.com" class="btn-primary">
+                Discuss this work <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
+    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
