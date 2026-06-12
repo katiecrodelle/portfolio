@@ -782,7 +782,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: none;
 }
 
-.cs-hero-photo img {
+.cs-hero-photo img,
+.cs-hero-photo video {
   display: block;
   width: 100%;
   height: auto;
