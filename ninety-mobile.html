@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Katie DeVoe led design for Ninety's first mobile app — from data-driven discovery to an Apple Top 100 Business App with 3× expected adoption." />
+  <title>Ninety Mobile App — Katie DeVoe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <header class="cs-hero">
+    <div class="container">
+      <nav class="cs-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="cs-breadcrumb-sep" aria-hidden="true">/</span>
+        <span>Case Study</span>
+      </nav>
+
+      <div class="cs-meta">
+        <span class="cs-badge">Case Study</span>
+        <span class="cs-company">Ninety.io</span>
+        <span class="cs-year">2023 &ndash; 2025</span>
+      </div>
+
+      <h1 class="cs-title">Ninety Mobile: From Zero to Apple&rsquo;s Top 100</h1>
+      <p class="cs-subtitle">
+        How I drove the discovery, vision, and design of Ninety&rsquo;s first mobile app &mdash; trading feature parity for user value, and landing in Apple&rsquo;s Top 100 Business Apps.
+      </p>
+
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-value">Top 100</div>
+          <div class="cs-stat-label">Ranked in Apple&rsquo;s Top 100 Business Apps</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">52%</div>
+          <div class="cs-stat-label">Of active users adopted mobile within 90 days &mdash; 3&times; expected</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">78%</div>
+          <div class="cs-stat-label">Core task completion per session</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">40%</div>
+          <div class="cs-stat-label">Monthly returning users</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="container" style="margin-top: 0;">
+      <figure class="cs-hero-image cs-hero-photo">
+        <img src="images/ninety-mobile-hero.jpg" alt="Two floating iPhones: one showing the Ninety app on a home screen alongside other business apps, the other showing the Ninety App Store listing with a 4.9-star rating and the app's morning dashboard of to-dos, issues, rocks, and milestones." loading="eager" />
+        <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">Ninety Mobile in the App Store &mdash; a 4.9-star rating and a home screen built around what needs attention today.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <!-- CASE STUDY BODY -->
+  <main class="cs-body">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- TABLE OF CONTENTS -->
+        <aside class="cs-toc" aria-label="Table of contents">
+          <p class="cs-toc-title">Contents</p>
+          <nav class="cs-toc-list">
+            <a href="#overview">Overview</a>
+            <a href="#problem">The Problem</a>
+            <a href="#my-role">My Role</a>
+            <a href="#discovery">Discovery</a>
+            <a href="#strategy">Design Strategy</a>
+            <a href="#validation">Testing &amp; Validation</a>
+            <a href="#outcomes">Outcomes</a>
+            <a href="#learnings">Key Learnings</a>
+          </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="cs-content">
+
+          <!-- OVERVIEW -->
+          <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
+            <p class="cs-section-label">Overview</p>
+            <h2 class="cs-section-title" id="overview-title">The case for mobile started with the data</h2>
+            <p class="cs-body-text">
+              Ninety is a business operating system that leadership teams live in &mdash; goals, to-dos, issues, and meetings. But it only existed on desktop. I spearheaded the initial discovery for a mobile experience after compiling usage data and customer feedback that showed an urgent need for a native app or PWA.
+            </p>
+            <p class="cs-body-text">
+              The voice of the customer was blunt:
+            </p>
+            <div class="pull-quote fade-up">
+              <p>&ldquo;I would like to say that this tool is outstanding. However, the lack of notifications and the mobile app are annoying&hellip; without an app, this software is not versatile.&rdquo;</p>
+            </div>
+            <p class="cs-body-text">
+              Users were managing real work on the go &mdash; and the product wasn&rsquo;t there. The opportunity was to design an intuitive, action-driven mobile experience tailored to those on-the-go workflows, not a shrunken copy of the desktop.
+            </p>
+          </section>
+
+          <!-- THE PROBLEM -->
+          <section class="cs-section fade-up" id="problem" aria-labelledby="problem-title">
+            <p class="cs-section-label">The Problem</p>
+            <h2 class="cs-section-title-lg" id="problem-title">Feature parity was the trap. User value was the strategy.</h2>
+            <p class="cs-body-text">
+              The instinctive brief for a first mobile app is &ldquo;put the product on a phone.&rdquo; That would have failed: Ninety&rsquo;s desktop surface is broad and dense, built for planning sessions and leadership meetings &mdash; not for the thirty seconds someone has between meetings.
+            </p>
+            <p class="cs-body-text">
+              I drove a strategic shift from <strong>feature parity to user value</strong>. The mobile experience would prioritize:
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>What needs attention now</strong> &mdash; personal to-dos, issues, and rocks that are overdue or due soon, surfaced first.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>What to do next</strong> &mdash; guiding users toward the highest-value action instead of presenting an unprioritized wall of data.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Capture on the go</strong> &mdash; making it effortless to create to-dos and issues the moment they come up, so nothing waits for a desk.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MY ROLE -->
+          <section class="cs-section fade-up" id="my-role" aria-labelledby="my-role-title">
+            <p class="cs-section-label">My Role</p>
+            <h2 class="cs-section-title" id="my-role-title">Lead Product Designer, end to end</h2>
+            <p class="cs-body-text">
+              I led design for the app from discovery through ship, working with the Head of Product, two product managers, and the engineering team:
+            </p>
+
+            <div class="role-list fade-up" role="list">
+              <div class="role-item" role="listitem"><strong>Vision &amp; UX strategy</strong> &mdash; Drove the product vision, the parity-to-value reframe, and the design execution for Ninety&rsquo;s first mobile app.</div>
+              <div class="role-item" role="listitem"><strong>Mobile-first design system</strong> &mdash; Designed a mobile design system from scratch for both iOS and Android, building on the Terra foundations.</div>
+              <div class="role-item" role="listitem"><strong>Research through QA</strong> &mdash; Led user research, wireframes, prototypes, visual design, and design QA &mdash; the full lifecycle.</div>
+              <div class="role-item" role="listitem"><strong>Cross-functional collaboration</strong> &mdash; Partnered with Product, Engineering, and Customer Success throughout, keeping the customer signal in the loop from discovery to launch.</div>
+            </div>
+          </section>
+
+          <!-- DISCOVERY -->
+          <section class="cs-section fade-up" id="discovery" aria-labelledby="discovery-title">
+            <p class="cs-section-label">Discovery</p>
+            <h2 class="cs-section-title" id="discovery-title">Interviews, themes, and two personas to design for</h2>
+            <p class="cs-body-text">
+              I conducted semi-structured interviews with current customers about how they worked away from their desks, then synthesized the sessions in Dovetail to identify the recurring themes. The analysis produced two primary personas that anchored every scope decision &mdash; each with distinct contexts, frequencies, and jobs that mobile needed to serve.
+            </p>
+
+            <div class="cs-image-grid-2 fade-up" aria-label="User personas">
+              <figure class="cs-image-figure" style="margin: 0;">
+                <a href="images/ninety-mobile-personas-greg.jpg" target="_blank" rel="noopener">
+                  <img src="images/ninety-mobile-personas-greg.jpg" alt="User persona one: Greg, with goals, frustrations, and mobile usage context." loading="lazy" style="background: #fff;" />
+                </a>
+              </figure>
+              <figure class="cs-image-figure" style="margin: 0;">
+                <a href="images/ninety-mobile-personas-amira.jpg" target="_blank" rel="noopener">
+                  <img src="images/ninety-mobile-personas-amira.jpg" alt="User persona two: Amira, with goals, frustrations, and mobile usage context." loading="lazy" style="background: #fff;" />
+                </a>
+              </figure>
+            </div>
+            <p class="placeholder-caption" style="text-align: center; font-style: normal;">The two primary personas from discovery research. Click to view full size.</p>
+          </section>
+
+          <!-- DESIGN STRATEGY -->
+          <section class="cs-section fade-up" id="strategy" aria-labelledby="strategy-title">
+            <p class="cs-section-label">Design Strategy</p>
+            <h2 class="cs-section-title" id="strategy-title">An action-driven experience, not a dashboard on a phone</h2>
+            <p class="cs-body-text">
+              The app opens to what matters today: a personalized morning view of overdue and upcoming to-dos, issues, and rocks. The feed keeps users connected to team activity &mdash; mentions, comments, completions &mdash; and a persistent create action means capturing a to-do or raising an issue takes seconds from anywhere in the app.
+            </p>
+
+            <figure class="cs-image-figure fade-up">
+              <img src="images/ninety-mobile-feed.jpg" alt="A person holding an iPhone showing the Ninety mobile feed: mentions, comments, and completed discussions from teammates, with bottom navigation for My90, To-Dos, Issues, Rocks, and People." loading="lazy" />
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The feed &mdash; team activity, mentions, and a persistent create action, one thumb away.</figcaption>
+            </figure>
+
+            <figure class="cs-image-figure fade-up">
+              <img src="images/ninety-mobile-anim.gif" alt="Animated walkthrough of the Ninety mobile app interface on a phone." loading="lazy" />
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The app in motion.</figcaption>
+            </figure>
+          </section>
+
+          <!-- TESTING & VALIDATION -->
+          <section class="cs-section fade-up" id="validation" aria-labelledby="validation-title">
+            <p class="cs-section-label">Testing &amp; Validation</p>
+            <h2 class="cs-section-title" id="validation-title">Validate cheap, commit with confidence</h2>
+            <p class="cs-body-text">
+              I mapped the user journey flows and designed unmoderated usability tests (Useberry) to validate the core flows before engineering committed. Results went back to stakeholders, and we chose the highest-impact approach the team could actually resource &mdash; an explicit trade-off conversation rather than a scope that quietly ballooned.
+            </p>
+            <p class="cs-body-text">
+              The toolkit across the project: <strong>Figma and FigJam</strong> for design and workshops, <strong>Dovetail</strong> for research synthesis, <strong>Useberry</strong> for unmoderated testing, <strong>Gainsight</strong> for customer signal, and <strong>Jira and Slack</strong> for delivery.
+            </p>
+          </section>
+
+          <!-- OUTCOMES -->
+          <section class="cs-section fade-up" id="outcomes" aria-labelledby="outcomes-title">
+            <p class="cs-section-label">Outcomes &amp; Recognition</p>
+            <h2 class="cs-section-title" id="outcomes-title">Shipped, adopted, and ranked</h2>
+
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">52%</div>
+                <div class="outcome-label">Of active users adopted mobile within 90 days &mdash; 3&times; the expected rate</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">78%</div>
+                <div class="outcome-label">Core task completion per session &mdash; people finish what they open the app to do</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">40%</div>
+                <div class="outcome-label">Monthly returning users &mdash; mobile became a habit, not a novelty</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 24px;">
+              The app shipped to both the App Store and Google Play, and was <strong>ranked in Apple&rsquo;s Top 100 Business Apps</strong>. For a first mobile release from a desktop-only B2B product, the adoption curve validated the central bet: immediacy over parity.
+            </p>
+          </section>
+
+          <!-- KEY LEARNINGS -->
+          <section class="cs-section fade-up" id="learnings" aria-labelledby="learnings-title">
+            <p class="cs-section-label">Key Learnings</p>
+            <h2 class="cs-section-title" id="learnings-title">What this project taught me</h2>
+
+            <div class="reflection-box fade-up">
+              <h3 class="reflection-box-title">Designing mobile-first means prioritizing immediacy, not parity</h3>
+              <p class="cs-body-text">
+                The most important decisions were about what <em>not</em> to build. Every desktop feature we declined to port was room for the mobile experience to be faster, clearer, and more focused on the moment of use. When launching something new, the discipline of the cut list matters as much as the feature list.
+              </p>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 32px;">
+              The adoption numbers also confirmed something I now carry into every project: <strong>clarity at every UX layer drives adoption</strong>. A focused home screen, an obvious next action, and frictionless capture did more for engagement than any individual feature would have.
+            </p>
+
+            <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
+              <a href="index.html" class="btn-secondary">
+                <span>&#8592;</span> Back to portfolio
+              </a>
+              <a href="mailto:kcrodelle@gmail.com" class="btn-primary">
+                Discuss this work <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
+    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
