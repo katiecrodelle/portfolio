@@ -97,6 +97,7 @@
             <a href="#design-challenge">Design Challenge</a>
             <a href="#workflows">Key Workflows</a>
             <a href="#trust">Trust &amp; Control</a>
+            <a href="#delegation">Designing for Delegation</a>
             <a href="#reporting">Reporting Insights</a>
             <a href="#outcome">Outcome &amp; Impact</a>
             <a href="#next">What&rsquo;s Next</a>
@@ -338,6 +339,52 @@
 
             <div class="callout fade-up">
               <p>These principles aren&rsquo;t just ethical guardrails. They&rsquo;re what makes the AI surfaces feel <strong>trustworthy rather than gimmicky</strong> &mdash; which is ultimately what determines whether users engage with them at all.</p>
+            </div>
+          </section>
+
+          <!-- DESIGNING FOR DELEGATION -->
+          <section class="cs-section fade-up" id="delegation" aria-labelledby="delegation-title">
+            <p class="cs-section-label">Designing for Delegation</p>
+            <h2 class="cs-section-title" id="delegation-title">The real design challenge isn&rsquo;t capability &mdash; it&rsquo;s earned autonomy</h2>
+            <p class="cs-body-text">
+              Most AI product design conversations focus on what the AI can do. The harder question &mdash; and the one I keep returning to at Constant Contact &mdash; is how much of that the user should actually let it do. That&rsquo;s not a technical question. It&rsquo;s a design question.
+            </p>
+            <p class="cs-body-text">
+              The distinction I think about constantly is the difference between <strong>human-in-the-loop</strong> and <strong>human-out-of-the-loop</strong> systems. Human-in-the-loop means the AI proposes and the human decides. Human-out-of-the-loop means the AI acts and the human reviews after the fact, or not at all. Both are valid in the right context. The mistake is deploying one when users expect the other.
+            </p>
+
+            <div class="reflection-box fade-up">
+              <h3 class="reflection-box-title">The spectrum isn&rsquo;t binary &mdash; it&rsquo;s a trust ladder</h3>
+              <p class="cs-body-text">
+                A user who has seen the AI get it right a dozen times is ready to delegate more than a user who just encountered it for the first time. The UI that serves both users the same way &mdash; always asking for approval, or never asking at all &mdash; is wrong for at least one of them. Designing for delegation means designing a system that can move users along that ladder, not one that freezes them at the first rung.
+              </p>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 32px;">
+              In practice, this plays out as a set of questions I ask about every AI action surface:
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Should the AI recommend or act?</strong> &mdash; Recommending is always safer from a trust standpoint but extracts less value from the capability. Acting autonomously delivers more value but requires the user to already trust the outcome. The answer depends on the stakes of the action and how well-established that trust is.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>When is explicit approval required?</strong> &mdash; Irreversibility is the key signal. Sending an email to 50,000 contacts requires explicit confirmation regardless of how confident the AI is. Surfacing a suggested subject line does not. The design should match the approval friction to the consequence of being wrong.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>What does the user need to see before they&rsquo;ll delegate?</strong> &mdash; Transparency isn&rsquo;t just ethical hygiene; it&rsquo;s the mechanism by which trust accumulates. A user who can see why the AI made a recommendation, and check it against their own judgment, is building the mental model that eventually lets them skip that check. Hiding the reasoning short-circuits the process.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>How do we signal growing confidence without being presumptuous?</strong> &mdash; As a user&rsquo;s track record with the AI builds, the system should subtly adapt &mdash; defaulting to accept rather than review, reducing friction on routine AI actions &mdash; without ever taking that trust for granted or acting without the user&rsquo;s awareness.</div>
+              </div>
+            </div>
+
+            <div class="callout fade-up">
+              <p>The goal isn&rsquo;t to maximize AI autonomy. It&rsquo;s to give users the confidence to delegate the right things &mdash; and the control to pull back when they need to. <strong>Autonomy, confidence, transparency, and control</strong> aren&rsquo;t in tension; they&rsquo;re the four variables that have to be in balance for the system to work.</p>
             </div>
           </section>
 
