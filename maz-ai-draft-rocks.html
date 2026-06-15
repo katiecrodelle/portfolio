@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Katie DeVoe designed Draft Rocks with Maz AI at Ninety — a conversational AI coach that guides users through creating high-quality, SMART quarterly goals." />
+  <title>Maz AI Draft Rocks — Katie DeVoe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
+    <div class="nav-links" id="nav-links">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- CASE STUDY HERO -->
+  <header class="cs-hero">
+    <div class="container">
+      <nav class="cs-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="cs-breadcrumb-sep" aria-hidden="true">/</span>
+        <span>Case Study</span>
+      </nav>
+
+      <div class="cs-meta">
+        <span class="cs-badge">Case Study</span>
+        <span class="cs-company">Ninety.io</span>
+        <span class="cs-year">2023 &ndash; 2025</span>
+      </div>
+
+      <h1 class="cs-title">Draft Rocks with Maz AI</h1>
+      <p class="cs-subtitle">
+        How I designed a conversational AI coach to guide leadership teams through creating high-quality quarterly goals &mdash; turning a chronic pain point into a 58% completion-rate feature.
+      </p>
+
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-value">58%</div>
+          <div class="cs-stat-label">Completion rate for AI-guided Rock drafts</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">Maz</div>
+          <div class="cs-stat-label">Ninety&rsquo;s conversational AI agent, built on Terra</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">EOS&reg;</div>
+          <div class="cs-stat-label">Coach-like questioning aligned to the Entrepreneurial Operating System</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">SMART</div>
+          <div class="cs-stat-label">Auto-filled fields: title, due date, and milestones</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="container" style="margin-top: 0;">
+      <figure class="cs-hero-image cs-hero-photo">
+        <img src="images/maz-ai-hero.png" alt="The Draft Rocks with Maz AI chat interface: a conversational panel open inside Ninety with Maz asking coaching questions to help a user define a quarterly Rock." loading="eager" />
+        <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">Draft Rocks with Maz AI &mdash; a guided conversation that coaches users through creating specific, measurable quarterly goals.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <!-- CASE STUDY BODY -->
+  <main class="cs-body">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- TABLE OF CONTENTS -->
+        <aside class="cs-toc" aria-label="Table of contents">
+          <p class="cs-toc-title">Contents</p>
+          <nav class="cs-toc-list">
+            <a href="#overview">Overview</a>
+            <a href="#problem">The Problem</a>
+            <a href="#my-role">My Role</a>
+            <a href="#solution">The Solution</a>
+            <a href="#design">Design Details</a>
+            <a href="#outcomes">Outcomes</a>
+            <a href="#reflection">Reflection</a>
+          </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="cs-content">
+
+          <!-- OVERVIEW -->
+          <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
+            <p class="cs-section-label">Overview</p>
+            <h2 class="cs-section-title" id="overview-title">The hardest part of quarterly planning is starting</h2>
+            <p class="cs-body-text">
+              Ninety is built around the Entrepreneurial Operating System (EOS&reg;) &mdash; a framework where leadership teams set quarterly priorities called &ldquo;Rocks.&rdquo; Rocks are supposed to be SMART: specific, measurable, actionable goals with clear milestones. In practice, they rarely started that way.
+            </p>
+            <p class="cs-body-text">
+              Users wrote vague Rock titles, forgot due dates, skipped milestones, and then leaned on their EOS implementers or coaches to fix them in the quarterly meeting. The feedback from coaches was consistent:
+            </p>
+            <div class="pull-quote fade-up">
+              <p>&ldquo;It took a year before people consistently made SMART Rocks. Everyone pushed it off until the last minute.&rdquo; &mdash; <em>Client, confidential</em></p>
+            </div>
+            <p class="cs-body-text">
+              The opportunity was to bring the coaching conversation into the product itself &mdash; letting Maz, Ninety&rsquo;s AI agent, ask the same reflective questions a good EOS coach would ask, right at the moment of creation.
+            </p>
+          </section>
+
+          <!-- THE PROBLEM -->
+          <section class="cs-section fade-up" id="problem" aria-labelledby="problem-title">
+            <p class="cs-section-label">The Problem</p>
+            <h2 class="cs-section-title-lg" id="problem-title">Vague goals compound. Every bad Rock is a coaching session waiting to happen.</h2>
+            <p class="cs-body-text">
+              The Rock creation experience was a blank form: a title field, a due date, a milestone section. Nothing guided users toward specificity, nothing prompted them to think through measurability, and nothing caught ambiguity before the quarterly session surfaced it.
+            </p>
+            <p class="cs-body-text">
+              Four failure modes showed up consistently in research:
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Vague, inconsistent titles</strong> &mdash; Rocks like &ldquo;Improve sales&rdquo; that couldn&rsquo;t be measured or tracked against.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>No SMART scaffolding</strong> &mdash; users knew Rocks should be specific and measurable but didn&rsquo;t know how to get there without a prompt.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Clunky milestone management</strong> &mdash; the milestone creation UX added friction, so milestones were often skipped entirely.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>Downstream coach dependency</strong> &mdash; implementers were cleaning up vague Rocks in meetings, which wasted session time and signaled a product gap.</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- MY ROLE -->
+          <section class="cs-section fade-up" id="my-role" aria-labelledby="my-role-title">
+            <p class="cs-section-label">My Role</p>
+            <h2 class="cs-section-title" id="my-role-title">Lead Product Designer, discovery through ship</h2>
+            <p class="cs-body-text">
+              I led design for Draft Rocks with Maz end to end, partnering with the PM and engineering team throughout:
+            </p>
+
+            <div class="role-list fade-up" role="list">
+              <div class="role-item" role="listitem"><strong>Discovery &amp; research</strong> &mdash; Conducted interviews with Ninety users and EOS coaches to understand the Rock creation failure modes and what good coaching looked like in practice.</div>
+              <div class="role-item" role="listitem"><strong>UX approach &amp; AI strategy</strong> &mdash; Defined the conversational coaching model and how it should integrate with existing Rock creation entry points without disrupting the flow for users who didn&rsquo;t need it.</div>
+              <div class="role-item" role="listitem"><strong>Chat UX &amp; modal behavior</strong> &mdash; Designed the full conversational interface, streaming patterns, and the auto-fill behavior that moves the draft from conversation into structured form fields.</div>
+              <div class="role-item" role="listitem"><strong>Prompt validation</strong> &mdash; Partnered with PM and engineers to test prompts, validate flows, and tune the coaching conversation before ship.</div>
+            </div>
+          </section>
+
+          <!-- THE SOLUTION -->
+          <section class="cs-section fade-up" id="solution" aria-labelledby="solution-title">
+            <p class="cs-section-label">The Solution</p>
+            <h2 class="cs-section-title" id="solution-title">A coach in the creation flow, not a form with more fields</h2>
+            <p class="cs-body-text">
+              Draft Rocks with Maz is a guided, conversational experience that opens inside the existing Rock creation entry points. Instead of a blank form, users get a conversation: Maz asks reflective EOS-style questions &mdash; &ldquo;What does success look like by the end of the quarter?&rdquo; &mdash; and as the answers come in, it auto-fills the Rock title, due date, and milestones.
+            </p>
+            <p class="cs-body-text">
+              The core design principles:
+            </p>
+
+            <div class="role-list fade-up" role="list">
+              <div class="role-item" role="listitem"><strong>Coach-like questions, not AI jargon</strong> &mdash; Maz asks the questions an EOS implementer would ask: focused, specific, leading toward measurability. The AI is a coach, not a chatbot.</div>
+              <div class="role-item" role="listitem"><strong>SMART scaffolding through conversation</strong> &mdash; Rather than asking users to know what &ldquo;SMART&rdquo; means and apply it, Maz draws specificity out through the conversation and auto-populates the structured fields at the end.</div>
+              <div class="role-item" role="listitem"><strong>Seamless entry points</strong> &mdash; The experience plugs into all three Rock creation paths: inline add, Global Create, and the linked Rock view, so the coaching is available wherever users start.</div>
+              <div class="role-item" role="listitem"><strong>Progress preservation</strong> &mdash; Paused or abandoned drafts are preserved, so a half-finished coaching session doesn&rsquo;t mean starting over.</div>
+              <div class="role-item" role="listitem"><strong>Familiar chat patterns</strong> &mdash; Streaming text, a stop button, markdown formatting, and chat history &mdash; the same patterns users expect from modern AI tools, applied to goal creation.</div>
+            </div>
+          </section>
+
+          <!-- DESIGN DETAILS -->
+          <section class="cs-section fade-up" id="design" aria-labelledby="design-title">
+            <p class="cs-section-label">Design Details</p>
+            <h2 class="cs-section-title" id="design-title">From blank form to guided conversation</h2>
+            <p class="cs-body-text">
+              The existing Rock creation entry point &mdash; an inline text input &mdash; needed to surface the option to use Maz without forcing it. I designed the affordance as a light touch: an AI assist option that appears alongside the existing inline add, so users who want to go straight to the form can, and users who want coaching can opt in.
+            </p>
+
+            <figure class="cs-image-figure fade-up">
+              <a href="images/maz-ai-create-rock.jpg" target="_blank" rel="noopener">
+                <img src="images/maz-ai-create-rock.jpg" alt="The Rock creation inline input with the Maz AI draft option appearing as a secondary action alongside the default text field." loading="lazy" />
+              </a>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The inline Rock creation entry point &mdash; the Maz AI option is surfaced without interrupting users who don&rsquo;t need it. Click to view full size.</figcaption>
+            </figure>
+
+            <p class="cs-body-text" style="margin-top: 32px;">
+              Once in the coaching conversation, Maz works through the Rock structure progressively: first grounding the user in the goal, then specificity, then how to measure it, then breaking it into milestones. As responses come in, the structured fields auto-populate in the background &mdash; so when the conversation ends, the Rock is ready to save.
+            </p>
+
+            <figure class="cs-image-figure fade-up">
+              <a href="images/maz-ai-chat.jpg" target="_blank" rel="noopener">
+                <img src="images/maz-ai-chat.jpg" alt="The full Maz AI chat panel open alongside the Rock creation form, showing Maz asking coaching questions and the Rock fields auto-populating as the user responds." loading="lazy" />
+              </a>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The coaching conversation in progress &mdash; Maz guides the user through specificity and milestones while auto-filling the Rock form. Click to view full size.</figcaption>
+            </figure>
+          </section>
+
+          <!-- OUTCOMES -->
+          <section class="cs-section fade-up" id="outcomes" aria-labelledby="outcomes-title">
+            <p class="cs-section-label">Outcomes</p>
+            <h2 class="cs-section-title" id="outcomes-title">A coaching conversation that converts</h2>
+
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">58%</div>
+                <div class="outcome-label">Completion rate for AI-guided Rock drafts &mdash; users who start the conversation finish with a saved Rock</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">SMART</div>
+                <div class="outcome-label">Rocks created through Maz are measurable and specific by design &mdash; the coaching conversation enforces it</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Less cleanup</div>
+                <div class="outcome-label">Coaches and implementers spending less session time fixing vague Rocks created before the quarter</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 24px;">
+              The feature shipped as part of Maz&rsquo;s broader launch at Ninety. It extended the Terra design system&rsquo;s chat patterns and token architecture &mdash; a direct continuation of the design system work that preceded it.
+            </p>
+          </section>
+
+          <!-- REFLECTION -->
+          <section class="cs-section fade-up" id="reflection" aria-labelledby="reflection-title">
+            <p class="cs-section-label">Reflection</p>
+            <h2 class="cs-section-title" id="reflection-title">What this taught me about AI-assisted creation</h2>
+
+            <div class="reflection-box fade-up">
+              <h3 class="reflection-box-title">The AI&rsquo;s job is to ask better questions, not give better answers</h3>
+              <p class="cs-body-text">
+                The instinct with generative AI features is to have the AI produce an output &mdash; &ldquo;generate a Rock for me.&rdquo; What research showed was that users didn&rsquo;t trust AI-generated goals because they didn&rsquo;t feel ownership over them. Maz&rsquo;s job isn&rsquo;t to write the Rock; it&rsquo;s to ask the questions that lead the user to write a better one themselves. That distinction &mdash; AI as coach versus AI as author &mdash; shaped every design decision in the feature.
+              </p>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 32px;">
+              This project is also where I developed the interaction patterns that I now think of as <strong>human-in-the-loop by design</strong>: the AI proposes, the user confirms, the AI executes. The stop button, the progress preservation, the opt-in entry point &mdash; these aren&rsquo;t just UX polish; they&rsquo;re the design expression of a philosophy about how people should stay in control of AI-assisted work.
+            </p>
+
+            <div class="callout fade-up">
+              <p>Draft Rocks with Maz was built on the Terra design system and fed directly into the AI patterns I now apply at Constant Contact &mdash; where the same question keeps coming up: how much should the AI do, and when does it need to hand control back to the human?</p>
+            </div>
+
+            <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
+              <a href="index.html" class="btn-secondary">
+                <span>&#8592;</span> Back to portfolio
+              </a>
+              <a href="mailto:kcrodelle@gmail.com" class="btn-primary">
+                Discuss this work <span>→</span>
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
+    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
