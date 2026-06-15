@@ -476,24 +476,39 @@
 
           <!-- REFLECTION -->
           <section class="cs-section fade-up" id="reflection" aria-labelledby="reflection-title">
-            <p class="cs-section-label">Reflection</p>
-            <h2 class="cs-section-title" id="reflection-title">What this work is teaching me about designing with AI</h2>
+            <p class="cs-section-label">Reflection &amp; Key Learnings</p>
+            <h2 class="cs-section-title" id="reflection-title">What designing AI systems has actually taught me</h2>
 
             <div class="reflection-box fade-up">
-              <h3 class="reflection-box-title">The most important design decisions weren&rsquo;t visual</h3>
+              <h3 class="reflection-box-title">AI adoption is a trust problem. Not a technology problem.</h3>
               <p class="cs-body-text">
-                The hardest problems on this project are about <strong>framing, trust architecture, and product strategy</strong> &mdash; not layout or component design. Deciding when AI should speak, what register it should use, how it should handle uncertainty, and when it should stay quiet altogether: these are the questions that matter most. The visual design follows from getting those answers right.
+                The question I hear most in AI product conversations is some version of &ldquo;how do we get users to use it more?&rdquo; The assumption baked into that question is that adoption is a discoverability problem, or a feature problem, or a marketing problem. In my experience, it&rsquo;s almost always a trust problem. Users don&rsquo;t avoid AI features because they don&rsquo;t know they exist. They avoid them because they&rsquo;ve been surprised before, or they don&rsquo;t know what the AI will do, or they tried it once and it was wrong in a way that felt embarrassing. The design work that actually moves adoption isn&rsquo;t adding more capabilities. It&rsquo;s reducing the cost of being wrong and making it safe to try again.
+              </p>
+            </div>
+
+            <div class="reflection-box fade-up" style="margin-top: 24px;">
+              <h3 class="reflection-box-title">The most valuable AI systems are not the smartest ones.</h3>
+              <p class="cs-body-text">
+                I&rsquo;ve seen very capable AI fail to get traction because users couldn&rsquo;t evaluate its outputs. And I&rsquo;ve seen more modest AI become deeply embedded in how people work because they understood what it was doing and why. The intelligence of the underlying model matters far less to adoption than the legibility of the experience. A system that explains itself at the right level of detail, in the right moment, will outperform a technically superior system that doesn&rsquo;t &mdash; because users will actually use it.
+              </p>
+            </div>
+
+            <div class="reflection-box fade-up" style="margin-top: 24px;">
+              <h3 class="reflection-box-title">Users delegate work when they understand what the AI is doing and why.</h3>
+              <p class="cs-body-text">
+                Delegation is not the same as automation. Automation removes the human from the loop. Delegation is a conscious transfer of a task from a person to a system &mdash; and it requires that the person trusts the system enough to let go. What I&rsquo;ve learned is that transparency is the mechanism that enables delegation. When a user can see the reasoning behind a recommendation, they can evaluate it. When they can evaluate it and it holds up, they build a mental model of when to trust it. That mental model is what eventually lets them skip the check. Hiding the reasoning to keep the interface clean short-circuits the whole process.
+              </p>
+            </div>
+
+            <div class="reflection-box fade-up" style="margin-top: 24px;">
+              <h3 class="reflection-box-title">Trust compounds &mdash; but only through successful outcomes, not through promises.</h3>
+              <p class="cs-body-text">
+                Early in a user&rsquo;s relationship with an AI feature, every interaction is an audition. They&rsquo;re not evaluating the feature on its long-term potential; they&rsquo;re evaluating whether this specific output was right, useful, and honest about its confidence. Get it right enough times and trust accumulates. Get it wrong in a surprising way &mdash; especially on something that cost the user something &mdash; and you&rsquo;re starting over. This means the most important design decisions in an AI product aren&rsquo;t about the happy path. They&rsquo;re about what happens at the edges: low data, ambiguous inputs, uncertain outputs. A graceful uncertain state builds more trust than a confident wrong answer ever can.
               </p>
             </div>
 
             <p class="cs-body-text" style="margin-top: 32px;">
-              Working adjacent to a core AI experience &mdash; rather than owning it entirely &mdash; is genuinely interesting. It requires constant coordination and negotiation about shared patterns, but it also gives me a clear mandate: own the moments that matter most for my users, and make sure the AI shows up well there.
-            </p>
-            <p class="cs-body-text">
-              This work keeps reinforcing my conviction that <strong>AI in product design is fundamentally a trust problem before it&rsquo;s a technical one</strong>. The models can generate good outputs. The harder job is designing the context, presentation, and control mechanisms that make users willing to act on them.
-            </p>
-            <p class="cs-body-text">
-              I&rsquo;m also learning how to advocate for user-facing AI quality in a large organization &mdash; where there are always competing pressures to ship faster, add more features, and paper over rough edges. Keeping the bar high on trust and explainability while the initiative moves fast is the ongoing challenge, and the part I find most energizing.
+              The throughline across all of this: <strong>designing intelligent systems is fundamentally about designing relationships between people and software.</strong> The AI is the capability. The design is the relationship. And relationships &mdash; between people or between a person and a product &mdash; are built on consistency, honesty, and the accumulation of small kept promises. That framing has changed how I approach every AI surface I touch.
             </p>
 
             <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
