@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Katie DeVoe led the consolidation of five fragmented design systems into Summit — Constant Contact's unified design platform for 20+ designers and 60+ engineers." />
+  <title>Summit Design System — Katie DeVoe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <site-nav progress></site-nav>
+
+  <!-- CASE STUDY HERO -->
+  <header class="cs-hero">
+    <div class="container">
+      <nav class="cs-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="cs-breadcrumb-sep" aria-hidden="true">/</span>
+        <span>Case Study</span>
+      </nav>
+
+      <div class="cs-meta">
+        <span class="cs-badge">Case Study</span>
+        <span class="cs-company">Constant Contact</span>
+        <span class="cs-year">2026 &ndash; Present</span>
+      </div>
+
+      <h1 class="cs-title">Summit: One System for Every Surface Constant Contact Ships</h1>
+      <p class="cs-subtitle">
+        How I led the consolidation of five fragmented legacy design systems into a unified platform &mdash; token architecture, accessibility standards, data visualization, and governance for 20+ designers and 60+ engineers.
+      </p>
+
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-value">5&thinsp;&rarr;&thinsp;1</div>
+          <div class="cs-stat-label">Legacy systems consolidated into one platform</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">20+</div>
+          <div class="cs-stat-label">Designers on one source of truth</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">60+</div>
+          <div class="cs-stat-label">Engineers aligned to one implementation</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-value">A11y</div>
+          <div class="cs-stat-label">WCAG compliance built into the token layer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="container" style="margin-top: 0;">
+      <figure class="cs-hero-image cs-hero-photo">
+        <img src="images/summit/convergence.svg" alt="Convergence diagram showing five legacy design systems — Rise Design, Legacy UI, Mobile DS, Component Lib, and Product Fork — flowing into Summit, Constant Contact's unified design system." loading="eager" style="background: var(--bg-secondary); padding: 48px;" />
+        <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">Five legacy systems. One unified platform. Summit is the foundation every Constant Contact surface is built on.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <!-- CASE STUDY BODY -->
+  <main class="cs-body">
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- TABLE OF CONTENTS -->
+        <aside class="cs-toc" aria-label="Table of contents">
+          <p class="cs-toc-title">Contents</p>
+          <nav class="cs-toc-list">
+            <a href="#overview">Overview</a>
+            <a href="#challenge">The Challenge</a>
+            <a href="#tokens">Token Architecture</a>
+            <a href="#accessibility">Accessibility</a>
+            <a href="#dataviz">Data Visualization</a>
+            <a href="#governance">Governance</a>
+            <a href="#impact">Impact</a>
+            <a href="#reflection">Reflection</a>
+          </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="cs-content">
+
+          <!-- OVERVIEW -->
+          <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
+            <p class="cs-section-label">Overview</p>
+            <h2 class="cs-section-title" id="overview-title">Five systems, zero shared truth</h2>
+            <p class="cs-body-text">
+              The problem at Constant Contact wasn&rsquo;t bad designers. The problem was that good designers, working in isolation across different product teams and acquisitions, had made locally reasonable decisions that compounded into systemic incoherence. Components had different names, different behaviors, different accessibility approaches &mdash; and the gap between what design specified and what engineering shipped kept widening.
+            </p>
+            <p class="cs-body-text">
+              I led the consolidation of five fragmented design systems into Summit: one Figma library, one Storybook, one token system that 20+ designers and 60+ engineers could both trust. This is the story of how we built it, and why the architectural decisions we made in year one will matter for the next decade.
+            </p>
+          </section>
+
+          <!-- THE CHALLENGE -->
+          <section class="cs-section fade-up" id="challenge" aria-labelledby="challenge-title">
+            <p class="cs-section-label">The Challenge</p>
+            <h2 class="cs-section-title-lg" id="challenge-title">Five systems. Zero truth.</h2>
+            <p class="cs-body-text">
+              Before Summit, auditing the Constant Contact component landscape meant confronting a matrix of contradictions: the same component &mdash; a button, a form input, a data table &mdash; designed and implemented five different ways across five different teams. No shared tokens. No accessibility standards. No single answer to &ldquo;what does a primary button look like?&rdquo;
+            </p>
+
+            <!-- Audit Table -->
+            <div class="audit-wrap fade-up" role="region" aria-label="Design system audit: component coverage matrix">
+              <div class="audit-header">
+                <svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="#f59e0b"/></svg>
+                Design System Audit &middot; Component Coverage Matrix
+              </div>
+              <div style="overflow-x: auto;">
+                <table class="audit-table">
+                  <thead>
+                    <tr>
+                      <th>Component Area</th>
+                      <th>Rise ①</th>
+                      <th>Legacy UI ②</th>
+                      <th>Mobile DS ③</th>
+                      <th>Comp. Lib ④</th>
+                      <th>Product Fork ⑤</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="audit-component">Buttons &amp; CTAs</td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-ok">✓ Aligned</span></td>
+                      <td><span class="audit-badge b-fail">✕ Inaccessible</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Forked</span></td>
+                    </tr>
+                    <tr>
+                      <td class="audit-component">Typography</td>
+                      <td><span class="audit-badge b-ok">✓ Aligned</span></td>
+                      <td><span class="audit-badge b-fail">✕ Inaccessible</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-fail">✕ Legacy</span></td>
+                    </tr>
+                    <tr>
+                      <td class="audit-component">Form Inputs</td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-miss">— Missing</span></td>
+                      <td><span class="audit-badge b-ok">✓ Aligned</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Forked</span></td>
+                    </tr>
+                    <tr>
+                      <td class="audit-component">Data Visualization</td>
+                      <td><span class="audit-badge b-miss">— Missing</span></td>
+                      <td><span class="audit-badge b-fail">✕ Inaccessible</span></td>
+                      <td><span class="audit-badge b-miss">— Missing</span></td>
+                      <td><span class="audit-badge b-warn">⚠ Inconsistent</span></td>
+                      <td><span class="audit-badge b-fail">✕ Color-only</span></td>
+                    </tr>
+                    <tr>
+                      <td class="audit-component">Color Tokens</td>
+                      <td><span class="audit-badge b-warn">⚠ Primitives only</span></td>
+                      <td><span class="audit-badge b-fail">✕ Hardcoded</span></td>
+                      <td><span class="audit-badge b-fail">✕ Hardcoded</span></td>
+                      <td><span class="audit-badge b-fail">✕ Hardcoded</span></td>
+                      <td><span class="audit-badge b-fail">✕ Hardcoded</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="pull-quote fade-up">
+              <p>&ldquo;The gap between design specification and production implementation wasn&rsquo;t a process failure. It was a structural one. We didn&rsquo;t need better handoff &mdash; we needed a system designers and engineers could both trust.&rdquo;</p>
+            </div>
+          </section>
+
+          <!-- TOKEN ARCHITECTURE -->
+          <section class="cs-section fade-up" id="tokens" aria-labelledby="tokens-title">
+            <p class="cs-section-label">Phase 01 &middot; Token Architecture</p>
+            <h2 class="cs-section-title" id="tokens-title">The most important decision in the project</h2>
+            <p class="cs-body-text">
+              I built Summit&rsquo;s token system as the structural backbone &mdash; the layer that makes future rebranding, dark mode, and white-labeling possible without touching a single component. Two layers: <strong>primitives</strong> (raw values) and <strong>semantics</strong> (meaning).
+            </p>
+            <p class="cs-body-text">
+              A button doesn&rsquo;t know it&rsquo;s blue. It knows it uses <code class="inline-code">color.action.primary</code>. Change the primitive, and every surface updates. This distinction is the difference between a design system that stays current and one that needs a ground-up rebuild every two years.
+            </p>
+
+            <!-- Token Diagram -->
+            <div class="token-diagram fade-up" role="img" aria-label="Token architecture: primitive tokens map to semantic tokens which map to component properties">
+              <div class="token-col">
+                <div class="token-col-hd">Primitive Tokens</div>
+                <div class="token-row t-prim">color.blue.500</div>
+                <div class="token-row t-prim">color.blue.600</div>
+                <div class="token-row t-prim">color.red.500</div>
+                <div class="token-row t-prim">spacing.4</div>
+                <div class="token-row t-prim">radius.md</div>
+              </div>
+              <div class="token-arrow" aria-hidden="true">→</div>
+              <div class="token-col">
+                <div class="token-col-hd">Semantic Tokens</div>
+                <div class="token-row t-sem">color.action.primary</div>
+                <div class="token-row t-sem">color.action.hover</div>
+                <div class="token-row t-sem">color.feedback.error</div>
+                <div class="token-row t-sem">space.inset.md</div>
+                <div class="token-row t-sem">radius.button</div>
+              </div>
+              <div class="token-arrow" aria-hidden="true">→</div>
+              <div class="token-col">
+                <div class="token-col-hd">Components</div>
+                <div class="token-row t-comp">Button.background</div>
+                <div class="token-row t-comp">Button.bg.hover</div>
+                <div class="token-row t-comp">Input.border.error</div>
+                <div class="token-row t-comp">Button.padding.x</div>
+                <div class="token-row t-comp">Button.radius</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACCESSIBILITY -->
+          <section class="cs-section fade-up" id="accessibility" aria-labelledby="a11y-title">
+            <p class="cs-section-label">Phase 02 &middot; Accessibility</p>
+            <h2 class="cs-section-title" id="a11y-title">Impossible to fail by accident</h2>
+            <p class="cs-body-text">
+              Accessibility at most companies is a checklist &mdash; something audited after components ship. At Summit, I made it a design constraint at the token layer. Color contrast was enforced structurally: using semantic tokens correctly made it <strong>impossible to ship a non-compliant combination</strong>. The question shifted from &ldquo;does this pass?&rdquo; to &ldquo;how do we make it structurally impossible to fail?&rdquo;
+            </p>
+
+            <!-- Before / After -->
+            <div class="before-after fade-up">
+              <div class="ba-card ba-before">
+                <div class="ba-hd">
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1.5"/><line x1="4" y1="4" x2="8" y2="8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="4" x2="4" y2="8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  Before Summit
+                </div>
+                <div class="ba-body">
+                  <div class="ba-row">
+                    <span class="btn-demo btn-demo-b1">Save Changes</span>
+                    <span class="a11y-badge a11y-no">2.8:1 contrast</span>
+                  </div>
+                  <div class="ba-row">
+                    <span class="btn-demo btn-demo-b2">Save Changes</span>
+                    <span class="a11y-badge a11y-no">No focus ring</span>
+                  </div>
+                  <div class="ba-row">
+                    <span class="btn-demo btn-demo-b3">Save Changes</span>
+                    <span class="a11y-badge a11y-no">Hardcoded hex</span>
+                  </div>
+                  <p class="ba-note">Three buttons. Three visual languages. Zero shared tokens.</p>
+                </div>
+              </div>
+              <div class="ba-card ba-after">
+                <div class="ba-hd">
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"/><polyline points="3,6 5,8.5 9,4" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  After Summit
+                </div>
+                <div class="ba-body">
+                  <div class="ba-row">
+                    <span class="btn-demo btn-demo-a1">Save Changes</span>
+                    <span class="a11y-badge a11y-ok">4.5:1 AA ✓</span>
+                  </div>
+                  <div class="ba-row">
+                    <span class="btn-demo btn-demo-a2">Save Changes</span>
+                    <span class="a11y-badge a11y-ok">Focus ring ✓</span>
+                  </div>
+                  <div class="ba-row">
+                    <code class="inline-code">color.action.primary</code>
+                    <span class="a11y-badge a11y-ok">Semantic ✓</span>
+                  </div>
+                  <p class="ba-note">One standard. Structurally impossible to fail.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- DATA VISUALIZATION -->
+          <section class="cs-section fade-up" id="dataviz" aria-labelledby="dataviz-title">
+            <p class="cs-section-label">Phase 03 &middot; Data Visualization</p>
+            <h2 class="cs-section-title" id="dataviz-title">Color-only charts fail 8% of users by design</h2>
+            <p class="cs-body-text">
+              Constant Contact&rsquo;s reporting surfaces are data-dense: open rates, click rates, subscriber trends, benchmark comparisons. Before Summit, every team built its own charts. Color-only differentiation was endemic &mdash; fine for most users, invisible to roughly 1-in-12.
+            </p>
+            <p class="cs-body-text">
+              I built a data viz framework that addressed color-only differentiation structurally. Categorical palettes were designed with non-color encoding as a requirement, not an afterthought: line style and marker shape carry information independently of hue. The result is charts that pass WCAG without visual compromise.
+            </p>
+
+            <!-- Data Viz Comparison -->
+            <div class="cs-image-grid-2 fade-up">
+              <div class="dv-compare-card">
+                <div class="dv-compare-hd dv-fail">
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1.5"/><line x1="4" y1="4" x2="8" y2="8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="4" x2="4" y2="8" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  Color-only differentiation
+                </div>
+                <div class="dv-compare-body">
+                  <svg viewBox="0 0 240 108" style="width:100%;height:auto;" aria-label="Three lines differentiated by color only — fails for color-blind users">
+                    <polyline points="10,84 46,56 82,70 118,36 154,52 190,28 226,42" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+                    <polyline points="10,94 46,74 82,60 118,74 154,46 190,64 226,52" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <polyline points="10,74 46,90 82,80 118,56 154,70 190,46 226,60" fill="none" stroke="#06b6d4" stroke-width="2.5"/>
+                    <text x="10" y="104" font-size="8.5" fill="#71717a" font-family="Inter,sans-serif">Color-only · Fails for ~8% of users</text>
+                  </svg>
+                </div>
+              </div>
+              <div class="dv-compare-card">
+                <div class="dv-compare-hd dv-pass">
+                  <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"/><polyline points="3,6 5,8.5 9,4" stroke="#22c55e" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Summit accessible palette
+                </div>
+                <div class="dv-compare-body">
+                  <svg viewBox="0 0 240 108" style="width:100%;height:auto;" aria-label="Three lines differentiated by color, dash pattern, and marker shape — accessible for color-blind users">
+                    <!-- Solid line + circle markers -->
+                    <polyline points="10,84 46,56 82,70 118,36 154,52 190,28 226,42" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+                    <circle cx="10" cy="84" r="3" fill="#6366f1"/><circle cx="46" cy="56" r="3" fill="#6366f1"/><circle cx="82" cy="70" r="3" fill="#6366f1"/><circle cx="118" cy="36" r="3" fill="#6366f1"/><circle cx="154" cy="52" r="3" fill="#6366f1"/><circle cx="190" cy="28" r="3" fill="#6366f1"/><circle cx="226" cy="42" r="3" fill="#6366f1"/>
+                    <!-- Dashed line + square markers -->
+                    <polyline points="10,94 46,74 82,60 118,74 154,46 190,64 226,52" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="5,3"/>
+                    <rect x="7" y="91" width="6" height="6" fill="#22c55e"/><rect x="43" y="71" width="6" height="6" fill="#22c55e"/><rect x="79" y="57" width="6" height="6" fill="#22c55e"/><rect x="115" y="71" width="6" height="6" fill="#22c55e"/><rect x="151" y="43" width="6" height="6" fill="#22c55e"/><rect x="187" y="61" width="6" height="6" fill="#22c55e"/><rect x="223" y="49" width="6" height="6" fill="#22c55e"/>
+                    <!-- Dotted line + triangle markers -->
+                    <polyline points="10,74 46,90 82,80 118,56 154,70 190,46 226,60" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="2,4"/>
+                    <polygon points="10,70 13,76 7,76" fill="#f59e0b"/><polygon points="46,86 49,92 43,92" fill="#f59e0b"/><polygon points="82,76 85,82 79,82" fill="#f59e0b"/><polygon points="118,52 121,58 115,58" fill="#f59e0b"/><polygon points="154,66 157,72 151,72" fill="#f59e0b"/><polygon points="190,42 193,48 187,48" fill="#f59e0b"/><polygon points="226,56 229,62 223,62" fill="#f59e0b"/>
+                    <text x="10" y="104" font-size="8.5" fill="#71717a" font-family="Inter,sans-serif">Color + dash + shape · Accessible by construction</text>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- GOVERNANCE -->
+          <section class="cs-section fade-up" id="governance" aria-labelledby="governance-title">
+            <p class="cs-section-label">Phase 04 &middot; Governance</p>
+            <h2 class="cs-section-title" id="governance-title">A design system without governance has an expiration date</h2>
+            <p class="cs-body-text">
+              A common failure mode: ship a beautiful system, publish it to Figma, and watch it fragment over the next eighteen months because no one defined how it should evolve. Summit&rsquo;s governance model was designed for the actual behavior of real teams under real deadline pressure &mdash; not the idealized process those teams wish they had.
+            </p>
+
+            <div class="workflow-grid fade-up">
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">01</div>
+                  <div>
+                    <div class="workflow-card-title">Contribution must have a path</div>
+                    <div class="workflow-card-subtitle">Keep the system open without making it a bottleneck</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">A structured intake brief captured the problem statement, existing alternatives considered, and adoption scope. Any designer could contribute. Nothing was arbitrary.</p>
+              </div>
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">02</div>
+                  <div>
+                    <div class="workflow-card-title">Change must be communicated</div>
+                    <div class="workflow-card-subtitle">Trust through transparency</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">Changelog discipline and deprecation windows ensured nothing was removed without a migration path. Teams didn&rsquo;t fear updates because they weren&rsquo;t surprised by them.</p>
+              </div>
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">03</div>
+                  <div>
+                    <div class="workflow-card-title">Adoption is a design problem</div>
+                    <div class="workflow-card-subtitle">Design for real behavior, not ideal behavior</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">The real work was making Summit easier to use than whatever workaround a team would otherwise reach for. Every friction point in the contribution process was a risk that someone would fork instead.</p>
+              </div>
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">04</div>
+                  <div>
+                    <div class="workflow-card-title">The system must evolve</div>
+                    <div class="workflow-card-subtitle">Architecture for the organization&rsquo;s future</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">Summit v1 was a foundation, not a finalization. The token architecture was built to support rebrands, new platforms, and new contributions without a ground-up rebuild.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- IMPACT -->
+          <section class="cs-section fade-up" id="impact" aria-labelledby="impact-title">
+            <p class="cs-section-label">Impact</p>
+            <h2 class="cs-section-title" id="impact-title">What changes when the foundation is right</h2>
+
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">5&thinsp;&rarr;&thinsp;1</div>
+                <div class="outcome-label">Systems consolidated into one platform</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Single source</div>
+                <div class="outcome-label">One Figma library, one Storybook, one token system</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">A11y default</div>
+                <div class="outcome-label">WCAG compliance built in &mdash; not audited after the fact</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Rebrand-ready</div>
+                <div class="outcome-label">Semantic tokens support rebranding without component rework</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Velocity</div>
+                <div class="outcome-label">Designers stopped rebuilding primitives and started shipping product work</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Eng trust</div>
+                <div class="outcome-label">One reference eliminated ambiguity and reduced implementation variation</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text">
+              The impact of Summit isn&rsquo;t visible in any single shipped screen. It&rsquo;s visible in what stopped happening: the design review arguments over button styles, the accessibility tickets filed in production, the sprint delays from ambiguous specs, the onboarding friction of learning five systems before you could contribute to one.
+            </p>
+          </section>
+
+          <!-- REFLECTION -->
+          <section class="cs-section fade-up" id="reflection" aria-labelledby="reflection-title">
+            <p class="cs-section-label">Reflection</p>
+            <h2 class="cs-section-title" id="reflection-title">What I&rsquo;d carry forward</h2>
+
+            <div class="reflection-list fade-up">
+              <div class="reflection-row">
+                <div class="reflection-key">Audit first, even under pressure</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">The audit is where you earn the right to make architectural decisions. The organizations most eager to skip it are the ones who most need it &mdash; because the politics of &ldquo;we don&rsquo;t have time&rdquo; are exactly what created five systems in the first place.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">Tokens are a strategy, not a setting</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">The semantic layer isn&rsquo;t a theming convenience &mdash; it&rsquo;s a decision about whether your system can support the business in ten years. That conversation belongs in design leadership, not a Figma file. Getting exec buy-in on the token architecture was as important as building it.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">Governance is a product</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">Design the process for the actual behavior of real people under real constraints. If contributing to the system is heavier than copying a component and moving on, people will copy and move on. The governance model that survives is the one that&rsquo;s easier to use than the workaround.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">Accessibility is architectural</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">When you build accessibility into the token layer, you shift the organization&rsquo;s posture from &ldquo;does this pass?&rdquo; to &ldquo;how do we make it impossible to fail?&rdquo; That&rsquo;s not compliance. That&rsquo;s design. It also means one token audit touches every surface at once &mdash; which is the only way to move a 60-engineer org.</p>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- /cs-content -->
+      </div><!-- /cs-layout -->
+    </div><!-- /container -->
+  </main>
+
+  <site-footer back></site-footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

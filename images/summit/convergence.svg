@@ -1,0 +1,27 @@
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="background:transparent;">
+  <defs>
+    <radialGradient id="sg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="gf"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="ah" markerWidth="6" markerHeight="4" refX="3" refY="2" orient="auto">
+      <polygon points="0 0,6 2,0 4" fill="rgba(99,102,241,0.45)"/>
+    </marker>
+  </defs>
+  <circle cx="380" cy="148" r="72" fill="url(#sg)"/>
+  <line x1="95"  y1="52"  x2="338" y2="132" stroke="rgba(99,102,241,0.4)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#ah)"/>
+  <line x1="665" y1="52"  x2="422" y2="132" stroke="rgba(99,102,241,0.4)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#ah)"/>
+  <line x1="55"  y1="148" x2="328" y2="148" stroke="rgba(99,102,241,0.4)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#ah)"/>
+  <line x1="705" y1="148" x2="432" y2="148" stroke="rgba(99,102,241,0.4)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#ah)"/>
+  <line x1="380" y1="268" x2="380" y2="192" stroke="rgba(99,102,241,0.4)" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#ah)"/>
+  <g opacity="0.75"><rect x="32" y="24" width="126" height="56" rx="9" fill="#18181b" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><text x="95" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">RISE DESIGN</text><text x="95" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#52525b">System ①</text></g>
+  <g opacity="0.75"><rect x="602" y="24" width="126" height="56" rx="9" fill="#18181b" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><text x="665" y="50" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">LEGACY UI</text><text x="665" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#52525b">System ②</text></g>
+  <g opacity="0.75"><rect x="-3" y="120" width="120" height="56" rx="9" fill="#18181b" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><text x="57" y="146" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">MOBILE DS</text><text x="57" y="161" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#52525b">System ③</text></g>
+  <g opacity="0.75"><rect x="643" y="120" width="120" height="56" rx="9" fill="#18181b" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><text x="703" y="146" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">COMPONENT LIB</text><text x="703" y="161" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#52525b">System ④</text></g>
+  <g opacity="0.75"><rect x="317" y="240" width="126" height="56" rx="9" fill="#18181b" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><text x="380" y="266" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#a1a1aa" letter-spacing="0.06em">PRODUCT FORK</text><text x="380" y="281" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#52525b">System ⑤</text></g>
+  <circle cx="380" cy="148" r="48" fill="#6366f1" filter="url(#gf)"/>
+  <circle cx="380" cy="148" r="44" fill="#111113" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="380" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fafafa" letter-spacing="0.05em">SUMMIT</text>
+  <text x="380" y="159" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#818cf8">Design System</text>
+</svg>
