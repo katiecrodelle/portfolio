@@ -8,28 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- SCROLL PROGRESS -->
-  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <site-nav progress></site-nav>
 
   <!-- CASE STUDY HERO -->
   <header class="cs-hero">
@@ -74,9 +56,9 @@
     <!-- HERO IMAGE -->
     <div class="container" style="margin-top: 0;">
       <figure class="cs-hero-image cs-hero-photo">
-        <video autoplay loop muted playsinline poster="images/help-panel.jpg" aria-label="Animated walkthrough of the redesigned help panel: opening the panel, searching, and navigating quick actions and learn links.">
-          <source src="images/help-panel-experience.mp4" type="video/mp4" />
-          <img src="images/help-panel.jpg" alt="The redesigned help panel open beside the Constant Contact dashboard." />
+        <video autoplay loop muted playsinline poster="images/help-panel/hero.jpg" aria-label="Animated walkthrough of the redesigned help panel: opening the panel, searching, and navigating quick actions and learn links.">
+          <source src="images/help-panel/experience.mp4" type="video/mp4" />
+          <img src="images/help-panel/hero.jpg" alt="The redesigned help panel open beside the Constant Contact dashboard." />
         </video>
         <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">The redesigned help panel in motion &mdash; search, quick actions, and clear paths to human help, with no dead ends.</figcaption>
       </figure>
@@ -228,8 +210,8 @@
             </div>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/journey-maps.png" target="_blank" rel="noopener">
-                <img src="images/journey-maps.png" alt="The Help Panel user journey mapping document: Declining, Growing, and Cancel Intent journey maps, with the Declining cohort summary showing $232.5K/month at risk, sub-segments, user needs, and stage-by-stage current-state journey with emotional states and data signals." loading="lazy" />
+              <a href="images/help-panel/journey-maps.png" target="_blank" rel="noopener">
+                <img src="images/help-panel/journey-maps.png" alt="The Help Panel user journey mapping document: Declining, Growing, and Cancel Intent journey maps, with the Declining cohort summary showing $232.5K/month at risk, sub-segments, user needs, and stage-by-stage current-state journey with emotional states and data signals." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The journey mapping document &mdash; each cohort pairs emotional states with the behavioral data behind them, stage by stage. Click to view full size.</figcaption>
             </figure>
@@ -292,8 +274,8 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/help-panel.jpg" target="_blank" rel="noopener">
-                <img src="images/help-panel.jpg" alt="The redesigned help panel design: a search field asking 'What do you need help with?', quick-action tiles, and learn links including chat and contact options." loading="lazy" />
+              <a href="images/help-panel/hero.jpg" target="_blank" rel="noopener">
+                <img src="images/help-panel/hero.jpg" alt="The redesigned help panel design: a search field asking 'What do you need help with?', quick-action tiles, and learn links including chat and contact options." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The M1 help panel design &mdash; search up front, quick actions for the most common jobs, and always-visible paths to a human. Click to view full size.</figcaption>
             </figure>
@@ -452,13 +434,8 @@
       </div>
     </div>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
-    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <site-footer back></site-footer>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

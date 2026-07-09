@@ -8,28 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- SCROLL PROGRESS -->
-  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <site-nav progress></site-nav>
 
   <!-- CASE STUDY HERO -->
   <header class="cs-hero">
@@ -74,7 +56,7 @@
     <!-- HERO IMAGE -->
     <div class="container" style="margin-top: 0;">
       <figure class="cs-hero-image cs-hero-photo">
-        <img src="images/maz-ai-hero.png" alt="The Draft Rocks with Maz AI chat interface: a conversational panel open inside Ninety with Maz asking coaching questions to help a user define a quarterly Rock." loading="eager" />
+        <img src="images/maz-ai/hero.png" alt="The Draft Rocks with Maz AI chat interface: a conversational panel open inside Ninety with Maz asking coaching questions to help a user define a quarterly Rock." loading="eager" />
         <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">Draft Rocks with Maz AI &mdash; a guided conversation that coaches users through creating specific, measurable quarterly goals.</figcaption>
       </figure>
     </div>
@@ -196,8 +178,8 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/maz-ai-create-rock.jpg" target="_blank" rel="noopener">
-                <img src="images/maz-ai-create-rock.jpg" alt="The Rock creation inline input with the Maz AI draft option appearing as a secondary action alongside the default text field." loading="lazy" />
+              <a href="images/maz-ai/create-rock.jpg" target="_blank" rel="noopener">
+                <img src="images/maz-ai/create-rock.jpg" alt="The Rock creation inline input with the Maz AI draft option appearing as a secondary action alongside the default text field." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The inline Rock creation entry point &mdash; the Maz AI option is surfaced without interrupting users who don&rsquo;t need it. Click to view full size.</figcaption>
             </figure>
@@ -207,8 +189,8 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/maz-ai-chat.jpg" target="_blank" rel="noopener">
-                <img src="images/maz-ai-chat.jpg" alt="The full Maz AI chat panel open alongside the Rock creation form, showing Maz asking coaching questions and the Rock fields auto-populating as the user responds." loading="lazy" />
+              <a href="images/maz-ai/chat.jpg" target="_blank" rel="noopener">
+                <img src="images/maz-ai/chat.jpg" alt="The full Maz AI chat panel open alongside the Rock creation form, showing Maz asking coaching questions and the Rock fields auto-populating as the user responds." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The coaching conversation in progress &mdash; Maz guides the user through specificity and milestones while auto-filling the Rock form. Click to view full size.</figcaption>
             </figure>
@@ -273,13 +255,8 @@
       </div>
     </div>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
-    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <site-footer back></site-footer>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

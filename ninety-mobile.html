@@ -8,28 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- SCROLL PROGRESS -->
-  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <site-nav progress></site-nav>
 
   <!-- CASE STUDY HERO -->
   <header class="cs-hero">
@@ -74,7 +56,7 @@
     <!-- HERO IMAGE -->
     <div class="container" style="margin-top: 0;">
       <figure class="cs-hero-image cs-hero-photo">
-        <img src="images/ninety-mobile-hero.jpg" alt="Two floating iPhones: one showing the Ninety app on a home screen alongside other business apps, the other showing the Ninety App Store listing with a 4.9-star rating and the app's morning dashboard of to-dos, issues, rocks, and milestones." loading="eager" />
+        <img src="images/ninety-mobile/hero.jpg" alt="Two floating iPhones: one showing the Ninety app on a home screen alongside other business apps, the other showing the Ninety App Store listing with a 4.9-star rating and the app's morning dashboard of to-dos, issues, rocks, and milestones." loading="eager" />
         <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">Ninety Mobile in the App Store &mdash; a 4.9-star rating and a home screen built around what needs attention today.</figcaption>
       </figure>
     </div>
@@ -174,13 +156,13 @@
 
             <div class="cs-image-grid-2 fade-up" aria-label="User personas">
               <figure class="cs-image-figure" style="margin: 0;">
-                <a href="images/ninety-mobile-personas-greg.jpg" target="_blank" rel="noopener">
-                  <img src="images/ninety-mobile-personas-greg.jpg" alt="User persona one: Greg, with goals, frustrations, and mobile usage context." loading="lazy" style="background: #fff;" />
+                <a href="images/ninety-mobile/personas-greg.jpg" target="_blank" rel="noopener">
+                  <img src="images/ninety-mobile/personas-greg.jpg" alt="User persona one: Greg, with goals, frustrations, and mobile usage context." loading="lazy" style="background: #fff;" />
                 </a>
               </figure>
               <figure class="cs-image-figure" style="margin: 0;">
-                <a href="images/ninety-mobile-personas-amira.jpg" target="_blank" rel="noopener">
-                  <img src="images/ninety-mobile-personas-amira.jpg" alt="User persona two: Amira, with goals, frustrations, and mobile usage context." loading="lazy" style="background: #fff;" />
+                <a href="images/ninety-mobile/personas-amira.jpg" target="_blank" rel="noopener">
+                  <img src="images/ninety-mobile/personas-amira.jpg" alt="User persona two: Amira, with goals, frustrations, and mobile usage context." loading="lazy" style="background: #fff;" />
                 </a>
               </figure>
             </div>
@@ -196,12 +178,12 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <img src="images/ninety-mobile-feed.jpg" alt="A person holding an iPhone showing the Ninety mobile feed: mentions, comments, and completed discussions from teammates, with bottom navigation for My90, To-Dos, Issues, Rocks, and People." loading="lazy" />
+              <img src="images/ninety-mobile/feed.jpg" alt="A person holding an iPhone showing the Ninety mobile feed: mentions, comments, and completed discussions from teammates, with bottom navigation for My90, To-Dos, Issues, Rocks, and People." loading="lazy" />
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The feed &mdash; team activity, mentions, and a persistent create action, one thumb away.</figcaption>
             </figure>
 
             <figure class="cs-image-figure fade-up">
-              <img src="images/ninety-mobile-anim.gif" alt="Animated walkthrough of the Ninety mobile app interface on a phone." loading="lazy" />
+              <img src="images/ninety-mobile/anim.gif" alt="Animated walkthrough of the Ninety mobile app interface on a phone." loading="lazy" />
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The app in motion.</figcaption>
             </figure>
           </section>
@@ -273,13 +255,8 @@
       </div>
     </div>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
-    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <site-footer back></site-footer>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

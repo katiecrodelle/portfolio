@@ -8,28 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- SCROLL PROGRESS -->
-  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <site-nav progress></site-nav>
 
   <!-- CASE STUDY HERO -->
   <header class="cs-hero">
@@ -74,7 +56,7 @@
     <!-- HERO IMAGE -->
     <div class="container" style="margin-top: 0;">
       <figure class="cs-hero-image cs-hero-photo">
-        <img src="images/terra-examples.png" alt="Terra design system components: form fields with labels, descriptions, character counts, and error states; toggle switches in multiple colors and states; an avatar profile card; a multi-select people list; and chip components with icons, avatars, and dismiss actions." loading="eager" style="background: #fff;" />
+        <img src="images/terra/examples.png" alt="Terra design system components: form fields with labels, descriptions, character counts, and error states; toggle switches in multiple colors and states; an avatar profile card; a multi-select people list; and chip components with icons, avatars, and dismiss actions." loading="eager" style="background: #fff;" />
         <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">Terra components in Figma &mdash; inputs, toggles, chips, avatars, and selection patterns, each designed across every state.</figcaption>
       </figure>
     </div>
@@ -178,8 +160,8 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/terra-button.png" target="_blank" rel="noopener">
-                <img src="images/terra-button.png" alt="The Terra button variant matrix: primary, secondary, dark, destructive, and positive button styles, each shown with icon, dropdown, and icon-only variants across default, hover, and disabled states, in filled, stroked, and flat treatments." loading="lazy" style="background: #fff;" />
+              <a href="images/terra/button.png" target="_blank" rel="noopener">
+                <img src="images/terra/button.png" alt="The Terra button variant matrix: primary, secondary, dark, destructive, and positive button styles, each shown with icon, dropdown, and icon-only variants across default, hover, and disabled states, in filled, stroked, and flat treatments." loading="lazy" style="background: #fff;" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The button matrix &mdash; every variant &times; state combination, all driven by the same semantic tokens. Click to view full size.</figcaption>
             </figure>
@@ -197,8 +179,8 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/terra-guidelines.jpg" target="_blank" rel="noopener">
-                <img src="images/terra-guidelines.jpg" alt="The full Terra Button documentation page: anatomy diagram with required and conditional elements, a properties table, behavior rules for hover, click, and dropdown, writer's tips, variations including icon, primary, secondary, positive, negative, black, fill, stroke and flat, disabled, size, and compact, plus an update history changelog." loading="lazy" style="background: #fff; max-height: 720px; object-fit: cover; object-position: top;" />
+              <a href="images/terra/guidelines.jpg" target="_blank" rel="noopener">
+                <img src="images/terra/guidelines.jpg" alt="The full Terra Button documentation page: anatomy diagram with required and conditional elements, a properties table, behavior rules for hover, click, and dropdown, writer's tips, variations including icon, primary, secondary, positive, negative, black, fill, stroke and flat, disabled, size, and compact, plus an update history changelog." loading="lazy" style="background: #fff; max-height: 720px; object-fit: cover; object-position: top;" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The Button documentation page &mdash; anatomy, behavior, writer&rsquo;s tips, variations, and a maintained changelog. Click to view the full page.</figcaption>
             </figure>
@@ -251,13 +233,8 @@
       </div>
     </div>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
-    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <site-footer back></site-footer>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

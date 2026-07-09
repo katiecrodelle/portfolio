@@ -3,9 +3,7 @@
 // ============================================
 const nav = document.querySelector('.nav');
 if (nav) {
-  const onScroll = () => {
-    nav.classList.toggle('scrolled', window.scrollY > 10);
-  };
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 }
@@ -17,21 +15,38 @@ const toggle = document.querySelector('.nav-mobile-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (toggle && navLinks) {
   toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    const isOpen = navLinks.classList.contains('open');
+    const isOpen = navLinks.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close on nav link click (navigating away or anchor jump)
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
 
   // Close on outside click
   document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target)) {
+    if (nav && !nav.contains(e.target)) {
       navLinks.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     }
   });
 }
 
 // ============================================
-// SCROLL PROGRESS BAR (case study page)
+// SCROLL PROGRESS BAR (case study pages)
 // ============================================
 const progressBar = document.querySelector('.progress-bar');
 if (progressBar) {
@@ -40,6 +55,7 @@ if (progressBar) {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
     progressBar.style.width = `${Math.min(progress, 100)}%`;
+    progressBar.setAttribute('aria-valuenow', Math.round(progress));
   };
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
@@ -82,9 +98,7 @@ if (tocLinks.length) {
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          activateLink(entry.target.id);
-        }
+        if (entry.isIntersecting) activateLink(entry.target.id);
       });
     },
     { rootMargin: '-20% 0px -60% 0px', threshold: 0 }

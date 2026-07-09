@@ -8,28 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- SCROLL PROGRESS -->
-  <div class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="nav-logo">Katie<span>.</span></a>
-    <div class="nav-links" id="nav-links">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
-    </div>
-    <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+  <site-nav progress></site-nav>
 
   <!-- CASE STUDY HERO -->
   <header class="cs-hero">
@@ -74,7 +56,7 @@
     <!-- HERO IMAGE -->
     <div class="container" style="margin-top: 0;">
       <figure class="cs-hero-image cs-hero-photo">
-        <img src="images/ai-assistant-reporting.jpg" alt="The AI Assistant panel open beside the Constant Contact dashboard, answering 'Where are my email subscribers coming from?' with a subscriber-source donut chart and a plain-language explanation of its analysis." loading="eager" />
+        <img src="images/ai-assistant/reporting.jpg" alt="The AI Assistant panel open beside the Constant Contact dashboard, answering 'Where are my email subscribers coming from?' with a subscriber-source donut chart and a plain-language explanation of its analysis." loading="eager" />
         <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">The AI Assistant answering a subscriber-growth question with visualized data and explained reasoning &mdash; conversational analytics embedded in reporting.</figcaption>
       </figure>
     </div>
@@ -138,8 +120,8 @@
             </p>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/reporting-hub-user-journey.png" target="_blank" rel="noopener">
-                <img src="images/reporting-hub-user-journey.png" alt="Reporting Hub user journey map organized by lifecycle cohort — Onboarding, Growing, Steady, and Declining — with rows for jobs in reporting, user actions, hub surfaces, what the hub must support, in-app flows, emotion, and signals." loading="lazy" />
+              <a href="images/ai-assistant/journey-map.png" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/journey-map.png" alt="Reporting Hub user journey map organized by lifecycle cohort — Onboarding, Growing, Steady, and Declining — with rows for jobs in reporting, user actions, hub surfaces, what the hub must support, in-app flows, emotion, and signals." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">Reporting Hub user journey by lifecycle cohort &mdash; mapping jobs, actions, surfaces, emotions, and signals across ~385K active users to ground where AI guidance matters most. Click to view full size.</figcaption>
             </figure>
@@ -196,16 +178,16 @@
 
             <figure class="cs-image-figure fade-up">
               <span class="cs-figure-badge">Before</span>
-              <a href="images/reporting-home-before.png" target="_blank" rel="noopener">
-                <img src="images/reporting-home-before.png" alt="The legacy email reporting page: raw performance stats, a marketing funnel, and open and click rate comparisons — data without guidance on what to do next." loading="lazy" />
+              <a href="images/ai-assistant/before.png" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/before.png" alt="The legacy email reporting page: raw performance stats, a marketing funnel, and open and click rate comparisons — data without guidance on what to do next." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The legacy reporting experience &mdash; accurate data, but no interpretation. Users see what the numbers are, not what they mean or what to do about them.</figcaption>
             </figure>
 
             <figure class="cs-image-figure fade-up">
               <span class="cs-figure-badge cs-figure-badge-accent">After &mdash; in progress</span>
-              <a href="images/reporting-home-after.jpg" target="_blank" rel="noopener">
-                <img src="images/reporting-home-after.jpg" alt="The redesigned Reporting Hub: at-a-glance metric cards with trends, a 'What to do next' section with AI-generated guidance on what's working and what needs attention, sent email performance, best time to send, link-level insights, and industry benchmarks." loading="lazy" />
+              <a href="images/ai-assistant/after.jpg" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/after.jpg" alt="The redesigned Reporting Hub: at-a-glance metric cards with trends, a 'What to do next' section with AI-generated guidance on what's working and what needs attention, sent email performance, best time to send, link-level insights, and industry benchmarks." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The redesigned Reporting Hub &mdash; the same data, now paired with an interpretation layer: &ldquo;What to do next&rdquo; guidance, best-time-to-send recommendations, link-level insights, and benchmarks that give every number context. Click to view full size.</figcaption>
             </figure>
@@ -300,8 +282,8 @@
             </div>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/ai-reporting-workflow.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-reporting-workflow.jpg" alt="The Constant Contact Email Reporting dashboard showing at-a-glance metrics — open rate 37%, click rate 4.6%, bounce rate 1.18%, traffic to website — alongside an AI-powered detail panel that surfaces bounce rate trends, hard vs. soft bounce breakdowns, a paginated bounced contacts list, and a 'Clean up hard bounces' action." loading="lazy" />
+              <a href="images/ai-assistant/workflow.jpg" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/workflow.jpg" alt="The Constant Contact Email Reporting dashboard showing at-a-glance metrics — open rate 37%, click rate 4.6%, bounce rate 1.18%, traffic to website — alongside an AI-powered detail panel that surfaces bounce rate trends, hard vs. soft bounce breakdowns, a paginated bounced contacts list, and a 'Clean up hard bounces' action." loading="lazy" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The reporting hub with AI-powered detail drill-down &mdash; clicking a metric surfaces contextual analysis, bounce breakdowns, and a direct action to resolve the issue. Click to view full size.</figcaption>
             </figure>
@@ -408,8 +390,8 @@
             </div>
 
             <figure class="cs-image-figure fade-up">
-              <a href="images/ai-insight-card-states.png" target="_blank" rel="noopener">
-                <img src="images/ai-insight-card-states.png" alt="AI insight component states: default card with thumbs up/down feedback actions; expanded feedback state with 'Tell us more (optional)' text field, Skip and Submit buttons; and confirmed state showing 'Thanks for your feedback!' — each shown with and without a dismiss X button." loading="lazy" style="background: #f5f7fa;" />
+              <a href="images/ai-assistant/insight-cards.png" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/insight-cards.png" alt="AI insight component states: default card with thumbs up/down feedback actions; expanded feedback state with 'Tell us more (optional)' text field, Skip and Submit buttons; and confirmed state showing 'Thanks for your feedback!' — each shown with and without a dismiss X button." loading="lazy" style="background: #f5f7fa;" />
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI insight card component across all states &mdash; default, feedback expanded, and confirmed &mdash; with thumbs feedback, optional freetext, and graceful dismissal. Click to view full size.</figcaption>
             </figure>
@@ -525,13 +507,8 @@
       </div>
     </div>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p class="footer-text">&copy; 2026 Katie DeVoe</p>
-    <a href="index.html" class="footer-text" style="color: var(--text-tertiary); transition: color 0.2s;">Back to home</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <site-footer back></site-footer>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
