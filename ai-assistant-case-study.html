@@ -81,6 +81,7 @@
             <a href="#trust">Trust &amp; Control</a>
             <a href="#delegation">Designing for Delegation</a>
             <a href="#reporting">Reporting Insights</a>
+            <a href="#conversation-flow">Conversation Flow</a>
             <a href="#outcome">Outcome &amp; Impact</a>
             <a href="#next">What&rsquo;s Next</a>
             <a href="#reflection">Reflection</a>
@@ -395,6 +396,79 @@
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI insight card component across all states &mdash; default, feedback expanded, and confirmed &mdash; with thumbs feedback, optional freetext, and graceful dismissal. Click to view full size.</figcaption>
             </figure>
+          </section>
+
+          <!-- CONVERSATIONAL ANALYTICS FLOW -->
+          <section class="cs-section fade-up" id="conversation-flow" aria-labelledby="flow-title">
+            <p class="cs-section-label">Conversational Analytics in Practice</p>
+            <h2 class="cs-section-title" id="flow-title">From raw data to coached action &mdash; in one conversation</h2>
+            <p class="cs-body-text">
+              The video below documents the AI Assistant panel as it actually works in the product today. What it shows isn&rsquo;t a prototype &mdash; it&rsquo;s the live experience. Watching how users move through it reveals the design patterns I&rsquo;ve been most focused on: how the AI earns the right to guide, not just inform.
+            </p>
+
+            <figure class="cs-image-figure fade-up">
+              <a href="images/ai-assistant/aia-panel-welcome.jpg" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/aia-panel-welcome.jpg" alt="The Constant Contact homepage with the AI Assistant panel open on the right, showing a welcome message and three suggested entry points: Create an email, Add my contacts, and Check my results — with Try asking me prompts below." loading="lazy" />
+              </a>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI Assistant welcome state &mdash; contextual prompts tuned to where the user is in their account, not generic suggestions. The panel is always available in the top nav and never interrupts the user&rsquo;s main task.</figcaption>
+            </figure>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 40px;">Entry point: &ldquo;Check my results&rdquo;</h3>
+            <p class="cs-body-text">
+              One of the most deliberate design decisions was how the AI Assistant opens. The welcome state doesn&rsquo;t drop users into a blank chat. It offers three anchored actions tied to the user&rsquo;s actual account state &mdash; <em>Create an email</em>, <em>Add my contacts</em>, <em>Check my results</em> &mdash; alongside suggested questions calibrated to where most users get stuck. This isn&rsquo;t a chatbot that waits to be discovered. It&rsquo;s a prompt at the moment of hesitation.
+            </p>
+            <p class="cs-body-text">
+              The &ldquo;Check my results&rdquo; path is where the reporting AI work lives. Selecting it triggers the AI to pull the user&rsquo;s actual campaign data, generate a 90-day summary, and return a plain-language analysis &mdash; not a chart dump.
+            </p>
+
+            <figure class="cs-image-figure fade-up">
+              <a href="images/ai-assistant/aia-performance-analysis.jpg" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/aia-performance-analysis.jpg" alt="The AI Assistant panel showing a 90-day performance summary: a line chart of email open and click rates over time, followed by bullet stats (11 campaigns sent, 262 total sends, 6.1% open rate, 6.1% click rate, 5.7% bounce rate, 1.2% unsubscribe rate) and a plain-language 'What it means' interpretation explaining that uneven results likely point to subject line, targeting, or content issues." loading="lazy" />
+              </a>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The 90-day performance summary &mdash; a chart paired with bullet stats and a &ldquo;What it means&rdquo; plain-language interpretation. The AI doesn&rsquo;t just surface numbers; it names the pattern and names likely causes. Click to view full size.</figcaption>
+            </figure>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 40px;">The analysis pattern: data, meaning, one next step</h3>
+            <p class="cs-body-text">
+              Every AI response in the reporting flow follows a three-part structure I helped define: <strong>here&rsquo;s what happened</strong> (the data), <strong>here&rsquo;s what it means</strong> (plain-language interpretation), and <strong>one specific thing to do</strong> (a single, actionable recommendation). The AI never buries the recommendation at the end of a wall of text. The structure is consistent enough that users learn to expect it &mdash; which is how you build a mental model of what the AI is for.
+            </p>
+            <p class="cs-body-text">
+              The &ldquo;See the thinking&rdquo; disclosure lets users expand to see the AI&rsquo;s reasoning before the final output arrives. This serves two purposes: it reduces the perceived latency of a slow response, and it gives skeptical users a way to audit the logic before they act on it.
+            </p>
+
+            <div class="callout fade-up">
+              <p>A small detail with outsized trust implications: when a campaign name didn&rsquo;t come through cleanly in the data, the AI left the field blank and noted, <em>&ldquo;I left it blank rather than guess.&rdquo;</em> That sentence &mdash; unprompted, unsolicited &mdash; is the kind of moment that makes a product feel honest. I advocated hard for this kind of epistemic humility to be a first-class behavior, not an edge case.</p>
+            </div>
+
+            <figure class="cs-image-figure fade-up">
+              <a href="images/ai-assistant/aia-chart-expand.jpg" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/aia-chart-expand.jpg" alt="An expanded modal showing 'Open Rates and Sends by Email Over the Last 90 Days' — a dual-line chart with open rate in blue and sends in orange, plotted from April through July. The user had asked the AI to add send counts to an existing chart, and the AI updated it in the same conversation thread." loading="lazy" />
+              </a>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The user asked the AI to overlay send counts on an existing open rate chart. The AI updated the visualization in-thread and surfaced it in an expandable modal for full-size review &mdash; conversational iteration, not a form rebuild. Click to view full size.</figcaption>
+            </figure>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 40px;">Iterative refinement: the conversation earns depth</h3>
+            <p class="cs-body-text">
+              One of the clearest validations of the conversational model is watching what users do after the first response. In this session: the user asked for a chart, then asked to add send counts to the chart, then asked for a table with email names, then pivoted entirely to ask &ldquo;What can I do to improve my click rates?&rdquo; Each turn built on the previous one. The AI held the full context of the account data across the whole conversation.
+            </p>
+            <p class="cs-body-text">
+              This is the product behavior that static reporting dashboards can&rsquo;t replicate: the ability to follow a user&rsquo;s actual question, not just surface the data they might ask about. A user who wants to understand their results doesn&rsquo;t want five more charts. They want one answer, and then the next question answered, and then the next.
+            </p>
+
+            <figure class="cs-image-figure fade-up">
+              <a href="images/ai-assistant/aia-click-coaching.jpg" target="_blank" rel="noopener">
+                <img src="images/ai-assistant/aia-click-coaching.jpg" alt="The AI Assistant responding to 'What can I do to improve my click rates?' with a 4-point coaching framework: make the CTA obvious, match the click to the subject line, cut down on competing links, and segment to the most interested contacts first — each with specific sub-bullet guidance." loading="lazy" />
+              </a>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The pivot from reporting to coaching: after analyzing campaign data, the user asked for advice. The AI delivered a structured, account-contextualized 4-point framework &mdash; not generic tips, but guidance grounded in what the data showed about this user&rsquo;s specific pattern. Click to view full size.</figcaption>
+            </figure>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 40px;">From analytics to coaching</h3>
+            <p class="cs-body-text">
+              The most significant moment in the flow is the pivot at the end: &ldquo;What can I do to improve my click rates?&rdquo; The user isn&rsquo;t asking for more data. They&rsquo;re asking for judgment. And the AI delivers it &mdash; not as generic best practices, but as a framework anchored to what the data showed about their specific account: which emails performed, why the recent sends likely dropped off, and what one thing to change on the next send.
+            </p>
+            <p class="cs-body-text">
+              This is the distinction I keep returning to in the design work: the goal was never to surface data more clearly. It was to get users to act. A user who leaves the reporting surface knowing what to do differently has had a fundamentally different experience than one who just saw their numbers. The conversational model is what makes that possible at scale.
+            </p>
           </section>
 
           <!-- OUTCOME AND IMPACT -->

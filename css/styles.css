@@ -932,6 +932,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 20px;
 }
 
+.cs-section-subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
 .cs-body-text {
   font-size: 1rem;
   color: var(--text-secondary);
