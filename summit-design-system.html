@@ -24,14 +24,14 @@
       </nav>
 
       <div class="cs-meta">
-        <span class="cs-badge">Case Study</span>
+        <span class="cs-badge">Case Study &middot; In Progress</span>
         <span class="cs-company">Constant Contact</span>
         <span class="cs-year">2026 &ndash; Present</span>
       </div>
 
       <h1 class="cs-title">Summit: One System for Every Surface Constant Contact Ships</h1>
       <p class="cs-subtitle">
-        How I led the consolidation of five fragmented legacy systems into a unified, AI-native design platform &mdash; semantic token architecture, accessible components, and documentation structured so both humans and AI agents can find, understand, and correctly apply the right primitives.
+        How I&rsquo;m leading component standardization for Constant Contact&rsquo;s unified design system &mdash; defining the Sheet and List Control building blocks that every mobile and web surface builds on, and building the documentation, prototypes, and decision records that make the system legible at scale.
       </p>
 
       <div class="cs-stat-row">
@@ -48,8 +48,8 @@
           <div class="cs-stat-label">Engineers aligned to one implementation</div>
         </div>
         <div class="cs-stat">
-          <div class="cs-stat-value">A11y</div>
-          <div class="cs-stat-label">WCAG compliance built into the token layer</div>
+          <div class="cs-stat-value">mweb + mapp</div>
+          <div class="cs-stat-label">Components designed across mobile web and native app</div>
         </div>
       </div>
     </div>
@@ -74,6 +74,9 @@
           <nav class="cs-toc-list">
             <a href="#overview">Overview</a>
             <a href="#challenge">The Challenge</a>
+            <a href="#workstreams">Active Workstreams</a>
+            <a href="#sheet">Sheet Standardization</a>
+            <a href="#list-controls">List Controls</a>
             <a href="#tokens">Token Architecture</a>
             <a href="#accessibility">Accessibility</a>
             <a href="#dataviz">Data Visualization</a>
@@ -90,15 +93,12 @@
           <!-- OVERVIEW -->
           <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
             <p class="cs-section-label">Overview</p>
-            <h2 class="cs-section-title" id="overview-title">Five systems, zero shared truth &mdash; and an AI-native opportunity</h2>
+            <h2 class="cs-section-title" id="overview-title">Five systems, zero shared truth</h2>
             <p class="cs-body-text">
-              The problem at Constant Contact wasn&rsquo;t bad designers. The problem was that good designers, working in isolation across different product teams and acquisitions, had made locally reasonable decisions that compounded into systemic incoherence. Components had different names, different behaviors, different accessibility approaches &mdash; and the gap between what design specified and what engineering shipped kept widening.
+              Constant Contact is consolidating five fragmented design systems into Summit &mdash; one Figma library, one Storybook, one token system that 20+ designers and 60+ engineers can both trust. The mandate is consolidation. The opportunity is bigger: to build the system in an AI-native way from the start, so Summit&rsquo;s naming, structure, and documentation are as legible to an AI agent as to a new designer.
             </p>
             <p class="cs-body-text">
-              I led the consolidation of five fragmented design systems into Summit: one Figma library, one Storybook, one token system that 20+ designers and 60+ engineers could both trust. The mandate was consolidation. The opportunity was bigger: to build the system in an AI-native way from the start &mdash; so that as AI-assisted design and development workflows became real, Summit&rsquo;s naming, structure, and documentation would be as legible to an AI agent as to a new designer.
-            </p>
-            <p class="cs-body-text">
-              This is the story of how we built it, and why the architectural decisions we made in year one will matter for the next decade.
+              My role in Summit is component design lead &mdash; owning the specification, documentation, and cross-functional alignment for the components that every mobile web and native app surface builds on. The two major active workstreams are <strong>Sheet and bottom sheet standardization</strong> and <strong>List Control Building Blocks</strong>. This case study covers both, along with the architectural principles that shape how I approach every component in the system.
             </p>
           </section>
 
@@ -180,6 +180,121 @@
             <div class="pull-quote fade-up">
               <p>&ldquo;The gap between design specification and production implementation wasn&rsquo;t a process failure. It was a structural one. We didn&rsquo;t need better handoff &mdash; we needed a system designers and engineers could both trust.&rdquo;</p>
             </div>
+          </section>
+
+          <!-- ACTIVE WORKSTREAMS INTRO -->
+          <section class="cs-section fade-up" id="workstreams" aria-labelledby="workstreams-title">
+            <p class="cs-section-label">Active Work</p>
+            <h2 class="cs-section-title" id="workstreams-title">What I&rsquo;m building in Summit</h2>
+            <p class="cs-body-text">
+              Summit is not a side project &mdash; it&rsquo;s the system every team at Constant Contact ships against. My contribution is in the hardest part: <strong>the components that show up everywhere</strong>, on every surface, across mweb and mapp. Getting those right requires more than good design. It requires written decisions, interactive specifications, stakeholder alignment, and documentation that doesn&rsquo;t become stale the sprint after it&rsquo;s published.
+            </p>
+            <p class="cs-body-text">
+              The two workstreams below represent that work in practice.
+            </p>
+          </section>
+
+          <!-- SHEET STANDARDIZATION -->
+          <section class="cs-section fade-up" id="sheet" aria-labelledby="sheet-title">
+            <p class="cs-section-label">Workstream 01 &middot; Sheet &amp; Bottom Sheet</p>
+            <h2 class="cs-section-title" id="sheet-title">One rule, one component, every contextual overlay in the product</h2>
+            <p class="cs-body-text">
+              Before this initiative, Summit had two separate component sets &mdash; Sheet and Bottom Sheet &mdash; with inconsistent usage guidance, conflicting anatomy, and no clear rule for when to reach for one versus the other. Different product teams had made different calls, and the result was a fragmented overlay experience across mweb and mapp.
+            </p>
+            <p class="cs-body-text">
+              I led the standardization effort: a unified Sheet organism covering both surfaces, a single set of usage rules, and the documentation and prototypes that give teams a clear answer at the point of design rather than in review.
+            </p>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 36px;">The one rule</h3>
+            <div class="callout fade-up">
+              <p><strong>Brief task &rarr; sheet. Sustained workflow &rarr; full page.</strong> If the interaction requires sustained attention, complex navigation, or more than three steps of drill-down, it belongs on its own page &mdash; not in a sheet.</p>
+            </div>
+
+            <p class="cs-body-text">
+              That single rule resolved the majority of ambiguous cases. The rest of the guidelines &mdash; anatomy, drill-down behavior, sizing, keyboard handling, dismissal, adaptive layout &mdash; build from it.
+            </p>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 36px;">Key decisions documented</h3>
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Required ✕ Close on every sheet, every step</strong> &mdash; Not replaced by a footer Cancel button. Persists through drill-down so users always have a clear exit, regardless of where they are in the flow.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>No stacked sheets</strong> &mdash; Drill-down replaces the body content in the same sheet rather than opening a second one. Recommended ceiling of three steps; beyond that, the flow takes over the full page.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Scrim is non-dismissible by default</strong> &mdash; Tapping the scrim does not close the sheet. The ✕ Close is the only guaranteed dismissal path, which prevents accidental data loss in form-heavy sheets.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>Adaptive layout at 640px</strong> &mdash; The same component transitions between bottom sheet (mobile) and fixed 400px right panel (desktop) at the 640px breakpoint &mdash; in place, while open, without remounting.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">5</div>
+                <div><strong>Keyboard behavior specified</strong> &mdash; On mobile, the sheet resizes when the software keyboard opens. This is documented with a prototype toggle so engineering has a testable reference, not just a written spec.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">6</div>
+                <div><strong>Unified Figma organism</strong> &mdash; Deprecated the previously separate Bottom Sheet Figma set. One component set with 25 mobile variants and 1 desktop variant, all breakpoint-driven.</div>
+              </div>
+            </div>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 36px;">Prototypes as living specs</h3>
+            <p class="cs-body-text">
+              Written guidelines aren&rsquo;t enough for complex interactive components. I built three interactive HTML prototypes that serve as executable references for engineering &mdash; not mockups, but functional demonstrations of the specified behavior:
+            </p>
+            <div class="role-list fade-up" role="list">
+              <div class="role-item" role="listitem"><strong>Mobile sheet prototype</strong> &mdash; 9 scenarios covering short content, 90% max height, full-height expansion, persistent bar, truncated header, and drill-down through three steps with full-page handoff at step four. Includes a keyboard on/off toggle to demonstrate resize behavior.</div>
+              <div class="role-item" role="listitem"><strong>Desktop panel prototype</strong> &mdash; Fixed 400px right panel with hover tooltip for truncated headers. No resize affordance on desktop.</div>
+              <div class="role-item" role="listitem"><strong>Responsive transition prototype</strong> &mdash; Resize the viewport across the 640px breakpoint while the sheet is open; the component transitions between bottom sheet and right panel in place without closing.</div>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 24px;">
+              Beyond the prototypes, I built a comprehensive guidelines document (Material 3&ndash;style, with sidebar navigation), a design review presentation deck for critique sessions, and a decision brief on drill-down step limits with industry comparisons. All artifacts are linked from the Summit documentation hub.
+            </p>
+          </section>
+
+          <!-- LIST CONTROLS -->
+          <section class="cs-section fade-up" id="list-controls" aria-labelledby="list-title">
+            <p class="cs-section-label">Workstream 02 &middot; List Control Building Blocks</p>
+            <h2 class="cs-section-title" id="list-title">Two components, not one &mdash; and why the distinction matters</h2>
+            <p class="cs-body-text">
+              The second major workstream is Ninety&rsquo;s &mdash; sorry, Constant Contact&rsquo;s &mdash; list and row patterns. Before the audit, these were inconsistent across every surface: campaign lists, contact lists, settings rows, and navigation rows all made different structural decisions, with no shared anatomy or behavior model.
+            </p>
+            <p class="cs-body-text">
+              The audit surfaced a core architectural question that had never been explicitly answered: <strong>is a list row a single component, or is it two?</strong>
+            </p>
+
+            <div class="callout fade-up">
+              <p><strong>The core finding: Tile and List Item are two distinct, composable components.</strong> Tile is layout &mdash; it defines the three-zone structure (leading &middot; content &middot; trailing) and how those zones flex and truncate. List Item is behavior &mdash; it defines the interactive states (tap, hover, focus, selected, disabled). They compose together, but they&rsquo;re not the same thing, and conflating them is what caused most of the inconsistency in production.</p>
+            </div>
+
+            <h3 class="cs-section-subtitle" style="margin-top: 36px;">Audit findings</h3>
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>The layout rule is right; the application isn&rsquo;t</strong> &mdash; The target anatomy (leading and trailing hug content; center column flexes and truncates; 16px gap) was the right call. But the campaign list violated it by putting an overflow menu in the center column, the highest-priority anti-pattern identified in the audit.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>Three distinct interaction models</strong> &mdash; Navigate (tap &rarr; detail), Select (tap &rarr; toggle), and Checkbox (leading checkbox owns selection). These are not stylistic variants; they define fundamentally different behaviors and should not be mixed in the same list.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Not every row needs List Item</strong> &mdash; Three cases: row-level interactive (Tile + List Item), control-level interactive (Tile + child control), and static/display (Tile alone). Applying List Item to non-interactive rows was causing unnecessary complexity in engineering.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>Contacts is the gold standard for responsive</strong> &mdash; Desktop DataTable &rarr; narrow card list at breakpoint, with truncation before layout swap. This pattern became the reference implementation for how list components should handle responsive behavior across mweb and mapp.</div>
+              </div>
+            </div>
+
+            <p class="cs-body-text" style="margin-top: 24px;">
+              The audit findings were packaged into shareable visual guides (Tile vs. List Item, Three Interaction Models), an interactive prototype demonstrating the three-zone anatomy with live zone highlighting, a side-by-side campaign list comparison showing production vs. proposed Tile-based layout, and a generated PPTX stakeholder readout for the CPD-20568 epic review.
+            </p>
           </section>
 
           <!-- TOKEN ARCHITECTURE -->
