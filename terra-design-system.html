@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="How Katie DeVoe co-led Terra, Ninety's first unified design system — token architecture, accessible components, and documentation that scaled across web and mobile." />
+  <meta name="description" content="How Katie DeVoe co-led Terra, Ninety's first unified design system — audit-first, token-driven, with a builder-friendly contribution process that drove real adoption across web and mobile." />
   <title>Terra Design System — Katie DeVoe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +30,7 @@
 
       <h1 class="cs-title">Terra: Building Ninety&rsquo;s First Unified Design System</h1>
       <p class="cs-subtitle">
-        How I co-led the creation of a scalable, accessible design system from the ground up &mdash; token architecture, documented components, and the cross-functional alignment to make it stick.
+        How I co-led a 0&rarr;1 design system from audit through adoption &mdash; defining the information architecture, token strategy, component lifecycle, and contribution process that made Terra the foundation the whole org built on.
       </p>
 
       <div class="cs-stat-row">
@@ -48,7 +48,7 @@
         </div>
         <div class="cs-stat">
           <div class="cs-stat-value">Co-lead</div>
-          <div class="cs-stat-label">Tokens, components, and documentation</div>
+          <div class="cs-stat-label">Tokens, components, lifecycle, and adoption</div>
         </div>
       </div>
     </div>
@@ -74,9 +74,10 @@
             <a href="#overview">Overview</a>
             <a href="#problem">The Problem</a>
             <a href="#my-role">My Role</a>
-            <a href="#approach">Approach</a>
+            <a href="#approach">Approach &amp; Prioritization</a>
             <a href="#tokens">Token Architecture</a>
             <a href="#components">Components &amp; Docs</a>
+            <a href="#contribution">Contribution Process</a>
             <a href="#impact">Impact</a>
             <a href="#reflection">Reflection</a>
           </nav>
@@ -90,10 +91,10 @@
             <p class="cs-section-label">Overview</p>
             <h2 class="cs-section-title" id="overview-title">One platform, many products, no shared language</h2>
             <p class="cs-body-text">
-              Ninety is a business operating system &mdash; goals, meetings, scorecards, org charts, and more, each effectively its own tool. As part of a small but mighty design team, I helped build <strong>Terra, Ninety&rsquo;s first unified design system</strong>, from the ground up.
+              Ninety is a business operating system &mdash; goals, meetings, scorecards, org charts, and more, each effectively its own tool. As part of a small but cross-functional design team, I co-led the creation of <strong>Terra, Ninety&rsquo;s first unified design system</strong>, from the ground up.
             </p>
             <p class="cs-body-text">
-              Before Terra, each tool on the platform had its own look and feel, making the user experience inconsistent and hard to scale. Our goal was to bring cohesion, clarity, and efficiency to every corner of the product &mdash; and to do it in a way that integrated seamlessly with the parent brand. That wasn&rsquo;t just a visual facelift; it was living up to the company&rsquo;s &ldquo;everyone, working as one&rdquo; motto.
+              Before Terra, each tool on the platform had its own look and feel, its own component conventions, and its own interpretation of the brand. The user experience was inconsistent. Design-to-development handoff was inefficient. And every new feature required re-litigating visual decisions that should have been settled at the system level. Terra was the answer &mdash; but building it meant more than drawing components. It meant doing the organizational work to get a system adopted and kept.
             </p>
           </section>
 
@@ -108,44 +109,56 @@
             <div class="numbered-list fade-up" role="list">
               <div class="numbered-item" role="listitem">
                 <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Inconsistent visual language</strong> &mdash; the same concept (a button, a table, a modal) looked and behaved differently from tool to tool, eroding user trust and making the platform feel stitched together.</div>
+                <div><strong>Inconsistent visual language</strong> &mdash; the same concept (a button, a table, a modal) looked and behaved differently from tool to tool, eroding user trust and making the platform feel stitched together rather than designed.</div>
               </div>
               <div class="numbered-item" role="listitem">
                 <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>Inefficient handoff and duplicated work</strong> &mdash; designers re-drew the same components, engineers re-built them, and every divergence created new maintenance burden on both sides.</div>
+                <div><strong>Duplicated work and slow handoff</strong> &mdash; designers re-drew the same components, engineers re-built them, and every divergence created new maintenance burden on both sides. There was no single answer to &ldquo;what does this component look like in its error state?&rdquo;</div>
               </div>
               <div class="numbered-item" role="listitem">
                 <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>No accessibility or responsive standards</strong> &mdash; without a system, accessibility was re-litigated (or skipped) per feature, and responsive behavior was inconsistent across web and mobile.</div>
+                <div><strong>No accessibility or responsive standards</strong> &mdash; without a system, accessibility was re-litigated (or skipped) per feature. Responsive behavior was inconsistent across web and mobile. Both problems compounded every sprint.</div>
               </div>
+            </div>
+
+            <div class="pull-quote fade-up">
+              <p>&ldquo;The goal wasn&rsquo;t a Figma library. It was a shared language that designers, engineers, and the product could all trust &mdash; and that would keep working as the org scaled.&rdquo;</p>
             </div>
           </section>
 
           <!-- MY ROLE -->
           <section class="cs-section fade-up" id="my-role" aria-labelledby="my-role-title">
             <p class="cs-section-label">My Role</p>
-            <h2 class="cs-section-title" id="my-role-title">Co-leading the system: tokens, components, alignment</h2>
+            <h2 class="cs-section-title" id="my-role-title">Co-leading the system: IA, tokens, lifecycle, adoption</h2>
             <p class="cs-body-text">
-              Terra was a team effort &mdash; 6 product designers, 1 product manager, and 2 engineering leads. I co-led the initiative, with my contributions focused on three areas:
+              Terra was a team effort &mdash; 6 product designers, 1 product manager, and 2 engineering leads. I co-led the initiative end-to-end, with my contributions spanning four areas that I view as inseparable in a successful 0&rarr;1 system:
             </p>
 
             <div class="role-list fade-up" role="list">
-              <div class="role-item" role="listitem"><strong>Design token architecture</strong> &mdash; I established a structured token system for color, spacing, and typography, with semantic naming that made themes and responsive behavior manageable rather than a maze of hard-coded values.</div>
-              <div class="role-item" role="listitem"><strong>Component design &amp; documentation</strong> &mdash; I designed and documented a suite of reusable components &mdash; including cards, tables, and modals &mdash; with accessibility and flexibility built in from the start, not patched on later.</div>
-              <div class="role-item" role="listitem"><strong>Cross-functional alignment</strong> &mdash; I collaborated with product and engineering partners to align UI patterns across tools, resolve inconsistencies, and build a shared understanding of Terra&rsquo;s purpose &mdash; the part of design systems work that determines whether the system actually gets adopted.</div>
+              <div class="role-item" role="listitem"><strong>Information architecture and naming</strong> &mdash; Defining the taxonomy, component hierarchy, and naming conventions that made Terra navigable and consistent. The IA work determined whether the system could be used correctly without someone explaining it, and whether new contributors could find the right primitive rather than creating a new one.</div>
+              <div class="role-item" role="listitem"><strong>Token architecture</strong> &mdash; Establishing a semantic token system for color, spacing, typography, and interactive states &mdash; the structural layer that made theming, responsive behavior, and cross-platform consistency manageable rather than ad hoc.</div>
+              <div class="role-item" role="listitem"><strong>Component design, documentation, and lifecycle</strong> &mdash; Designing and documenting reusable components with accessibility built in from the start, and owning the versioning, changelog, and deprecation process that kept the system alive rather than frozen.</div>
+              <div class="role-item" role="listitem"><strong>Cross-functional alignment and adoption</strong> &mdash; Working across design, product, and engineering to align on patterns, resolve inconsistencies, and drive adoption without formal authority. The technical quality of the system mattered less than whether people actually used it.</div>
             </div>
           </section>
 
-          <!-- APPROACH -->
+          <!-- APPROACH & PRIORITIZATION -->
           <section class="cs-section fade-up" id="approach" aria-labelledby="approach-title">
-            <p class="cs-section-label">Approach</p>
-            <h2 class="cs-section-title" id="approach-title">Atomic design, anchored to the parent brand</h2>
+            <p class="cs-section-label">Approach &amp; Prioritization</p>
+            <h2 class="cs-section-title" id="approach-title">Audit first. Prioritize by leverage. Ship iteratively.</h2>
             <p class="cs-body-text">
-              We structured Terra using atomic design methodology &mdash; <strong>atoms, molecules, and organisms</strong> &mdash; so every complex pattern decomposed into reusable, independently documented parts. Tokens fed atoms, atoms composed into molecules, and the whole hierarchy stayed traceable: change a token, and you could reason about everything it touched.
+              A common 0&rarr;1 failure mode is starting with the components that are most fun to build rather than the ones that will have the most impact. Before we wrote a single token, I ran a component audit across Ninety&rsquo;s web and mobile surfaces to identify where inconsistency was highest, where duplication was most painful, and where a shared component would immediately unblock the most teams.
             </p>
             <p class="cs-body-text">
-              Just as important was what the system anchored to. Terra was designed to integrate seamlessly with the larger parent brand identity, so the product didn&rsquo;t drift into its own visual dialect &mdash; the design system and the brand system stayed one conversation.
+              That audit shaped a concrete sequenced plan &mdash; agreed on with design leadership, the PM, and engineering leads &mdash; that balanced long-term architectural correctness with near-term product needs. We didn&rsquo;t build everything at once. We built the highest-leverage primitives first, shipped them, let teams adopt them, and iterated based on what broke in practice.
             </p>
+            <p class="cs-body-text">
+              We structured Terra using atomic design methodology &mdash; atoms, molecules, and organisms &mdash; so every complex pattern decomposed into independently documented, reusable parts. Tokens fed atoms, atoms composed into molecules, and the whole hierarchy stayed traceable: change a token and you could reason about everything it touched.
+            </p>
+
+            <div class="callout fade-up">
+              <p>The sequencing decision that mattered most: we shipped button, input, and color token components in the first sprint &mdash; not because they were the flashiest, but because they were used on every single screen. Early wins on high-visibility components built credibility faster than a perfect but slow-to-ship system would have.</p>
+            </div>
           </section>
 
           <!-- TOKENS -->
@@ -153,17 +166,17 @@
             <p class="cs-section-label">Token Architecture</p>
             <h2 class="cs-section-title" id="tokens-title">Semantic tokens that scale across themes and platforms</h2>
             <p class="cs-body-text">
-              The token layer was the foundation everything else depended on. I structured it semantically &mdash; tokens named for their <em>role</em> (surface, emphasis, danger) rather than their value &mdash; which meant theming, dark-mode readiness, and responsive adjustments became configuration problems instead of redesign problems.
+              The token layer was the foundation everything else depended on. I structured it semantically &mdash; tokens named for their <em>role</em> (surface, emphasis, danger) rather than their value &mdash; which meant theming, responsive adjustments, and cross-platform consistency became configuration problems instead of redesign problems.
             </p>
             <p class="cs-body-text">
-              The discipline paid off most visibly in component states. Every interactive component &mdash; buttons, toggles, inputs, chips &mdash; drew its hover, focus, disabled, and error treatments from the same semantic ramps, so state behavior felt identical across the whole platform.
+              The token pipeline ran from Figma variables through to code, with a defined sync process to keep both sides current. The discipline paid off most visibly in component states: every interactive component &mdash; buttons, toggles, inputs, chips &mdash; drew its hover, focus, disabled, and error treatments from the same semantic ramps, so state behavior felt identical across the whole platform.
             </p>
 
             <figure class="cs-image-figure fade-up">
               <a href="images/terra/button.png" target="_blank" rel="noopener">
                 <img src="images/terra/button.png" alt="The Terra button variant matrix: primary, secondary, dark, destructive, and positive button styles, each shown with icon, dropdown, and icon-only variants across default, hover, and disabled states, in filled, stroked, and flat treatments." loading="lazy" style="background: #fff;" />
               </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The button matrix &mdash; every variant &times; state combination, all driven by the same semantic tokens. Click to view full size.</figcaption>
+              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The button matrix &mdash; every variant &times; state combination, all driven by the same semantic tokens. Change a token and the entire matrix updates. Click to view full size.</figcaption>
             </figure>
           </section>
 
@@ -172,10 +185,10 @@
             <p class="cs-section-label">Components &amp; Documentation</p>
             <h2 class="cs-section-title" id="components-title">Documentation that answers the next question</h2>
             <p class="cs-body-text">
-              A component without documentation is just a picture. For each Terra component, we wrote documentation structured around how people actually use a system: <strong>anatomy</strong> (what the parts are and which are required), <strong>behavior</strong> (hover, click, and interaction rules down to the 1px press effect), <strong>writer&rsquo;s tips</strong> (how to label it in plain language), <strong>variations</strong> (when to reach for primary vs. secondary vs. destructive), and <strong>update history</strong> (so consumers could trust the component was maintained).
+              A component without documentation is just a picture. For each Terra component, we wrote documentation structured around how people actually use a system: <strong>anatomy</strong> (what the parts are and which are required), <strong>behavior</strong> (hover, click, and interaction rules), <strong>writer&rsquo;s tips</strong> (how to label it in plain language), <strong>variations</strong> (when to reach for primary vs. secondary vs. destructive), and <strong>update history</strong> so consumers could trust the component was maintained.
             </p>
             <p class="cs-body-text">
-              Each page named a point-of-contact owner and linked directly to the Figma source &mdash; small governance details that kept the documentation alive instead of decorative.
+              Each documentation page named a point-of-contact owner and linked directly to the Figma source &mdash; small governance details that kept documentation alive instead of decorative. The update history was non-negotiable: a system without a visible changelog is a system that engineers don&rsquo;t trust to update their implementations against.
             </p>
 
             <figure class="cs-image-figure fade-up">
@@ -186,20 +199,95 @@
             </figure>
           </section>
 
+          <!-- CONTRIBUTION PROCESS -->
+          <section class="cs-section fade-up" id="contribution" aria-labelledby="contribution-title">
+            <p class="cs-section-label">Contribution Process</p>
+            <h2 class="cs-section-title" id="contribution-title">Low governance tax. High trust.</h2>
+            <p class="cs-body-text">
+              One of the hardest design problems in a 0&rarr;1 system is the contribution model. Too restrictive and the system becomes a bottleneck. Too open and it fragments. We needed a process that any designer, engineer, or PM could participate in without it feeling like a committee review.
+            </p>
+            <p class="cs-body-text">
+              We landed on a lightweight intake process: a brief that captures the problem the component solves, what alternatives were considered, and the intended adoption scope. Any contributor could open one. The system team reviewed quickly &mdash; usually within a sprint &mdash; and responded with one of three outcomes: merge as-is, merge with modifications, or document why an existing component solved the problem instead.
+            </p>
+
+            <div class="workflow-grid fade-up">
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">01</div>
+                  <div>
+                    <div class="workflow-card-title">Propose with a brief</div>
+                    <div class="workflow-card-subtitle">Problem, alternatives, adoption scope</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">Any designer, engineer, or PM can open a contribution proposal. The bar is low: articulate the problem and what you tried before reaching for a new component. No committee. No lengthy pre-approval.</p>
+              </div>
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">02</div>
+                  <div>
+                    <div class="workflow-card-title">Fast review cycle</div>
+                    <div class="workflow-card-subtitle">A decision within one sprint</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">The system team committed to fast turnaround. Slow review cycles are a primary driver of people skipping the process entirely and forking. Speed signals that the system is maintained.</p>
+              </div>
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">03</div>
+                  <div>
+                    <div class="workflow-card-title">Versioned releases with changelogs</div>
+                    <div class="workflow-card-subtitle">Trust through transparency</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">Every change shipped with release notes and a deprecation window. Nothing removed without a migration path. Engineers could update their implementations against a known changelog rather than discovering breaking changes in code review.</p>
+              </div>
+              <div class="workflow-card">
+                <div class="workflow-card-header">
+                  <div class="workflow-icon" aria-hidden="true">04</div>
+                  <div>
+                    <div class="workflow-card-title">Easier than the workaround</div>
+                    <div class="workflow-card-subtitle">Adoption is a design problem</div>
+                  </div>
+                </div>
+                <p class="workflow-card-body">If using Terra costs more than copying a component from another screen, people copy. Every friction point in the process was a fork risk. We tracked where teams went off-system and treated each divergence as a signal that something needed to change.</p>
+              </div>
+            </div>
+          </section>
+
           <!-- IMPACT -->
           <section class="cs-section fade-up" id="impact" aria-labelledby="impact-title">
             <p class="cs-section-label">Impact</p>
             <h2 class="cs-section-title" id="impact-title">What Terra changed</h2>
 
-            <div class="role-list fade-up" role="list">
-              <div class="role-item" role="listitem"><strong>Cut design-to-development handoff time significantly</strong> by aligning both sides on shared components &mdash; designers stopped re-specifying and engineers stopped re-interpreting.</div>
-              <div class="role-item" role="listitem"><strong>Reduced visual debt across web and mobile</strong> as tools migrated onto the shared component set.</div>
-              <div class="role-item" role="listitem"><strong>Enabled faster onboarding for new team members</strong> &mdash; centralized documentation meant new designers and engineers could be productive without archaeology.</div>
-              <div class="role-item" role="listitem"><strong>Laid the foundation for governance</strong> &mdash; contribution guidelines, component ownership, and update history gave the system a way to evolve without fragmenting again.</div>
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">Faster handoff</div>
+                <div class="outcome-label">Shared components eliminated spec ambiguity — designers stopped re-specifying, engineers stopped re-interpreting</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Visual consistency</div>
+                <div class="outcome-label">Web and mobile surfaces converged onto shared components as tools migrated</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">A11y by default</div>
+                <div class="outcome-label">Accessibility built into tokens and components — no longer re-litigated per feature</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Faster onboarding</div>
+                <div class="outcome-label">Centralized documentation meant new designers and engineers productive without archaeology</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Living system</div>
+                <div class="outcome-label">Contribution guidelines, component ownership, and changelogs gave the system a way to evolve without fragmenting</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Extensible</div>
+                <div class="outcome-label">New patterns — including AI interaction components — extended Terra rather than diverging from it</div>
+              </div>
             </div>
 
             <div class="callout fade-up">
-              <p>Terra also became the foundation my later AI work at Ninety was built on &mdash; when we designed <strong>Maz, the AI agent</strong>, its interaction patterns extended Terra components rather than inventing new ones, which is exactly the test a design system should pass.</p>
+              <p>Terra also became the foundation my later AI work at Ninety was built on. When we designed <strong>Maz, Ninety&rsquo;s AI agent</strong>, its interaction patterns extended Terra components rather than inventing new ones. That&rsquo;s the test a design system should pass: when something genuinely new shows up, the system is flexible enough to absorb it without breaking.</p>
             </div>
           </section>
 
@@ -208,15 +296,27 @@
             <p class="cs-section-label">Reflection</p>
             <h2 class="cs-section-title" id="reflection-title">What building Terra taught me</h2>
 
-            <div class="reflection-box fade-up">
-              <h3 class="reflection-box-title">A design system is a social contract, not a Figma file</h3>
-              <p class="cs-body-text">
-                The hardest work on Terra wasn&rsquo;t drawing components &mdash; it was cross-functional alignment. Six designers with six existing mental models, plus engineering leads with legitimate constraints, all had to agree on shared patterns and then keep honoring them under deadline pressure. The system succeeded because we treated adoption as a design problem: documentation written for the reader&rsquo;s next question, named owners, and a changelog that proved the system was alive.
-              </p>
+            <div class="reflection-list fade-up">
+              <div class="reflection-row">
+                <div class="reflection-key">The organizational work is the real work</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">The hardest part of Terra wasn&rsquo;t drawing components &mdash; it was cross-functional alignment. Six designers with six existing mental models, plus engineering leads with legitimate constraints, all had to agree on shared patterns and keep honoring them under deadline pressure. Influencing without formal authority over six designers and two engineering leads required making the system easier to use than the alternative &mdash; and making the people who contributed to it feel ownership over it.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">Adoption is a design problem, not a communication problem</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">When teams weren&rsquo;t using Terra, the instinct was to send more announcements. The real fix was always to look at what made Terra harder to use than the workaround &mdash; unclear documentation, slow contribution review, missing states &mdash; and fix that. A system that requires active promotion has a product problem, not a marketing problem.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">Naming is worth the argument</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">We spent time debating token and component names that felt trivial in the moment. Those debates were worth it. A token named for its role rather than its appearance is documentation. It tells the next engineer, the next designer, and the next contributor what the token is <em>for</em> &mdash; which is more useful than knowing what hex value it resolves to.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">The lifecycle matters as much as the launch</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">A design system without a versioning and deprecation process has an expiration date. Teams stop trusting it the first time a component changes without notice. The changelog and deprecation window discipline we built into Terra was what made teams feel safe updating their implementations &mdash; and what kept the system alive rather than frozen at v1.</p>
+              </div>
             </div>
 
             <p class="cs-body-text" style="margin-top: 32px;">
-              Terra is also why I treat <strong>design systems leadership as core to AI product design</strong>. Consistent, token-driven components are what make it possible to introduce new paradigms &mdash; like AI-generated content and agentic interactions &mdash; without the product fracturing. The systems thinking I built here carries directly into how I design AI patterns at Constant Contact today.
+              Terra is also why I treat <strong>design systems leadership as foundational to product work</strong> at any scale. Consistent, well-documented components are what let teams move fast without diverging. The systems thinking I built here carries directly into how I approach design systems at Constant Contact today &mdash; including how Summit is built to serve AI-assisted workflows, not just human ones.
             </p>
 
             <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">

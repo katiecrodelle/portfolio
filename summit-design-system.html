@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="How Katie DeVoe led the consolidation of five fragmented design systems into Summit — Constant Contact's unified design platform for 20+ designers and 60+ engineers." />
+  <meta name="description" content="How Katie DeVoe led the consolidation of five fragmented design systems into Summit — an AI-native, token-driven platform for 20+ designers and 60+ engineers at Constant Contact." />
   <title>Summit Design System — Katie DeVoe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,7 +31,7 @@
 
       <h1 class="cs-title">Summit: One System for Every Surface Constant Contact Ships</h1>
       <p class="cs-subtitle">
-        How I led the consolidation of five fragmented legacy design systems into a unified platform &mdash; token architecture, accessibility standards, data visualization, and governance for 20+ designers and 60+ engineers.
+        How I led the consolidation of five fragmented legacy systems into a unified, AI-native design platform &mdash; semantic token architecture, accessible components, and documentation structured so both humans and AI agents can find, understand, and correctly apply the right primitives.
       </p>
 
       <div class="cs-stat-row">
@@ -77,6 +77,7 @@
             <a href="#tokens">Token Architecture</a>
             <a href="#accessibility">Accessibility</a>
             <a href="#dataviz">Data Visualization</a>
+            <a href="#agent-legible">Agent-Legible by Design</a>
             <a href="#governance">Governance</a>
             <a href="#impact">Impact</a>
             <a href="#reflection">Reflection</a>
@@ -89,12 +90,15 @@
           <!-- OVERVIEW -->
           <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
             <p class="cs-section-label">Overview</p>
-            <h2 class="cs-section-title" id="overview-title">Five systems, zero shared truth</h2>
+            <h2 class="cs-section-title" id="overview-title">Five systems, zero shared truth &mdash; and an AI-native opportunity</h2>
             <p class="cs-body-text">
               The problem at Constant Contact wasn&rsquo;t bad designers. The problem was that good designers, working in isolation across different product teams and acquisitions, had made locally reasonable decisions that compounded into systemic incoherence. Components had different names, different behaviors, different accessibility approaches &mdash; and the gap between what design specified and what engineering shipped kept widening.
             </p>
             <p class="cs-body-text">
-              I led the consolidation of five fragmented design systems into Summit: one Figma library, one Storybook, one token system that 20+ designers and 60+ engineers could both trust. This is the story of how we built it, and why the architectural decisions we made in year one will matter for the next decade.
+              I led the consolidation of five fragmented design systems into Summit: one Figma library, one Storybook, one token system that 20+ designers and 60+ engineers could both trust. The mandate was consolidation. The opportunity was bigger: to build the system in an AI-native way from the start &mdash; so that as AI-assisted design and development workflows became real, Summit&rsquo;s naming, structure, and documentation would be as legible to an AI agent as to a new designer.
+            </p>
+            <p class="cs-body-text">
+              This is the story of how we built it, and why the architectural decisions we made in year one will matter for the next decade.
             </p>
           </section>
 
@@ -104,6 +108,9 @@
             <h2 class="cs-section-title-lg" id="challenge-title">Five systems. Zero truth.</h2>
             <p class="cs-body-text">
               Before Summit, auditing the Constant Contact component landscape meant confronting a matrix of contradictions: the same component &mdash; a button, a form input, a data table &mdash; designed and implemented five different ways across five different teams. No shared tokens. No accessibility standards. No single answer to &ldquo;what does a primary button look like?&rdquo;
+            </p>
+            <p class="cs-body-text">
+              The audit was where I earned the right to make architectural decisions. It revealed not just inconsistency but the structural root cause: there was no agreed-upon information architecture for the system itself &mdash; no shared naming conventions, no component hierarchy, no documentation standard. Before we could build one unified system, we had to define what that system&rsquo;s own structure should be.
             </p>
 
             <!-- Audit Table -->
@@ -185,6 +192,9 @@
             <p class="cs-body-text">
               A button doesn&rsquo;t know it&rsquo;s blue. It knows it uses <code class="inline-code">color.action.primary</code>. Change the primitive, and every surface updates. This distinction is the difference between a design system that stays current and one that needs a ground-up rebuild every two years.
             </p>
+            <p class="cs-body-text">
+              The token architecture also creates a traceable pipeline: Figma variables &rarr; design tokens &rarr; Storybook-validated components. Changes flow in one direction. The semantic layer means a theme change or rebrand updates Figma and code simultaneously &mdash; not through a manual sync between two sources that are always slightly out of date with each other.
+            </p>
 
             <!-- Token Diagram -->
             <div class="token-diagram fade-up" role="img" aria-label="Token architecture: primitive tokens map to semantic tokens which map to component properties">
@@ -223,6 +233,9 @@
             <h2 class="cs-section-title" id="a11y-title">Impossible to fail by accident</h2>
             <p class="cs-body-text">
               Accessibility at most companies is a checklist &mdash; something audited after components ship. At Summit, I made it a design constraint at the token layer. Color contrast was enforced structurally: using semantic tokens correctly made it <strong>impossible to ship a non-compliant combination</strong>. The question shifted from &ldquo;does this pass?&rdquo; to &ldquo;how do we make it structurally impossible to fail?&rdquo;
+            </p>
+            <p class="cs-body-text">
+              This matters even more in an AI-assisted workflow. If an AI agent is generating UI from Summit components, accessibility should be guaranteed by the system itself &mdash; not dependent on the agent making the right color choice.
             </p>
 
             <!-- Before / After -->
@@ -306,13 +319,10 @@
                 </div>
                 <div class="dv-compare-body">
                   <svg viewBox="0 0 240 108" style="width:100%;height:auto;" aria-label="Three lines differentiated by color, dash pattern, and marker shape — accessible for color-blind users">
-                    <!-- Solid line + circle markers -->
                     <polyline points="10,84 46,56 82,70 118,36 154,52 190,28 226,42" fill="none" stroke="#6366f1" stroke-width="2.5"/>
                     <circle cx="10" cy="84" r="3" fill="#6366f1"/><circle cx="46" cy="56" r="3" fill="#6366f1"/><circle cx="82" cy="70" r="3" fill="#6366f1"/><circle cx="118" cy="36" r="3" fill="#6366f1"/><circle cx="154" cy="52" r="3" fill="#6366f1"/><circle cx="190" cy="28" r="3" fill="#6366f1"/><circle cx="226" cy="42" r="3" fill="#6366f1"/>
-                    <!-- Dashed line + square markers -->
                     <polyline points="10,94 46,74 82,60 118,74 154,46 190,64 226,52" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="5,3"/>
                     <rect x="7" y="91" width="6" height="6" fill="#22c55e"/><rect x="43" y="71" width="6" height="6" fill="#22c55e"/><rect x="79" y="57" width="6" height="6" fill="#22c55e"/><rect x="115" y="71" width="6" height="6" fill="#22c55e"/><rect x="151" y="43" width="6" height="6" fill="#22c55e"/><rect x="187" y="61" width="6" height="6" fill="#22c55e"/><rect x="223" y="49" width="6" height="6" fill="#22c55e"/>
-                    <!-- Dotted line + triangle markers -->
                     <polyline points="10,74 46,90 82,80 118,56 154,70 190,46 226,60" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="2,4"/>
                     <polygon points="10,70 13,76 7,76" fill="#f59e0b"/><polygon points="46,86 49,92 43,92" fill="#f59e0b"/><polygon points="82,76 85,82 79,82" fill="#f59e0b"/><polygon points="118,52 121,58 115,58" fill="#f59e0b"/><polygon points="154,66 157,72 151,72" fill="#f59e0b"/><polygon points="190,42 193,48 187,48" fill="#f59e0b"/><polygon points="226,56 229,62 223,62" fill="#f59e0b"/>
                     <text x="10" y="104" font-size="8.5" fill="#71717a" font-family="Inter,sans-serif">Color + dash + shape · Accessible by construction</text>
@@ -322,12 +332,50 @@
             </div>
           </section>
 
+          <!-- AGENT-LEGIBLE BY DESIGN -->
+          <section class="cs-section fade-up" id="agent-legible" aria-labelledby="agent-legible-title">
+            <p class="cs-section-label">Phase 04 &middot; AI-Native Architecture</p>
+            <h2 class="cs-section-title" id="agent-legible-title">Built to be legible to agents, not just designers</h2>
+            <p class="cs-body-text">
+              As AI-assisted design and development workflows have become real at Constant Contact, a design system faces a new kind of consumer: AI agents that need to understand, select, and apply the right primitives without a human making every micro-decision. Summit was built with this in mind from the start.
+            </p>
+            <p class="cs-body-text">
+              The insight I kept returning to: <strong>naming is documentation</strong>. A token named <code class="inline-code">color.action.primary</code> tells an agent what the token is <em>for</em>. A component named <code class="inline-code">InsightCard.dismissible</code> carries its own usage context. The information architecture of the system itself &mdash; how things are named, organized, and described &mdash; determines whether an AI agent asked to &ldquo;build the campaign results screen&rdquo; reaches for the right primitives or invents new ones.
+            </p>
+
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Naming as machine-readable intent</strong> &mdash; Every token, component, and pattern was named for its role and context, not its appearance. <code class="inline-code">color.feedback.warning</code> instead of <code class="inline-code">color.yellow</code>. Appearance changes. Intent doesn&rsquo;t.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>Structured documentation</strong> &mdash; Usage rationale, do/don&rsquo;t examples, and decision records were written to be scannable by both humans and machine parsing. The goal was documentation that people &mdash; and agents &mdash; actually use, not documentation that exists to prove the system was documented.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Unambiguous component APIs</strong> &mdash; Components with well-defined props, explicit states, and documented variants reduce ambiguity for engineers and AI-assisted tooling alike. A component that requires interpretive judgment to use correctly is a component that will be used incorrectly at scale.</div>
+              </div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">4</div>
+                <div><strong>Human review gates, explicitly defined</strong> &mdash; AI can audit, tag, and surface inconsistencies in the system. What it shouldn&rsquo;t do autonomously: make naming decisions, introduce new patterns, deprecate existing ones, or sign off on accessibility. Those gates exist for a reason, and Summit&rsquo;s governance model defines them explicitly rather than assuming someone will catch it.</div>
+              </div>
+            </div>
+
+            <div class="callout fade-up">
+              <p>The test I apply: if a designer prompts an AI agent to build a screen using Summit, does the agent reach for <code class="inline-code">InsightCard</code> or does it reinvent it? If the system&rsquo;s naming and documentation are good enough, the agent gets it right without a human correcting it afterward. That&rsquo;s the bar Summit is designed to meet.</p>
+            </div>
+          </section>
+
           <!-- GOVERNANCE -->
           <section class="cs-section fade-up" id="governance" aria-labelledby="governance-title">
-            <p class="cs-section-label">Phase 04 &middot; Governance</p>
-            <h2 class="cs-section-title" id="governance-title">A design system without governance has an expiration date</h2>
+            <p class="cs-section-label">Phase 05 &middot; Governance</p>
+            <h2 class="cs-section-title" id="governance-title">Low governance tax. High adoption.</h2>
             <p class="cs-body-text">
-              A common failure mode: ship a beautiful system, publish it to Figma, and watch it fragment over the next eighteen months because no one defined how it should evolve. Summit&rsquo;s governance model was designed for the actual behavior of real teams under real deadline pressure &mdash; not the idealized process those teams wish they had.
+              A common failure mode: ship a beautiful system, publish it to Figma, and watch it fragment over the next eighteen months because the contribution process is too heavy and the workaround is easier. Summit&rsquo;s governance model was designed around a core belief: <strong>if contributing to the system costs more than forking, people will fork</strong>.
+            </p>
+            <p class="cs-body-text">
+              That meant designing the process for real teams under real deadline pressure &mdash; not the idealized workflow those teams wish they had. Any designer, engineer, or PM can propose a new pattern. The intake process is lightweight: a brief that captures the problem statement, what alternatives were considered, and the intended adoption scope. No proposal committee. No lengthy review cycle.
             </p>
 
             <div class="workflow-grid fade-up">
@@ -336,20 +384,20 @@
                   <div class="workflow-icon" aria-hidden="true">01</div>
                   <div>
                     <div class="workflow-card-title">Contribution must have a path</div>
-                    <div class="workflow-card-subtitle">Keep the system open without making it a bottleneck</div>
+                    <div class="workflow-card-subtitle">Open without becoming a bottleneck</div>
                   </div>
                 </div>
-                <p class="workflow-card-body">A structured intake brief captured the problem statement, existing alternatives considered, and adoption scope. Any designer could contribute. Nothing was arbitrary.</p>
+                <p class="workflow-card-body">Any designer, engineer, or PM can propose. A structured intake brief captures the problem, alternatives considered, and adoption scope &mdash; lightweight enough to complete in under an hour.</p>
               </div>
               <div class="workflow-card">
                 <div class="workflow-card-header">
                   <div class="workflow-icon" aria-hidden="true">02</div>
                   <div>
-                    <div class="workflow-card-title">Change must be communicated</div>
-                    <div class="workflow-card-subtitle">Trust through transparency</div>
+                    <div class="workflow-card-title">Component lifecycle end-to-end</div>
+                    <div class="workflow-card-subtitle">Versioning, release notes, deprecations</div>
                   </div>
                 </div>
-                <p class="workflow-card-body">Changelog discipline and deprecation windows ensured nothing was removed without a migration path. Teams didn&rsquo;t fear updates because they weren&rsquo;t surprised by them.</p>
+                <p class="workflow-card-body">Every change ships with release notes and a deprecation window. Nothing is removed without a migration path. Teams don&rsquo;t fear updates because they&rsquo;re never surprised by them.</p>
               </div>
               <div class="workflow-card">
                 <div class="workflow-card-header">
@@ -359,7 +407,7 @@
                     <div class="workflow-card-subtitle">Design for real behavior, not ideal behavior</div>
                   </div>
                 </div>
-                <p class="workflow-card-body">The real work was making Summit easier to use than whatever workaround a team would otherwise reach for. Every friction point in the contribution process was a risk that someone would fork instead.</p>
+                <p class="workflow-card-body">The system has to be easier to use than whatever workaround a team would reach for. Every point of friction in the contribution or adoption process is a risk that someone forks instead.</p>
               </div>
               <div class="workflow-card">
                 <div class="workflow-card-header">
@@ -369,7 +417,7 @@
                     <div class="workflow-card-subtitle">Architecture for the organization&rsquo;s future</div>
                   </div>
                 </div>
-                <p class="workflow-card-body">Summit v1 was a foundation, not a finalization. The token architecture was built to support rebrands, new platforms, and new contributions without a ground-up rebuild.</p>
+                <p class="workflow-card-body">Summit v1 was a foundation, not a finalization. The token architecture supports rebrands, new platforms, and new AI interaction patterns without a ground-up rebuild.</p>
               </div>
             </div>
           </section>
@@ -386,7 +434,7 @@
               </div>
               <div class="outcome-card">
                 <div class="outcome-value">Single source</div>
-                <div class="outcome-label">One Figma library, one Storybook, one token system</div>
+                <div class="outcome-label">One Figma library, one Storybook, one token pipeline</div>
               </div>
               <div class="outcome-card">
                 <div class="outcome-value">A11y default</div>
@@ -401,13 +449,16 @@
                 <div class="outcome-label">Designers stopped rebuilding primitives and started shipping product work</div>
               </div>
               <div class="outcome-card">
-                <div class="outcome-value">Eng trust</div>
-                <div class="outcome-label">One reference eliminated ambiguity and reduced implementation variation</div>
+                <div class="outcome-value">Agent-ready</div>
+                <div class="outcome-label">Named, documented, and structured for AI-assisted workflows</div>
               </div>
             </div>
 
             <p class="cs-body-text">
               The impact of Summit isn&rsquo;t visible in any single shipped screen. It&rsquo;s visible in what stopped happening: the design review arguments over button styles, the accessibility tickets filed in production, the sprint delays from ambiguous specs, the onboarding friction of learning five systems before you could contribute to one.
+            </p>
+            <p class="cs-body-text">
+              And it&rsquo;s visible in what&rsquo;s now possible: AI-assisted design and development workflows that reach for Summit primitives and produce something shippable &mdash; not something that has to be rebuilt because it diverged from the system.
             </p>
           </section>
 
@@ -419,7 +470,11 @@
             <div class="reflection-list fade-up">
               <div class="reflection-row">
                 <div class="reflection-key">Audit first, even under pressure</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">The audit is where you earn the right to make architectural decisions. The organizations most eager to skip it are the ones who most need it &mdash; because the politics of &ldquo;we don&rsquo;t have time&rdquo; are exactly what created five systems in the first place.</p>
+                <p class="cs-body-text" style="margin-bottom: 0;">The audit is where you earn the right to make architectural decisions. The organizations most eager to skip it are the ones who most need it &mdash; because the politics of &ldquo;we don&rsquo;t have time&rdquo; are exactly what created five systems in the first place. The audit also surfaces the highest-leverage consolidation opportunities, so you can sequence the work to build credibility through early visible impact rather than disappearing into a 12-month foundation project.</p>
+              </div>
+              <div class="reflection-row">
+                <div class="reflection-key">Naming is the system&rsquo;s IA</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">The information architecture of the system itself &mdash; naming conventions, component hierarchy, documentation structure &mdash; is not a style preference. It determines whether the system is navigable by new designers, by AI agents, by engineers who weren&rsquo;t in the room when it was built. Get the IA wrong and adoption becomes a training problem instead of a system quality problem.</p>
               </div>
               <div class="reflection-row">
                 <div class="reflection-key">Tokens are a strategy, not a setting</div>
@@ -427,12 +482,21 @@
               </div>
               <div class="reflection-row">
                 <div class="reflection-key">Governance is a product</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">Design the process for the actual behavior of real people under real constraints. If contributing to the system is heavier than copying a component and moving on, people will copy and move on. The governance model that survives is the one that&rsquo;s easier to use than the workaround.</p>
+                <p class="cs-body-text" style="margin-bottom: 0;">Design the process for the actual behavior of real people under real constraints. If contributing to the system is heavier than copying a component and moving on, people will copy and move on. The governance model that survives is the one that&rsquo;s easier to use than the workaround &mdash; and that has a defined lifecycle for every component, not just the ones that caused a problem.</p>
               </div>
               <div class="reflection-row">
-                <div class="reflection-key">Accessibility is architectural</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">When you build accessibility into the token layer, you shift the organization&rsquo;s posture from &ldquo;does this pass?&rdquo; to &ldquo;how do we make it impossible to fail?&rdquo; That&rsquo;s not compliance. That&rsquo;s design. It also means one token audit touches every surface at once &mdash; which is the only way to move a 60-engineer org.</p>
+                <div class="reflection-key">Build for the next consumer, not just the current one</div>
+                <p class="cs-body-text" style="margin-bottom: 0;">When we built Summit, the next consumer of the system was an AI agent. Naming, documentation structure, and component APIs that are unambiguous for a human are doubly important for an agent that can&rsquo;t ask a clarifying question. The systems that will hold up over the next decade are the ones designed with that consumer in mind from the start.</p>
               </div>
+            </div>
+
+            <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
+              <a href="index.html" class="btn-secondary">
+                <span>&#8592;</span> Back to portfolio
+              </a>
+              <a href="mailto:kcrodelle@gmail.com" class="btn-primary">
+                Discuss this work <span class="btn-arrow">→</span>
+              </a>
             </div>
           </section>
 
