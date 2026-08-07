@@ -78,6 +78,7 @@
             <a href="#tokens">Token Architecture</a>
             <a href="#components">Components &amp; Docs</a>
             <a href="#contribution">Contribution Process</a>
+            <a href="#alignment">Stakeholder Alignment</a>
             <a href="#impact">Impact</a>
             <a href="#reflection">Reflection</a>
           </nav>
@@ -254,40 +255,75 @@
             </div>
           </section>
 
-          <!-- IMPACT -->
-          <section class="cs-section fade-up" id="impact" aria-labelledby="impact-title">
-            <p class="cs-section-label">Impact</p>
-            <h2 class="cs-section-title" id="impact-title">What Terra changed</h2>
+          <!-- STAKEHOLDER ALIGNMENT -->
+          <section class="cs-section fade-up" id="alignment" aria-labelledby="alignment-title">
+            <p class="cs-section-label">Stakeholder Alignment</p>
+            <h2 class="cs-section-title" id="alignment-title">Getting 8 people to agree &mdash; and keep agreeing</h2>
+            <p class="cs-body-text">
+              The hardest part of Terra wasn&rsquo;t the token architecture or the component documentation. It was getting six designers, two engineering leads, and product leadership to commit to a shared system they hadn&rsquo;t asked for &mdash; and to keep using it under deadline pressure when copying a component from another screen was faster.
+            </p>
+            <p class="cs-body-text">
+              Each stakeholder group had a different concern, and each required a different kind of persuasion:
+            </p>
 
-            <div class="outcome-grid fade-up">
-              <div class="outcome-card">
-                <div class="outcome-value">Faster handoff</div>
-                <div class="outcome-label">Shared components eliminated spec ambiguity — designers stopped re-specifying, engineers stopped re-interpreting</div>
+            <div class="numbered-list fade-up" role="list">
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">1</div>
+                <div><strong>Designers: &ldquo;This will slow us down.&rdquo;</strong> &mdash; Six designers, six existing mental models, six ways of doing the same thing. The concern was real: switching to a shared system mid-sprint adds friction. We addressed it by shipping the highest-frequency components first &mdash; button, input, color tokens &mdash; so the payoff was visible immediately. Designers who adopted early moved faster, not slower. That visibility did the persuasion we couldn&rsquo;t.</div>
               </div>
-              <div class="outcome-card">
-                <div class="outcome-value">Visual consistency</div>
-                <div class="outcome-label">Web and mobile surfaces converged onto shared components as tools migrated</div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">2</div>
+                <div><strong>Engineering leads: &ldquo;We need it to be stable.&rdquo;</strong> &mdash; Engineering&rsquo;s ask was reasonable: don&rsquo;t change components without notice, don&rsquo;t break implementations that are already shipped. The versioned changelog and deprecation window were designed specifically for this concern. Engineers could update against a known changelog rather than discovering breaking changes in code review. Once they trusted the release process, adoption accelerated.</div>
               </div>
-              <div class="outcome-card">
-                <div class="outcome-value">A11y by default</div>
-                <div class="outcome-label">Accessibility built into tokens and components — no longer re-litigated per feature</div>
-              </div>
-              <div class="outcome-card">
-                <div class="outcome-value">Faster onboarding</div>
-                <div class="outcome-label">Centralized documentation meant new designers and engineers productive without archaeology</div>
-              </div>
-              <div class="outcome-card">
-                <div class="outcome-value">Living system</div>
-                <div class="outcome-label">Contribution guidelines, component ownership, and changelogs gave the system a way to evolve without fragmenting</div>
-              </div>
-              <div class="outcome-card">
-                <div class="outcome-value">Extensible</div>
-                <div class="outcome-label">New patterns — including AI interaction components — extended Terra rather than diverging from it</div>
+              <div class="numbered-item" role="listitem">
+                <div class="numbered-item-num" aria-hidden="true">3</div>
+                <div><strong>Product leadership: &ldquo;Don&rsquo;t let this become a bottleneck.&rdquo;</strong> &mdash; The fear was that a gated system would slow feature delivery. We countered with the audit data: re-building and re-specifying the same components was already slowing delivery &mdash; it just wasn&rsquo;t visible as a system cost. The lightweight contribution process (a decision within one sprint, no committee) was our answer to the bottleneck concern in practice, not just in principle.</div>
               </div>
             </div>
 
             <div class="callout fade-up">
-              <p>Terra also became the foundation my later AI work at Ninety was built on. When we designed <strong>Maz, Ninety&rsquo;s AI agent</strong>, its interaction patterns extended Terra components rather than inventing new ones. That&rsquo;s the test a design system should pass: when something genuinely new shows up, the system is flexible enough to absorb it without breaking.</p>
+              <p>The insight that reframed the alignment work: <strong>influencing without authority requires making the right choice the easy choice.</strong> Every time a designer chose Terra, it had to feel faster than the alternative. The moment it felt like extra work, the system lost. That meant treating every fork &mdash; every time a team went off-system &mdash; as a product signal rather than a compliance failure.</p>
+            </div>
+
+            <p class="cs-body-text">
+              We ran a weekly alignment meeting with design and engineering leads for the first three months &mdash; not to report status, but to surface friction. What was hard to find? What was missing? What did someone fork last sprint and why? Those answers shaped the backlog more than any roadmap we wrote upfront.
+            </p>
+          </section>
+
+          <!-- IMPACT -->
+          <section class="cs-section fade-up" id="impact" aria-labelledby="impact-title">
+            <p class="cs-section-label">Impact</p>
+            <h2 class="cs-section-title" id="impact-title">What Terra made possible</h2>
+
+            <div class="outcome-grid fade-up">
+              <div class="outcome-card">
+                <div class="outcome-value">[X] components</div>
+                <div class="outcome-label">Documented with full state coverage across default, hover, focus, disabled, and error</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Web + iOS + Android</div>
+                <div class="outcome-label">One system spanning every Ninety surface — web, native iOS, and Android</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">6 designers</div>
+                <div class="outcome-label">All contributing to and shipping from Terra within [X] months of launch</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">Top 100 Business Apps</div>
+                <div class="outcome-label">Ninety Mobile &mdash; built entirely on Terra &mdash; hit Apple&rsquo;s Top 100 with 3&times; expected adoption</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">58% task completion</div>
+                <div class="outcome-label">Maz AI extended Terra components rather than inventing new patterns &mdash; system absorbed a genuinely new paradigm</div>
+              </div>
+              <div class="outcome-card">
+                <div class="outcome-value">[X] sprints</div>
+                <div class="outcome-label">Reduction in per-feature accessibility rework after Terra tokens enforced contrast and state standards by default</div>
+              </div>
+            </div>
+
+            <div class="callout fade-up">
+              <p>The clearest test a design system can pass: when something genuinely new arrives, does the system absorb it or break? When we designed <strong>Maz, Ninety&rsquo;s AI agent</strong>, its conversation patterns, confidence indicators, and human-in-the-loop states all extended existing Terra components. Nothing had to be invented from scratch. That&rsquo;s what a well-structured system buys you.</p>
             </div>
           </section>
 
