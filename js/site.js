@@ -79,7 +79,7 @@ const CASE_STUDIES = [
     chips: [‘Native Mobile’, ‘0&rarr;1’, ‘iOS &amp; Android’, ‘UX Strategy’, ‘Product Vision’],
     image: ‘images/ninety-mobile/hero.jpg’,
     imageAlt: ‘Two iPhones showing the Ninety mobile app and its App Store listing with a 4.9-star rating.’,
-    ariaLabel: ‘Read case study: Ninety Mobile, From Zero to Apple’s Top 100’,
+    ariaLabel: "Read case study: Ninety Mobile, From Zero to Apple's Top 100",
     imageStyle: ‘object-position: center;’,
   },
   {
@@ -126,7 +126,7 @@ const CASE_STUDIES = [
     chips: [‘Design Systems’, ‘Design Tokens’, ‘Governance’, ‘Accessibility’, ‘0&rarr;1’],
     image: ‘images/terra/examples.png’,
     imageAlt: ‘Terra design system components: form fields, toggle switches, chips, avatars, and selection lists.’,
-    ariaLabel: ‘Read case study: Terra, Ninety’s First Unified Design System’,
+    ariaLabel: "Read case study: Terra, Ninety's First Unified Design System",
     visualStyle: ‘background: #fff;’,
     imageStyle: ‘object-position: center;’,
   },
