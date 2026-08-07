@@ -1,0 +1,80 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="People Analyzer evaluation UI concept">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <linearGradient id="bar-full" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="bar-warn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#bg2)"/>
+
+  <!-- Main card -->
+  <rect x="40" y="40" width="560" height="320" rx="12" fill="#141416" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="60" y="76" font-family="Inter, sans-serif" font-size="16" fill="#fafafa" font-weight="600">People Analyzer</text>
+  <text x="60" y="96" font-family="Inter, sans-serif" font-size="11" fill="#71717a">Right Person, Right Seat evaluation · Q2 2024</text>
+
+  <!-- RPRS badge -->
+  <rect x="460" y="58" width="120" height="30" rx="8" fill="rgba(34,197,94,0.12)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+  <text x="520" y="78" font-family="Inter, sans-serif" font-size="11" fill="#22c55e" font-weight="600" text-anchor="middle">Right Person ✓</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="112" x2="580" y2="112" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Core Values section -->
+  <text x="60" y="136" font-family="Inter, sans-serif" font-size="10" fill="#71717a" font-weight="600" letter-spacing="0.08em">CORE VALUES</text>
+
+  <!-- Value 1 -->
+  <text x="60" y="160" font-family="Inter, sans-serif" font-size="12" fill="#a1a1aa">Humbly Confident</text>
+  <rect x="200" y="150" width="280" height="8" rx="4" fill="#27272a"/>
+  <rect x="200" y="150" width="252" height="8" rx="4" fill="url(#bar-full)"/>
+  <text x="492" y="160" font-family="Inter, sans-serif" font-size="11" fill="#818cf8" font-weight="600">+</text>
+
+  <!-- Value 2 -->
+  <text x="60" y="184" font-family="Inter, sans-serif" font-size="12" fill="#a1a1aa">Grow or Die</text>
+  <rect x="200" y="174" width="280" height="8" rx="4" fill="#27272a"/>
+  <rect x="200" y="174" width="280" height="8" rx="4" fill="url(#bar-full)"/>
+  <text x="492" y="184" font-family="Inter, sans-serif" font-size="11" fill="#818cf8" font-weight="600">+</text>
+
+  <!-- Value 3 -->
+  <text x="60" y="208" font-family="Inter, sans-serif" font-size="12" fill="#a1a1aa">Team First</text>
+  <rect x="200" y="198" width="280" height="8" rx="4" fill="#27272a"/>
+  <rect x="200" y="198" width="196" height="8" rx="4" fill="url(#bar-warn)"/>
+  <text x="492" y="208" font-family="Inter, sans-serif" font-size="11" fill="#f59e0b" font-weight="600">+/-</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="226" x2="580" y2="226" stroke="#27272a" stroke-width="1"/>
+
+  <!-- GWC section -->
+  <text x="60" y="248" font-family="Inter, sans-serif" font-size="10" fill="#71717a" font-weight="600" letter-spacing="0.08em">GWC — GET IT · WANT IT · CAPACITY</text>
+
+  <!-- G W C chips -->
+  <rect x="60" y="260" width="100" height="34" rx="8" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+  <text x="110" y="275" font-family="Inter, sans-serif" font-size="10" fill="#71717a" text-anchor="middle">Get It</text>
+  <text x="110" y="289" font-family="Inter, sans-serif" font-size="13" fill="#22c55e" font-weight="600" text-anchor="middle">Yes</text>
+
+  <rect x="172" y="260" width="100" height="34" rx="8" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+  <text x="222" y="275" font-family="Inter, sans-serif" font-size="10" fill="#71717a" text-anchor="middle">Want It</text>
+  <text x="222" y="289" font-family="Inter, sans-serif" font-size="13" fill="#22c55e" font-weight="600" text-anchor="middle">Yes</text>
+
+  <rect x="284" y="260" width="100" height="34" rx="8" fill="rgba(245,158,11,0.1)" stroke="rgba(245,158,11,0.25)" stroke-width="1"/>
+  <text x="334" y="275" font-family="Inter, sans-serif" font-size="10" fill="#71717a" text-anchor="middle">Capacity</text>
+  <text x="334" y="289" font-family="Inter, sans-serif" font-size="13" fill="#f59e0b" font-weight="600" text-anchor="middle">+/-</text>
+
+  <!-- Right Seat badge -->
+  <rect x="420" y="260" width="140" height="34" rx="8" fill="rgba(113,113,122,0.1)" stroke="#27272a" stroke-width="1"/>
+  <text x="490" y="274" font-family="Inter, sans-serif" font-size="10" fill="#71717a" text-anchor="middle">Right Seat</text>
+  <text x="490" y="289" font-family="Inter, sans-serif" font-size="12" fill="#a1a1aa" font-weight="500" text-anchor="middle">Developing →</text>
+
+  <!-- Role count -->
+  <text x="60" y="336" font-family="Inter, sans-serif" font-size="10" fill="#71717a">3 roles evaluated · Auto RPRS calculation · Terra Design System</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Knowledge Portal UI concept">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="400" fill="url(#bg-grad)"/>
+
+  <!-- Sidebar -->
+  <rect x="40" y="40" width="140" height="320" rx="10" fill="#141416" stroke="#27272a" stroke-width="1"/>
+  <text x="56" y="72" font-family="Inter, sans-serif" font-size="10" fill="#71717a" font-weight="600" letter-spacing="0.08em" text-anchor="start">COLLECTIONS</text>
+  <rect x="56" y="84" width="108" height="28" rx="6" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <circle cx="70" cy="98" r="5" fill="#6366f1"/>
+  <text x="82" y="102" font-family="Inter, sans-serif" font-size="11" fill="#fafafa" font-weight="500">Onboarding</text>
+  <rect x="56" y="120" width="108" height="28" rx="6" fill="transparent"/>
+  <circle cx="70" cy="134" r="5" fill="#27272a"/>
+  <text x="82" y="138" font-family="Inter, sans-serif" font-size="11" fill="#a1a1aa">Leadership</text>
+  <rect x="56" y="154" width="108" height="28" rx="6" fill="transparent"/>
+  <circle cx="70" cy="168" r="5" fill="#27272a"/>
+  <text x="82" y="172" font-family="Inter, sans-serif" font-size="11" fill="#a1a1aa">EOS Basics</text>
+  <rect x="56" y="188" width="108" height="28" rx="6" fill="transparent"/>
+  <circle cx="70" cy="202" r="5" fill="#27272a"/>
+  <text x="82" y="206" font-family="Inter, sans-serif" font-size="11" fill="#a1a1aa">Coaching</text>
+  <rect x="56" y="222" width="108" height="28" rx="6" fill="transparent"/>
+  <circle cx="70" cy="236" r="5" fill="#27272a"/>
+  <text x="82" y="240" font-family="Inter, sans-serif" font-size="11" fill="#a1a1aa">Processes</text>
+
+  <!-- Main content area -->
+  <rect x="200" y="40" width="400" height="320" rx="10" fill="#141416" stroke="#27272a" stroke-width="1"/>
+
+  <!-- Header row -->
+  <text x="220" y="72" font-family="Inter, sans-serif" font-size="14" fill="#fafafa" font-weight="600">Onboarding Collection</text>
+  <rect x="504" y="56" width="76" height="26" rx="6" fill="url(#accent-grad)"/>
+  <text x="542" y="74" font-family="Inter, sans-serif" font-size="11" fill="#fff" font-weight="500" text-anchor="middle">+ Add Topic</text>
+
+  <!-- Progress bar -->
+  <text x="220" y="102" font-family="Inter, sans-serif" font-size="10" fill="#71717a">COMPLETION</text>
+  <rect x="220" y="108" width="260" height="6" rx="3" fill="#27272a"/>
+  <rect x="220" y="108" width="182" height="6" rx="3" fill="url(#accent-grad)"/>
+  <text x="490" y="116" font-family="Inter, sans-serif" font-size="10" fill="#818cf8" font-weight="600">70%</text>
+
+  <!-- Topic cards -->
+  <rect x="220" y="128" width="370" height="52" rx="8" fill="#1c1c1f" stroke="#27272a" stroke-width="1"/>
+  <rect x="236" y="144" width="20" height="20" rx="4" fill="rgba(34,197,94,0.15)"/>
+  <text x="246" y="158" font-family="Inter, sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">✓</text>
+  <text x="266" y="152" font-family="Inter, sans-serif" font-size="12" fill="#fafafa" font-weight="500">Week 1: Company Overview</text>
+  <text x="266" y="167" font-family="Inter, sans-serif" font-size="10" fill="#71717a">4 subtopics · 100% complete</text>
+  <text x="576" y="158" font-family="Inter, sans-serif" font-size="10" fill="#22c55e" text-anchor="end">Done</text>
+
+  <rect x="220" y="188" width="370" height="52" rx="8" fill="#1c1c1f" stroke="#27272a" stroke-width="1"/>
+  <rect x="236" y="204" width="20" height="20" rx="4" fill="rgba(99,102,241,0.15)"/>
+  <text x="246" y="218" font-family="Inter, sans-serif" font-size="11" fill="#818cf8" text-anchor="middle">↗</text>
+  <text x="266" y="212" font-family="Inter, sans-serif" font-size="12" fill="#fafafa" font-weight="500">Week 2: Tools &amp; Systems</text>
+  <text x="266" y="227" font-family="Inter, sans-serif" font-size="10" fill="#71717a">3 subtopics · In progress</text>
+  <text x="576" y="218" font-family="Inter, sans-serif" font-size="10" fill="#818cf8" text-anchor="end">67%</text>
+
+  <rect x="220" y="248" width="370" height="52" rx="8" fill="#1c1c1f" stroke="#27272a" stroke-width="1"/>
+  <rect x="236" y="264" width="20" height="20" rx="4" fill="#27272a"/>
+  <text x="246" y="278" font-family="Inter, sans-serif" font-size="11" fill="#71717a" text-anchor="middle">○</text>
+  <text x="266" y="272" font-family="Inter, sans-serif" font-size="12" fill="#a1a1aa" font-weight="500">Week 3: Team Workflows</text>
+  <text x="266" y="287" font-family="Inter, sans-serif" font-size="10" fill="#71717a">5 subtopics · Not started</text>
+  <text x="576" y="278" font-family="Inter, sans-serif" font-size="10" fill="#71717a" text-anchor="end">0%</text>
+
+  <!-- AI badge -->
+  <rect x="220" y="316" width="120" height="24" rx="12" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text x="280" y="332" font-family="Inter, sans-serif" font-size="10" fill="#818cf8" font-weight="500" text-anchor="middle">✦ Maz AI Companion</text>
+
+  <!-- Stats row bottom right -->
+  <text x="388" y="330" font-family="Inter, sans-serif" font-size="10" fill="#71717a">40K+ monthly views</text>
+  <text x="510" y="330" font-family="Inter, sans-serif" font-size="10" fill="#71717a">40% adoption</text>
+</svg>
