@@ -592,6 +592,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.5;
 }
 
+.about-portrait {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
 .about-sidebar-sub {
   font-size: 0.8125rem;
   color: var(--text-tertiary);
