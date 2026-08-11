@@ -83,17 +83,6 @@ const CASE_STUDIES = [
     imageStyle: 'object-position: center;',
   },
   {
-    href: 'maz-ai-draft-rocks.html',
-    badge: 'Case Study',
-    companyYear: 'Ninety.io &middot; 2023&ndash;2025',
-    title: 'Draft Rocks with Maz AI',
-    description: 'Designed a conversational AI coach inside Ninety&rsquo;s goal-setting flow &mdash; replacing blank forms with EOS-style coaching questions that auto-populate SMART quarterly goals. Defined the human-in-the-loop interaction patterns the whole organization extended.',
-    chips: ['Conversational AI', 'Human-in-the-Loop', 'AI Agent Design', 'Goal-Setting UX', 'EOS&reg;'],
-    image: 'images/maz-ai/chat.jpg',
-    imageAlt: 'The Draft Rocks with Maz AI conversational coach interface open inside Ninety.',
-    ariaLabel: 'Read case study: Draft Rocks with Maz AI',
-  },
-  {
     href: 'help-panel-case-study.html',
     badge: 'Case Study',
     companyYear: 'Constant Contact &middot; 2026',
