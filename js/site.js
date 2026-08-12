@@ -94,7 +94,7 @@ const CASE_STUDIES = [
     ariaLabel: 'Read case study: Turning the Help Panel into a Retention Engine',
   },
   {
-    href: 'https://www.katiedevoedesigns.com/portfolio/ninetyio-kp',
+    href: 'knowledge-portal.html',
     badge: 'Case Study',
     companyYear: 'Ninety.io &middot; 2023&ndash;2025',
     title: 'Knowledge Portal: 0&rarr;1 Learning Platform with AI',
@@ -120,7 +120,7 @@ const CASE_STUDIES = [
     imageStyle: 'object-position: center;',
   },
   {
-    href: 'https://www.katiedevoedesigns.com/portfolio/people-analyzer',
+    href: 'people-analyzer.html',
     badge: 'Case Study',
     companyYear: 'Ninety.io &middot; 2023&ndash;2025',
     title: 'People Analyzer: EOS-Aligned Evaluation Tool',
