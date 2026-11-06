@@ -47,6 +47,16 @@ customElements.define('site-footer', SiteFooter);
 // ============================================
 const CASE_STUDIES = [
   {
+    href: 'agents-case-study.html', badge: 'Shipped to alpha', companyYear: 'Ninety &middot; 2026',
+    title: 'AI Agents: Designing Work That Runs Without You',
+    description: 'Owned the entire UX and UI for Ninety’s AI agents as Staff Product Designer, from research through alpha. Made recurring work easier to delegate, clarified trust and control, and helped eliminate tool selection through design and engineering collaboration.',
+    chips: ['AI Agents', 'End-to-end UX/UI', 'Staff Product Designer', 'Alpha Release'],
+    image: 'images/agents/agents-overview.jpg',
+    imageAlt: 'Ninety Agents interface showing recurring workflows, schedules, and attention states.',
+    ariaLabel: 'Read case study: AI Agents at Ninety',
+    visualStyle: 'background: #11131c;', imageStyle: 'object-fit: contain;',
+  },
+  {
     href: 'ai-assistant-case-study.html',
     badge: 'Case Study',
     companyYear: 'Constant Contact &middot; 2026',
@@ -109,9 +119,9 @@ const CASE_STUDIES = [
   {
     href: 'terra-design-system.html',
     badge: 'Case Study',
-    companyYear: 'Ninety.io &middot; 2023&ndash;2025',
+    companyYear: 'Ninety.io &middot; Updated 2026',
     title: 'Terra: Building Ninety&rsquo;s First Unified Design System',
-    description: 'Co-led a 0-to-1 design system &mdash; semantic token architecture, accessible documented components, and the cross-functional governance that made it the foundation for every product that followed, including mobile and AI.',
+    description: 'Co-built Ninety’s first unified design system and led its continued evolution as Staff Product Designer: component audits, Figma and Storybook alignment, accessibility corrections, governance, and AI and mobile patterns.',
     chips: ['Design Systems', 'Design Tokens', 'Governance', 'Accessibility', '0&rarr;1'],
     image: 'images/terra/examples.png',
     imageAlt: 'Terra design system components: form fields, toggle switches, chips, avatars, and selection lists.',
