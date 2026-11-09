@@ -10,8 +10,8 @@ class SiteNav extends HTMLElement {
         <a href="index.html" class="nav-logo">Katie<span>.</span></a>
         <div class="nav-links" id="nav-links">
           <a href="${isHomepage ? '#work' : 'index.html#work'}">Work</a>
-          <a href="${isHomepage ? '#about' : 'index.html#about'}">About</a>
-          <a href="${isHomepage ? '#experience' : 'index.html#experience'}">Experience</a>
+          <a href="about.html">About</a>
+          <a href="katie-devoe-resume.pdf" download>Résumé ↓</a>
           <a href="${isHomepage ? '#contact' : 'index.html#contact'}">Contact</a>
           <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
         </div>

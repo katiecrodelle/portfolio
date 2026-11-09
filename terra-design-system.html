@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-</head>
+<link rel="stylesheet" href="css/editorial.css"></head>
 <body>
   <site-nav progress></site-nav>
 
@@ -63,107 +63,11 @@
   </header>
 
   <!-- CASE STUDY BODY -->
-  <main class="cs-body">
-    <div class="container">
-      <div class="cs-layout">
-
-        <!-- TABLE OF CONTENTS -->
-        <aside class="cs-toc" aria-label="Table of contents">
-          <p class="cs-toc-title">Contents</p>
-          <nav class="cs-toc-list">
-            <a href="#overview">Overview</a>
-            <a href="#problem">The Problem</a>
-            <a href="#my-role">My Role</a>
-            <a href="#approach">Approach &amp; Prioritization</a>
-            <a href="#tokens">Token Architecture</a>
-            <a href="#components">Components &amp; Docs</a>
-            <a href="#contribution">Contribution Process</a>
-            <a href="#alignment">Stakeholder Alignment</a>
-            <a href="#evolution">2026 evolution</a><a href="#governance-2026">Governance in practice</a><a href="#component-evolution">Component work</a><a href="#accessibility-2026">Accessibility & tokens</a><a href="#ai-patterns">AI component family</a><a href="#navigation-mobile">Navigation & mobile</a><a href="#impact">Impact</a>
-            <a href="#reflection">Reflection</a>
-          </nav>
-        </aside>
-
-        <!-- CONTENT -->
-        <div class="cs-content">
-
-          <!-- OVERVIEW -->
-          <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
+  <main class="cs-body"><div class="container"><div class="cs-layout"><aside class="cs-toc" aria-label="Table of contents"><p class="cs-toc-title">Contents</p><nav class="cs-toc-list"><a href="#overview">The system & my role</a><a href="#tokens">Shared tokens</a><a href="#accessibility-2026">Accessibility</a><a href="#components">Component guidance</a><a href="#component-evolution">Component inventory</a><a href="#governance-2026">Governance</a><a href="#ai-patterns">AI patterns</a><a href="#navigation-mobile">Navigation & mobile</a><a href="#impact">Outcomes</a></nav></aside><div class="cs-content"><section class="cs-section" id="overview" aria-labelledby="overview-title">
             <p class="cs-section-label">Overview</p>
             <h2 class="cs-section-title" id="overview-title">One platform, many products, no shared language</h2>
-            <p class="cs-body-text">
-              Ninety is a business operating system &mdash; goals, meetings, scorecards, org charts, and more, each effectively its own tool. As part of a small but cross-functional design team, I co-led the creation of <strong>Terra, Ninety&rsquo;s first unified design system</strong>, from the ground up.
-            </p>
-            <p class="cs-body-text">
-              Before Terra, each tool on the platform had its own look and feel, its own component conventions, and its own interpretation of the brand. The user experience was inconsistent. Design-to-development handoff was inefficient. And every new feature required re-litigating visual decisions that should have been settled at the system level. Terra was the answer &mdash; but building it meant more than drawing components. It meant doing the organizational work to get a system adopted and kept.
-            </p>
-          </section>
-
-          <!-- THE PROBLEM -->
-          <section class="cs-section fade-up" id="problem" aria-labelledby="problem-title">
-            <p class="cs-section-label">The Problem</p>
-            <h2 class="cs-section-title" id="problem-title">Visual debt was slowing everyone down</h2>
-            <p class="cs-body-text">
-              The lack of a shared system showed up as three compounding problems:
-            </p>
-
-            <div class="numbered-list fade-up" role="list">
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Inconsistent visual language</strong> &mdash; the same concept (a button, a table, a modal) looked and behaved differently from tool to tool, eroding user trust and making the platform feel stitched together rather than designed.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>Duplicated work and slow handoff</strong> &mdash; designers re-drew the same components, engineers re-built them, and every divergence created new maintenance burden on both sides. There was no single answer to &ldquo;what does this component look like in its error state?&rdquo;</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>No accessibility or responsive standards</strong> &mdash; without a system, accessibility was re-litigated (or skipped) per feature. Responsive behavior was inconsistent across web and mobile. Both problems compounded every sprint.</div>
-              </div>
-            </div>
-
-            <div class="pull-quote fade-up">
-              <p>&ldquo;The goal wasn&rsquo;t a Figma library. It was a shared language that designers, engineers, and the product could all trust &mdash; and that would keep working as the org scaled.&rdquo;</p>
-            </div>
-          </section>
-
-          <!-- MY ROLE -->
-          <section class="cs-section fade-up" id="my-role" aria-labelledby="my-role-title">
-            <p class="cs-section-label">My Role</p>
-            <h2 class="cs-section-title" id="my-role-title">Co-leading the system: IA, tokens, lifecycle, adoption</h2>
-            <p class="cs-body-text">
-              Terra was a team effort &mdash; 6 product designers, 1 product manager, and 2 engineering leads. I co-led the initiative end-to-end, with my contributions spanning four areas that I view as inseparable in a successful 0&rarr;1 system:
-            </p>
-
-            <div class="role-list fade-up" role="list">
-              <div class="role-item" role="listitem"><strong>Information architecture and naming</strong> &mdash; Defining the taxonomy, component hierarchy, and naming conventions that made Terra navigable and consistent. The IA work determined whether the system could be used correctly without someone explaining it, and whether new contributors could find the right primitive rather than creating a new one.</div>
-              <div class="role-item" role="listitem"><strong>Token architecture</strong> &mdash; Auditing component states, correcting hard-coded values, and extending the existing token library while documenting its current architectural limits.</div>
-              <div class="role-item" role="listitem"><strong>Component design, documentation, and lifecycle</strong> &mdash; Designing and documenting reusable components with accessibility built in from the start, and owning the versioning, changelog, and deprecation process that kept the system alive rather than frozen.</div>
-              <div class="role-item" role="listitem"><strong>Cross-functional alignment and adoption</strong> &mdash; Working across design, product, and engineering to align on patterns, resolve inconsistencies, and drive adoption without formal authority. The technical quality of the system mattered less than whether people actually used it.</div>
-            </div>
-          </section>
-
-          <!-- APPROACH & PRIORITIZATION -->
-          <section class="cs-section fade-up" id="approach" aria-labelledby="approach-title">
-            <p class="cs-section-label">Approach &amp; Prioritization</p>
-            <h2 class="cs-section-title" id="approach-title">Audit first. Prioritize by leverage. Ship iteratively.</h2>
-            <p class="cs-body-text">
-              A common 0&rarr;1 failure mode is starting with the components that are most fun to build rather than the ones that will have the most impact. Before we wrote a single token, I ran a component audit across Ninety&rsquo;s web and mobile surfaces to identify where inconsistency was highest, where duplication was most painful, and where a shared component would immediately unblock the most teams.
-            </p>
-            <p class="cs-body-text">
-              That audit shaped a concrete sequenced plan &mdash; agreed on with design leadership, the PM, and engineering leads &mdash; that balanced long-term architectural correctness with near-term product needs. We didn&rsquo;t build everything at once. We built the highest-leverage primitives first, shipped them, let teams adopt them, and iterated based on what broke in practice.
-            </p>
-            <p class="cs-body-text">
-              We structured Terra using atomic design methodology &mdash; atoms, molecules, and organisms &mdash; so every complex pattern decomposed into independently documented, reusable parts. Tokens fed atoms, atoms composed into molecules, and the whole hierarchy stayed traceable: change a token and you could reason about everything it touched.
-            </p>
-
-            <div class="callout fade-up">
-              <p>The sequencing decision that mattered most: we shipped button, input, and color token components in the first sprint &mdash; not because they were the flashiest, but because they were used on every single screen. Early wins on high-visibility components built credibility faster than a perfect but slow-to-ship system would have.</p>
-            </div>
-          </section>
-
-          <!-- TOKENS -->
-          <section class="cs-section fade-up" id="tokens" aria-labelledby="tokens-title">
+            <p class="cs-body-text">I co-built Terra, Ninety’s first unified design system, and led its continued evolution as Staff Product Designer. The work connects the Figma library, implemented components, and the product experiences that use them.</p><p class="cs-body-text">In October–November 2026, I focused on three connected problems: aligning Figma with Storybook, defining component behavior against real product use, and extending the system into AI and mobile. Storybook’s Terra section is the implementation source of truth.</p>
+          </section><section class="cs-section" id="tokens" aria-labelledby="tokens-title">
             <p class="cs-section-label">Token Architecture</p>
             <h2 class="cs-section-title" id="tokens-title">Shared tokens, with explicit architectural boundaries</h2>
 <p class="cs-body-text">Terra’s existing token library provides the shared foundation for component styling and themes. My recent work focused on replacing hard-coded values, correcting state treatments, and using existing tokens wherever possible.</p><p class="cs-body-text">The AI color work exposed an architectural boundary: Terra does not yet have an alias layer. The new purple ramp is named by hue, with its AI-only usage documented in guidelines. Keeping this distinction explicit avoids overstating the maturity of the token architecture.</p>
@@ -173,10 +77,7 @@
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">Earlier Terra button matrix — component variants and states. The 2026 work simplified properties and removed the dedicated dropdown variant. Click to view full size.</figcaption>
             </figure>
-          </section>
-
-          <!-- COMPONENTS & DOCS -->
-          <section class="cs-section fade-up" id="components" aria-labelledby="components-title">
+          </section><section class="cs-section" id="accessibility-2026" aria-labelledby="accessibility-2026-title"><p class="cs-section-label">Accessibility & tokens</p><h2 class="cs-section-title" id="accessibility-2026-title">Fix what can be fixed—and name what remains</h2><p class="cs-body-text">I audited contrast across button types and states, correcting failing labels and icons with existing tokens. Customer-selected brand colors were outside the audit because their values are unknown at design time. I relinked hard-coded active fills and neutral hover styling to Terra tokens and recorded contrast results in the guidelines.</p><p class="cs-body-text">Terra’s focus ring—4px brand color at 20% opacity—was documented as failing the 3:1 non-text contrast requirement. The team agreed to retain one consistent app-wide focus state temporarily and address it across Terra later. Identifying the issue did not mean it was resolved.</p><p class="cs-body-text">I corrected navigation dark mode using existing tokens, checked existing Terra icons before adding new ones, and aligned Base Card selected and active states with a 16px corner radius.</p></section><section class="cs-section" id="components" aria-labelledby="components-title">
             <p class="cs-section-label">Components &amp; Documentation</p>
             <h2 class="cs-section-title" id="components-title">Documentation that answers the next question</h2>
             <p class="cs-body-text">
@@ -192,153 +93,11 @@
               </a>
               <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The Button documentation page &mdash; anatomy, behavior, writer&rsquo;s tips, variations, and a maintained changelog. Click to view the full page.</figcaption>
             </figure>
-          </section>
-
-          <!-- CONTRIBUTION PROCESS -->
-          <section class="cs-section fade-up" id="contribution" aria-labelledby="contribution-title">
-            <p class="cs-section-label">Contribution Process</p>
-            <h2 class="cs-section-title" id="contribution-title">Low governance tax. High trust.</h2>
-            <p class="cs-body-text">
-              One of the hardest design problems in a 0&rarr;1 system is the contribution model. Too restrictive and the system becomes a bottleneck. Too open and it fragments. We needed a process that any designer, engineer, or PM could participate in without it feeling like a committee review.
-            </p>
-            <p class="cs-body-text">
-              We landed on a lightweight intake process: a brief that captures the problem the component solves, what alternatives were considered, and the intended adoption scope. Any contributor could open one. The system team reviewed quickly &mdash; usually within a sprint &mdash; and responded with one of three outcomes: merge as-is, merge with modifications, or document why an existing component solved the problem instead.
-            </p>
-
-            <div class="workflow-grid fade-up">
-              <div class="workflow-card">
-                <div class="workflow-card-header">
-                  <div class="workflow-icon" aria-hidden="true">01</div>
-                  <div>
-                    <div class="workflow-card-title">Propose with a brief</div>
-                    <div class="workflow-card-subtitle">Problem, alternatives, adoption scope</div>
-                  </div>
-                </div>
-                <p class="workflow-card-body">Any designer, engineer, or PM can open a contribution proposal. The bar is low: articulate the problem and what you tried before reaching for a new component. No committee. No lengthy pre-approval.</p>
-              </div>
-              <div class="workflow-card">
-                <div class="workflow-card-header">
-                  <div class="workflow-icon" aria-hidden="true">02</div>
-                  <div>
-                    <div class="workflow-card-title">Fast review cycle</div>
-                    <div class="workflow-card-subtitle">A decision within one sprint</div>
-                  </div>
-                </div>
-                <p class="workflow-card-body">The system team committed to fast turnaround. Slow review cycles are a primary driver of people skipping the process entirely and forking. Speed signals that the system is maintained.</p>
-              </div>
-              <div class="workflow-card">
-                <div class="workflow-card-header">
-                  <div class="workflow-icon" aria-hidden="true">03</div>
-                  <div>
-                    <div class="workflow-card-title">Versioned releases with changelogs</div>
-                    <div class="workflow-card-subtitle">Trust through transparency</div>
-                  </div>
-                </div>
-                <p class="workflow-card-body">Every change shipped with release notes and a deprecation window. Nothing removed without a migration path. Engineers could update their implementations against a known changelog rather than discovering breaking changes in code review.</p>
-              </div>
-              <div class="workflow-card">
-                <div class="workflow-card-header">
-                  <div class="workflow-icon" aria-hidden="true">04</div>
-                  <div>
-                    <div class="workflow-card-title">Easier than the workaround</div>
-                    <div class="workflow-card-subtitle">Adoption is a design problem</div>
-                  </div>
-                </div>
-                <p class="workflow-card-body">If using Terra costs more than copying a component from another screen, people copy. Every friction point in the process was a fork risk. We tracked where teams went off-system and treated each divergence as a signal that something needed to change.</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- STAKEHOLDER ALIGNMENT -->
-          <section class="cs-section fade-up" id="alignment" aria-labelledby="alignment-title">
-            <p class="cs-section-label">Stakeholder Alignment</p>
-            <h2 class="cs-section-title" id="alignment-title">Getting 8 people to agree &mdash; and keep agreeing</h2>
-            <p class="cs-body-text">
-              The hardest part of Terra wasn&rsquo;t the token architecture or the component documentation. It was getting six designers, two engineering leads, and product leadership to commit to a shared system they hadn&rsquo;t asked for &mdash; and to keep using it under deadline pressure when copying a component from another screen was faster.
-            </p>
-            <p class="cs-body-text">
-              Each stakeholder group had a different concern, and each required a different kind of persuasion:
-            </p>
-
-            <div class="numbered-list fade-up" role="list">
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Designers: &ldquo;This will slow us down.&rdquo;</strong> &mdash; Six designers, six existing mental models, six ways of doing the same thing. The concern was real: switching to a shared system mid-sprint adds friction. We addressed it by shipping the highest-frequency components first &mdash; button, input, color tokens &mdash; so the payoff was visible immediately. Designers who adopted early moved faster, not slower. That visibility did the persuasion we couldn&rsquo;t.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>Engineering leads: &ldquo;We need it to be stable.&rdquo;</strong> &mdash; Engineering&rsquo;s ask was reasonable: don&rsquo;t change components without notice, don&rsquo;t break implementations that are already shipped. The versioned changelog and deprecation window were designed specifically for this concern. Engineers could update against a known changelog rather than discovering breaking changes in code review. Once they trusted the release process, adoption accelerated.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>Product leadership: &ldquo;Don&rsquo;t let this become a bottleneck.&rdquo;</strong> &mdash; The fear was that a gated system would slow feature delivery. We countered with the audit data: re-building and re-specifying the same components was already slowing delivery &mdash; it just wasn&rsquo;t visible as a system cost. The lightweight contribution process (a decision within one sprint, no committee) was our answer to the bottleneck concern in practice, not just in principle.</div>
-              </div>
-            </div>
-
-            <div class="callout fade-up">
-              <p>The insight that reframed the alignment work: <strong>influencing without authority requires making the right choice the easy choice.</strong> Every time a designer chose Terra, it had to feel faster than the alternative. The moment it felt like extra work, the system lost. That meant treating every fork &mdash; every time a team went off-system &mdash; as a product signal rather than a compliance failure.</p>
-            </div>
-
-            <p class="cs-body-text">
-              We ran a weekly alignment meeting with design and engineering leads for the first three months &mdash; not to report status, but to surface friction. What was hard to find? What was missing? What did someone fork last sprint and why? Those answers shaped the backlog more than any roadmap we wrote upfront.
-            </p>
-          </section>
-
-<section class="cs-section fade-up" id="evolution" aria-labelledby="evolution-title"><p class="cs-section-label">2026 evolution</p><h2 class="cs-section-title" id="evolution-title">A system that stays aligned with the product</h2><p class="cs-body-text">From October 5 to November 6, 2026, I led ongoing Terra design work as Staff Product Designer at Ninety. The focus was maintaining a usable relationship between the Figma library, implemented components, and the product surfaces that depend on them.</p><p class="cs-body-text">I established Storybook’s Terra Design System section as the source of truth when Figma and code disagree. Other Storybook areas—Pods, Commercial Model, and Legacy—are outside Terra. This gave audits a clear boundary and teams a shared way to resolve mismatches.</p><p class="cs-body-text">I used Claude Code to support component audits, documentation, and prototyping across the design library and design-team codebase, with design and engineering review guiding the decisions.</p></section>
-<section class="cs-section fade-up" id="governance-2026" aria-labelledby="governance-2026-title"><p class="cs-section-label">Governance in practice</p><h2 class="cs-section-title" id="governance-2026-title">Give each audience the information it needs</h2><p class="cs-body-text">After engineering feedback, I separated component guidance from product requirements. Figma guidelines describe appearance and behavior with visuals; requirements and implementation notes live in records in the prototype repository. The side navigation also has its own product requirements document.</p><p class="cs-body-text">I wrote “Terra and the North Star” to connect the system to Ninety’s vision and values, alongside the governance charter. I also took a maturity self-assessment to establish a baseline for future system work.</p><p class="cs-body-text">For the sidebar transition, I labeled old and new versions clearly, merged the Figma branch, and published 18 library changes. I reorganized the library’s page structure and standardized section names so components were easier to locate.</p><p class="cs-body-text">Weekly design system syncs, a shared component tracker, current-state Jira tickets, and release announcements kept work visible. Announcements explicitly distinguish design completion from engineering implementation. I clarified ownership across core product, AI, and design systems and turned engineering review comments into component and guideline updates.</p></section>
-<section class="cs-section fade-up" id="component-evolution" aria-labelledby="component-evolution-title"><p class="cs-section-label">Component work</p><h2 class="cs-section-title" id="component-evolution-title">Audit real use before defining the abstraction</h2><p class="cs-body-text">Pagination: I audited Storybook and live product usage, rebuilt the component with Terra tokens and default, hover, and active states, and defined a responsive rule below 600px. Guidance covers large page counts, placement, mobile, labeled navigation, and aria-current.</p><p class="cs-body-text">Details Sheet and Bottom Sheet: research and team review led to two components with separate guidance and a shared content slot. I defined wide-screen behavior and a rule to hide the Maz panel when both panels cannot fit. An audit of detail panels across the app informed a header with slots covering about 80% of observed use cases; this is an audit estimate, not a measured adoption result.</p><p class="cs-body-text">Page Header and Global Top Bar: I inventoried titles, subtitles, actions, tabs, and filters across live pages. I designed scroll collapse and small-screen behavior, revising action placement after engineering raised concerns about overflow menus. The Filter Bar became a Page Header subcomponent, with a Popover for collapsed filters.</p><p class="cs-body-text">Buttons and Tabs: I simplified button properties and naming, added Full Width, separated Compact Button, and replaced the dropdown variant with an optional icon. For Tabs, I aligned effects, disabled behavior, icon color, and instance swaps, and documented long labels and active versus selected states.</p><p class="cs-body-text">Chip, Switch, Menu, and Search Input: I aligned Chip with Storybook, documented remaining Chip and Switch mismatches as backlog work, built the shared Menu rather than introducing a custom dropdown, and added guidance and tracking for Search Input. Popover was ready in Figma with Storybook implementation still in progress.</p></section>
-<section class="cs-section fade-up" id="accessibility-2026" aria-labelledby="accessibility-2026-title"><p class="cs-section-label">Accessibility & tokens</p><h2 class="cs-section-title" id="accessibility-2026-title">Fix what can be fixed—and name what remains</h2><p class="cs-body-text">I audited contrast across button types and states, correcting failing labels and icons with existing tokens. Customer-selected brand colors were outside the audit because their values are unknown at design time. I relinked hard-coded active fills and neutral hover styling to Terra tokens and recorded contrast results in the guidelines.</p><p class="cs-body-text">Terra’s focus ring—4px brand color at 20% opacity—was documented as failing the 3:1 non-text contrast requirement. The team agreed to retain one consistent app-wide focus state temporarily and address it across Terra later. Identifying the issue did not mean it was resolved.</p><p class="cs-body-text">I corrected navigation dark mode using existing tokens, checked existing Terra icons before adding new ones, and aligned Base Card selected and active states with a 16px corner radius.</p></section>
-<section class="cs-section fade-up" id="ai-patterns" aria-labelledby="ai-patterns-title"><p class="cs-section-label">AI component family</p><h2 class="cs-section-title" id="ai-patterns-title">Make AI recognizable without inventing another system</h2><p class="cs-body-text">Maz had used the customer’s brand color, making AI indistinguishable from primary product UI. I proposed a dedicated purple ramp, added it to the token library, and documented its use for AI. Because Terra does not yet have an alias layer, engineering requested hue-based naming; the reservation for AI lives in the guidelines.</p><p class="cs-body-text">Engineering implemented the purple token in code. After team feedback on saturation, I explored softer alternatives and the team selected a softened purple. This separated the styling decision from a claim that a complete semantic alias architecture already existed.</p><p class="cs-body-text">I built the Maz composer from existing Terra pieces: prompt chips, a button launcher, and shared tokens, with active, placeholder, and disabled variants and documented micro-interactions. AI chips, prompts, and suggestion-detail popovers form one Maz family.</p><p class="cs-body-text">I applied Terra components and tokens across Maz Copilot, Profile, Agents, proactive suggestions, and support-entry explorations, keeping Figma and code aligned. Product prototyping became a way to test the system under real interaction demands.</p></section>
-<section class="cs-section fade-up" id="navigation-mobile" aria-labelledby="navigation-mobile-title"><p class="cs-section-label">Navigation & mobile</p><h2 class="cs-section-title" id="navigation-mobile-title">The shared system has to survive real constraints</h2><p class="cs-body-text">The new side navigation groups tools into Execute, Align, and Grow and renames My 90 to Home. I designed collapsed-item tooltips, short-screen scrolling, scroll shadows, status badges, and keyboard Escape behavior for click-open groups.</p><p class="cs-body-text">Engineering feedback changed the design: I removed width animation because rows would reflow awkwardly and removed duplicate flyout headings to fit implementation constraints. Company logos use a fitted square tile with no cropping and an initials fallback.</p><p class="cs-body-text">On mobile, I designed the navigation bar, top app bar, and AI assistant placement in a prototype using the real mobile codebase and Terra tokens. I softened glass effects, added blur behind scrolling page titles, and cleaned up chip backgrounds.</p><p class="cs-body-text">I partnered with engineering to get the prototype into TestFlight using sandbox configuration, with tracking isolated from production and changes merged through reviewed pull requests. TestFlight availability is a prototype delivery milestone, not a general-release claim.</p></section>
-
-          <!-- IMPACT -->
-          <section class="cs-section fade-up" id="impact" aria-labelledby="impact-title">
+          </section><details class="case-notes"><summary>Audit real use before defining the abstraction</summary><section class="cs-section" id="component-evolution" aria-label="Audit real use before defining the abstraction"><p class="cs-section-label">Component work</p><p class="cs-body-text">Pagination: I audited Storybook and live product usage, rebuilt the component with Terra tokens and default, hover, and active states, and defined a responsive rule below 600px. Guidance covers large page counts, placement, mobile, labeled navigation, and aria-current.</p><p class="cs-body-text">Details Sheet and Bottom Sheet: research and team review led to two components with separate guidance and a shared content slot. I defined wide-screen behavior and a rule to hide the Maz panel when both panels cannot fit. An audit of detail panels across the app informed a header with slots covering about 80% of observed use cases; this is an audit estimate, not a measured adoption result.</p><p class="cs-body-text">Page Header and Global Top Bar: I inventoried titles, subtitles, actions, tabs, and filters across live pages. I designed scroll collapse and small-screen behavior, revising action placement after engineering raised concerns about overflow menus. The Filter Bar became a Page Header subcomponent, with a Popover for collapsed filters.</p><p class="cs-body-text">Buttons and Tabs: I simplified button properties and naming, added Full Width, separated Compact Button, and replaced the dropdown variant with an optional icon. For Tabs, I aligned effects, disabled behavior, icon color, and instance swaps, and documented long labels and active versus selected states.</p><p class="cs-body-text">Chip, Switch, Menu, and Search Input: I aligned Chip with Storybook, documented remaining Chip and Switch mismatches as backlog work, built the shared Menu rather than introducing a custom dropdown, and added guidance and tracking for Search Input. Popover was ready in Figma with Storybook implementation still in progress.</p></section></details><section class="cs-section" id="governance-2026" aria-labelledby="governance-2026-title"><p class="cs-section-label">Governance in practice</p><h2 class="cs-section-title" id="governance-2026-title">Give each audience the information it needs</h2><p class="cs-body-text">After engineering feedback, I separated component guidance from product requirements. Figma guidelines describe appearance and behavior with visuals; requirements and implementation notes live in records in the prototype repository. The side navigation also has its own product requirements document.</p><p class="cs-body-text">I wrote “Terra and the North Star” to connect the system to Ninety’s vision and values, alongside the governance charter. I also took a maturity self-assessment to establish a baseline for future system work.</p><p class="cs-body-text">For the sidebar transition, I labeled old and new versions clearly, merged the Figma branch, and published 18 library changes. I reorganized the library’s page structure and standardized section names so components were easier to locate.</p><p class="cs-body-text">Weekly design system syncs, a shared component tracker, current-state Jira tickets, and release announcements kept work visible. Announcements explicitly distinguish design completion from engineering implementation. I clarified ownership across core product, AI, and design systems and turned engineering review comments into component and guideline updates.</p></section><section class="cs-section" id="ai-patterns" aria-labelledby="ai-patterns-title"><p class="cs-section-label">AI component family</p><h2 class="cs-section-title" id="ai-patterns-title">Make AI recognizable without inventing another system</h2><p class="cs-body-text">Maz had used the customer’s brand color, making AI indistinguishable from primary product UI. I proposed a dedicated purple ramp, added it to the token library, and documented its use for AI. Because Terra does not yet have an alias layer, engineering requested hue-based naming; the reservation for AI lives in the guidelines.</p><p class="cs-body-text">Engineering implemented the purple token in code. After team feedback on saturation, I explored softer alternatives and the team selected a softened purple. This separated the styling decision from a claim that a complete semantic alias architecture already existed.</p><p class="cs-body-text">I built the Maz composer from existing Terra pieces: prompt chips, a button launcher, and shared tokens, with active, placeholder, and disabled variants and documented micro-interactions. AI chips, prompts, and suggestion-detail popovers form one Maz family.</p><p class="cs-body-text">I applied Terra components and tokens across Maz Copilot, Profile, Agents, proactive suggestions, and support-entry explorations, keeping Figma and code aligned. Product prototyping became a way to test the system under real interaction demands.</p></section><section class="cs-section" id="navigation-mobile" aria-labelledby="navigation-mobile-title"><p class="cs-section-label">Navigation & mobile</p><h2 class="cs-section-title" id="navigation-mobile-title">The shared system has to survive real constraints</h2><p class="cs-body-text">The new side navigation groups tools into Execute, Align, and Grow and renames My 90 to Home. I designed collapsed-item tooltips, short-screen scrolling, scroll shadows, status badges, and keyboard Escape behavior for click-open groups.</p><p class="cs-body-text">Engineering feedback changed the design: I removed width animation because rows would reflow awkwardly and removed duplicate flyout headings to fit implementation constraints. Company logos use a fitted square tile with no cropping and an initials fallback.</p><p class="cs-body-text">On mobile, I designed the navigation bar, top app bar, and AI assistant placement in a prototype using the real mobile codebase and Terra tokens. I softened glass effects, added blur behind scrolling page titles, and cleaned up chip backgrounds.</p><p class="cs-body-text">I partnered with engineering to get the prototype into TestFlight using sandbox configuration, with tracking isolated from production and changes merged through reviewed pull requests. TestFlight availability is a prototype delivery milestone, not a general-release claim.</p></section><section class="cs-section" id="impact" aria-labelledby="impact-title">
             <p class="cs-section-label">Impact</p>
             <h2 class="cs-section-title" id="impact-title">What Terra made possible</h2>
 
-<p class="cs-body-text">The October–November work produced concrete system changes: a sidebar library release with 18 changes, rebuilt and documented components, button contrast corrections using existing tokens, an implemented purple token, and a mobile prototype delivered through TestFlight with engineering review.</p><p class="cs-body-text">Other work remains in progress: Storybook implementation for Popover, logged Chip and Switch mismatches, and a system-wide focus-ring fix. Release communications distinguish these states instead of treating design completion as shipped code.</p><p class="cs-body-text">No measured reduction in delivery time, accessibility rework, or adoption is available for this period. These outcomes describe delivered artifacts, implementation milestones, and documented decisions.</p><div class="callout"><p><strong>Terra in product work:</strong> the <a href="agents-case-study.html">AI Agents case study</a> shows how shared components supported a complete UX and UI, while product-specific challenges exposed gaps for the system backlog.</p></div></section>
-          <!-- REFLECTION -->
-          <section class="cs-section fade-up" id="reflection" aria-labelledby="reflection-title">
-            <p class="cs-section-label">Reflection</p>
-            <h2 class="cs-section-title" id="reflection-title">What building Terra taught me</h2>
-
-            <div class="reflection-list fade-up">
-              <div class="reflection-row">
-                <div class="reflection-key">The organizational work is the real work</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">The hardest part of Terra wasn&rsquo;t drawing components &mdash; it was cross-functional alignment. Six designers with six existing mental models, plus engineering leads with legitimate constraints, all had to agree on shared patterns and keep honoring them under deadline pressure. Influencing without formal authority over six designers and two engineering leads required making the system easier to use than the alternative &mdash; and making the people who contributed to it feel ownership over it.</p>
-              </div>
-              <div class="reflection-row">
-                <div class="reflection-key">Adoption is a design problem, not a communication problem</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">When teams weren&rsquo;t using Terra, the instinct was to send more announcements. The real fix was always to look at what made Terra harder to use than the workaround &mdash; unclear documentation, slow contribution review, missing states &mdash; and fix that. A system that requires active promotion has a product problem, not a marketing problem.</p>
-              </div>
-              <div class="reflection-row">
-                <div class="reflection-key">Naming is worth the argument</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">We spent time debating token and component names that felt trivial in the moment. Those debates were worth it. A token named for its role rather than its appearance is documentation. It tells the next engineer, the next designer, and the next contributor what the token is <em>for</em> &mdash; which is more useful than knowing what hex value it resolves to.</p>
-              </div>
-              <div class="reflection-row">
-                <div class="reflection-key">The lifecycle matters as much as the launch</div>
-                <p class="cs-body-text" style="margin-bottom: 0;">A design system without a versioning and deprecation process has an expiration date. Teams stop trusting it the first time a component changes without notice. The changelog and deprecation window discipline we built into Terra was what made teams feel safe updating their implementations &mdash; and what kept the system alive rather than frozen at v1.</p>
-              </div>
-            </div>
-
-            <p class="cs-body-text" style="margin-top: 32px;">
-              Terra is also why I treat <strong>design systems leadership as foundational to product work</strong> at any scale. Consistent, well-documented components are what let teams move fast without diverging. The systems thinking I built here carries directly into how I approach design systems at Constant Contact today &mdash; including how Summit is built to serve AI-assisted workflows, not just human ones.
-            </p>
-
-            <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
-              <a href="index.html" class="btn-secondary">
-                <span>&#8592;</span> Back to portfolio
-              </a>
-              <a href="mailto:kcrodelle@gmail.com" class="btn-primary">
-                Discuss this work <span class="btn-arrow">→</span>
-              </a>
-            </div>
-          </section>
-
-        </div>
-      </div>
-    </div>
-  </main>
+<p class="cs-body-text">The October–November work produced concrete system changes: a sidebar library release with 18 changes, rebuilt and documented components, button contrast corrections using existing tokens, an implemented purple token, and a mobile prototype delivered through TestFlight with engineering review.</p><p class="cs-body-text">Other work remains in progress: Storybook implementation for Popover, logged Chip and Switch mismatches, and a system-wide focus-ring fix. Release communications distinguish these states instead of treating design completion as shipped code.</p><p class="cs-body-text">No measured reduction in delivery time, accessibility rework, or adoption is available for this period. These outcomes describe delivered artifacts, implementation milestones, and documented decisions.</p><div class="callout"><p><strong>Terra in product work:</strong> the <a href="agents-case-study.html">AI Agents case study</a> shows how shared components supported a complete UX and UI, while product-specific challenges exposed gaps for the system backlog.</p></div></section></div></div></div></main>
   <site-footer back></site-footer>
   <script src="js/site.js"></script>
   <script src="js/main.js"></script>

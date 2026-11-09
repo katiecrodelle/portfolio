@@ -106,3 +106,12 @@ if (tocLinks.length) {
 
   sections.forEach((s) => sectionObserver.observe(s));
 }
+
+// Reveal supporting case-study notes before following a deep link.
+function revealCaseNotes() {
+  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  const details = target && target.closest('details');
+  if (details) { details.open = true; target.scrollIntoView({block: 'start'}); }
+}
+window.addEventListener('hashchange', revealCaseNotes);
+revealCaseNotes();
