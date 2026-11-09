@@ -11,7 +11,7 @@ class SiteNav extends HTMLElement {
         <div class="nav-links" id="nav-links">
           <a href="${isHomepage ? '#work' : 'index.html#work'}">Work</a>
           <a href="about.html">About</a>
-          <a href="katie-devoe-resume.pdf" download>Résumé ↓</a>
+          
           <a href="${isHomepage ? '#contact' : 'index.html#contact'}">Contact</a>
           <a href="mailto:kcrodelle@gmail.com" class="nav-cta">Get in touch</a>
         </div>
