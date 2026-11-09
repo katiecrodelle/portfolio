@@ -51,7 +51,7 @@ const CASE_STUDIES = [
     title: 'AI Agents: Designing Work That Runs Without You',
     description: 'Owned the entire UX and UI for Ninety’s AI agents as Staff Product Designer, from research through alpha. Made recurring work easier to delegate, clarified trust and control, and helped eliminate tool selection through design and engineering collaboration.',
     chips: ['AI Agents', 'End-to-end UX/UI', 'Staff Product Designer', 'Alpha Release'],
-    image: 'images/agents/agents-overview.jpg',
+    image: 'images/agents/agents-overview-clean.jpg',
     imageAlt: 'Ninety Agents interface showing recurring workflows, schedules, and attention states.',
     ariaLabel: 'Read case study: AI Agents at Ninety',
     visualStyle: 'background: #11131c;', imageStyle: 'object-fit: contain;',
