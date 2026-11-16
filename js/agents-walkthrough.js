@@ -4,11 +4,11 @@ class AgentsWalkthrough extends HTMLElement {
     if (this.dataset.ready) return;
     this.dataset.ready = 'true';
     const steps = [
-      ['overview','Your agents','See what needs attention, what happened, and what comes next.'],
-      ['discover','Discover','Find agents by the job they do, with starter choices and curated packs.'],
-      ['template','Preview','Review when it runs, what it looks at, and what it can do.'],
-      ['setup','Review setup','Inspect instructions and example output before turning anything on.'],
-      ['results','Review results','Read findings, inspect proposed actions, and choose what to do next.']
+      ['overview','Your agents','Design decision: bring exceptions and outcomes forward so people can review the work without checking every agent.'],
+      ['discover','Discover','Design decision: organize discovery around jobs people recognize, with starter choices and curated packs.'],
+      ['template','Preview','Design decision: explain the commitment before setup—when it runs, what it looks at, and what it can do.'],
+      ['setup','Review setup','Design decision: show instructions, access, and example output before a person turns the agent on.'],
+      ['results','Review results','Design decision: keep people in control of the response by making findings and proposed actions inspectable.']
     ];
     this.innerHTML = `<section class="agents-tour" aria-label="Agents prototype walkthrough">
       <div class="tour-top"><span>Inside the newer experience</span><button type="button" class="tour-play">Play walkthrough <span aria-hidden="true">▷</span></button></div>
