@@ -4,7 +4,7 @@ class AgentsWalkthrough extends HTMLElement {
     if (this.dataset.ready) return;
     this.dataset.ready = 'true';
     const steps = [
-      ['overview','Your agents','See what needs attention, what happened, and what comes next.'],
+      ['overview-no-create','Your agents','See what needs attention, what happened, and what comes next.'],
       ['discover','Discover','Find agents by the job they do, with starter choices and curated packs.'],
       ['template','Preview','Review when it runs, what it looks at, and what it can do.'],
       ['setup','Review setup','Inspect instructions and example output before turning anything on.'],
@@ -12,7 +12,7 @@ class AgentsWalkthrough extends HTMLElement {
     ];
     this.innerHTML = `<section class="agents-tour" aria-label="Agents prototype walkthrough">
       <div class="tour-top"><span>Inside the newer experience</span><button type="button" class="tour-play">Play walkthrough <span aria-hidden="true">▷</span></button></div>
-      <div class="tour-stage">${steps.map(([file,title,caption],i)=>`<figure class="tour-frame${i===0?' is-current':''}" ${i===0?'':'hidden'}><a href="images/agents/agents-nov16-${file}.jpg" target="_blank" rel="noopener" aria-label="Enlarge ${title} screen"><img src="images/agents/agents-nov16-${file}.jpg" width="1440" height="900" alt="${title}: ${caption}" loading="eager"></a></figure>`).join('')}</div>
+      <div class="tour-stage">${steps.map(([file,title,caption],i)=>`<figure class="tour-frame${i===0?' is-current':''}" ${i===0?'':'hidden'}><a href="images/agents/agents-nov16-${file}.${file==='overview-no-create'?'png':'jpg'}" target="_blank" rel="noopener" aria-label="Enlarge ${title} screen"><img src="images/agents/agents-nov16-${file}.${file==='overview-no-create'?'png':'jpg'}" width="1440" height="900" alt="${title}: ${caption}" loading="eager"></a></figure>`).join('')}</div>
       <div class="tour-progress" aria-hidden="true"><span></span></div>
       <div class="tour-steps" role="group" aria-label="Choose a walkthrough screen">${steps.map(([,title],i)=>`<button type="button" data-step="${i}" aria-pressed="${i===0}"><span>0${i+1}</span> ${title}</button>`).join('')}</div>
       <p class="tour-caption" aria-live="polite">${steps[0][2]}</p>
