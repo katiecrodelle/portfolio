@@ -12,7 +12,7 @@ class AgentsWalkthrough extends HTMLElement {
     ];
     this.innerHTML = `<section class="agents-tour" aria-label="Agents prototype walkthrough">
       <div class="tour-top"><span>Inside the newer experience</span><button type="button" class="tour-play">Play walkthrough <span aria-hidden="true">▷</span></button></div>
-      <div class="tour-stage">${steps.map(([file,title,caption],i)=>`<figure class="tour-frame${i===0?' is-current':''}" ${i===0?'':'hidden'}><a href="images/agents/clean-v3/agents-nov16-${file}.png" target="_blank" rel="noopener" aria-label="Enlarge ${title} screen"><img src="images/agents/clean-v3/agents-nov16-${file}.png" width="1440" height="900" alt="${title}: ${caption}" loading="eager"></a></figure>`).join('')}</div>
+      <div class="tour-stage">${steps.map(([file,title,caption],i)=>`<figure class="tour-frame${i===0?' is-current':''}" ${i===0?'':'hidden'}><a href="images/agents/clean-v3/agents-nov16-${file}.png?v=4" target="_blank" rel="noopener" aria-label="Enlarge ${title} screen"><img src="images/agents/clean-v3/agents-nov16-${file}.png?v=4" width="1440" height="900" alt="${title}: ${caption}" loading="eager"></a></figure>`).join('')}</div>
       <div class="tour-progress" aria-hidden="true"><span></span></div>
       <div class="tour-steps" role="group" aria-label="Choose a walkthrough screen">${steps.map(([,title],i)=>`<button type="button" data-step="${i}" aria-pressed="${i===0}"><span>0${i+1}</span> ${title}</button>`).join('')}</div>
       <p class="tour-caption" aria-live="polite">${steps[0][2]}</p>
