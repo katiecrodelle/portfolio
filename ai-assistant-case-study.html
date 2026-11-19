@@ -1,564 +1,285 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="How Katie DeVoe is shaping conversational AI in reporting and core product at Constant Contact — and the design system patterns that make it scale." />
-  <title>AI-Powered Marketing Guidance — Katie DeVoe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
-<link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Katie DeVoe’s AI reporting design at Constant Contact connects campaign data, explanations, follow-up questions, and marketing actions." name="description"/>
+<title>Helping marketers decide what to do next. — Katie DeVoe</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="css/styles.css" rel="stylesheet"/>
+<link href="/favicon.svg?v=2" rel="icon" type="image/svg+xml"/>
+<link href="/favicon.ico?v=2" rel="icon" sizes="32x32" type="image/x-icon"/>
+<link href="/apple-touch-icon.png?v=2" rel="apple-touch-icon"/>
 </head>
 <body>
-  <site-nav progress></site-nav>
-
-  <!-- CASE STUDY HERO -->
-  <header class="cs-hero">
-    <div class="container">
-      <nav class="cs-breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="cs-breadcrumb-sep" aria-hidden="true">/</span>
-        <span>Case Study</span>
-      </nav>
-
-      <div class="cs-meta">
-        <span class="cs-badge">Case Study &middot; In Progress</span>
-        <span class="cs-company">Constant Contact</span>
-        <span class="cs-year">2026 &ndash; Present</span>
-      </div>
-
-      <h1 class="cs-title">Designing AI-Powered Marketing Guidance at Constant Contact</h1>
-      <p class="cs-subtitle">
-        How I&rsquo;m shaping conversational AI in reporting and core product at Constant Contact &mdash; and the design system patterns that make it scale across the product. Active work &mdash; updated as it ships.
-      </p>
-
-      <div class="cs-stat-row">
-        <div class="cs-stat">
-          <div class="cs-stat-value">~385K</div>
-          <div class="cs-stat-label">Active SMB customers reached</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-value">3 areas</div>
-          <div class="cs-stat-label">Core product, reporting, design systems</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-value">0 &#8594; 1</div>
-          <div class="cs-stat-label">AI-in-reporting design patterns</div>
-        </div>
-        <div class="cs-stat">
-          <div class="cs-stat-value">Lead</div>
-          <div class="cs-stat-label">Design owner across core product, reporting &amp; design systems</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HERO IMAGE -->
-    <div class="container" style="margin-top: 0;">
-      <figure class="cs-hero-image cs-hero-photo">
-        <img src="images/ai-assistant/reporting.jpg" alt="The AI Assistant panel open beside the Constant Contact dashboard, answering 'Where are my email subscribers coming from?' with a subscriber-source donut chart and a plain-language explanation of its analysis." loading="eager" />
-        <figcaption class="placeholder-caption" style="padding: 12px 0 16px;">The AI Assistant answering a subscriber-growth question with visualized data and explained reasoning &mdash; conversational analytics embedded in reporting.</figcaption>
-      </figure>
-    </div>
-  </header>
-
-  <!-- CASE STUDY BODY -->
-  <main class="cs-body">
-    <div class="container">
-      <div class="cs-layout">
-
-        <!-- TABLE OF CONTENTS -->
-        <aside class="cs-toc" aria-label="Table of contents">
-          <p class="cs-toc-title">Contents</p>
-          <nav class="cs-toc-list">
-            <a href="#overview">Overview</a>
-            <a href="#problem">The Problem</a>
-            <a href="#why-ai">Why AI</a>
-            <a href="#my-role">My Role</a>
-            <a href="#product-context">Product Context</a>
-            <a href="#design-challenge">Design Challenge</a>
-            <a href="#workflows">Key Workflows</a>
-            <a href="#trust">Trust &amp; Control</a>
-            <a href="#delegation">Designing for Delegation</a>
-            <a href="#reporting">Reporting Insights</a>
-            <a href="#conversation-flow">Conversation Flow</a>
-            <a href="#outcome">Outcome &amp; Impact</a>
-            <a href="#next">What&rsquo;s Next</a>
-            <a href="#reflection">Reflection</a>
-          </nav>
-        </aside>
-
-        <!-- CONTENT -->
-        <div class="cs-content">
-
-          <!-- OVERVIEW -->
-          <section class="cs-section fade-up" id="overview" aria-labelledby="overview-title">
-            <p class="cs-section-label">Overview</p>
-            <h2 class="cs-section-title" id="overview-title">A company-wide bet on AI, and a focused design mandate</h2>
-            <p class="cs-body-text">
-              In 2026, Constant Contact made a company-wide investment in an AI Assistant to help small business owners get more out of their email marketing. The AI Assistant is a complex, cross-functional initiative &mdash; and one designer owns the core conversational experience.
-            </p>
-            <p class="cs-body-text">
-              My role spans core product, reporting, and design systems. I am the <strong>design lead responsible for how AI shows up in the product&rsquo;s most decision-critical surfaces</strong> &mdash; reporting dashboards and campaign performance &mdash; and for building the AI component patterns into Summit so they scale consistently across the product.
-            </p>
-            <p class="cs-body-text">
-              This case study is about that work &mdash; designing the moments where AI moves from being a chat interface to being genuinely embedded in how users understand, trust, and act on their marketing data. It&rsquo;s an active, evolving initiative, and this page reflects where the work stands today.
-            </p>
-          </section>
-
-          <!-- THE PROBLEM -->
-          <section class="cs-section fade-up" id="problem" aria-labelledby="problem-title">
-            <p class="cs-section-label">The Problem</p>
-            <h2 class="cs-section-title" id="problem-title">Small business owners have data. They don&rsquo;t have answers.</h2>
-            <p class="cs-body-text">
-              Constant Contact serves hundreds of thousands of small business owners &mdash; people running restaurants, boutiques, nonprofits, and freelance practices. They&rsquo;re not data analysts. They log in to see how their last email did, feel uncertain about what the numbers mean, and often leave without taking any action.
-            </p>
-            <div class="callout callout-accent">
-              <p>The core tension: <strong>the product had rich performance data, but it wasn&rsquo;t translating into clear next steps.</strong> Users were making marketing decisions based on anxiety and guesswork rather than insight.</p>
-            </div>
-            <p class="cs-body-text">
-              Our research surfaced a consistent pattern: users knew their open rate went up or down, but they didn&rsquo;t know why, and they didn&rsquo;t know what to do about it. The reporting surface existed &mdash; it just wasn&rsquo;t working hard enough.
-            </p>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/journey-map.png" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/journey-map.png" alt="Reporting Hub user journey map organized by lifecycle cohort — Onboarding, Growing, Steady, and Declining — with rows for jobs in reporting, user actions, hub surfaces, what the hub must support, in-app flows, emotion, and signals." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">Reporting Hub user journey by lifecycle cohort &mdash; mapping jobs, actions, surfaces, emotions, and signals across ~385K active users to ground where AI guidance matters most. Click to view full size.</figcaption>
-            </figure>
-          </section>
-
-          <!-- WHY AI -->
-          <section class="cs-section fade-up" id="why-ai" aria-labelledby="why-ai-title">
-            <p class="cs-section-label">Why AI</p>
-            <h2 class="cs-section-title" id="why-ai-title">AI as a translation layer, not a party trick</h2>
-            <p class="cs-body-text">
-              The opportunity wasn&rsquo;t to put a chatbot in the product. It was to use AI to do something genuinely hard: <strong>close the gap between raw data and plain-language understanding</strong> at the exact moment a user is looking at their campaign results.
-            </p>
-            <p class="cs-body-text">
-              For a small business owner with no marketing background, &ldquo;Your open rate is 18.4%&rdquo; is a number. &ldquo;Your open rate is above average for restaurants &mdash; your subject line likely contributed&rdquo; is an insight. AI made the second version achievable at scale.
-            </p>
-            <div class="pull-quote">
-              <p>&ldquo;The goal was not to add AI features. The goal was to make marketing feel less like guesswork.&rdquo;</p>
-            </div>
-            <p class="cs-body-text">
-              Beyond reporting, AI opened a path to personalized guidance at scale &mdash; surfacing recommendations based on each user&rsquo;s history, audience, and industry, rather than generic best-practice tooltips everyone ignores.
-            </p>
-          </section>
-
-          <!-- MY ROLE -->
-          <section class="cs-section fade-up" id="my-role" aria-labelledby="my-role-title">
-            <p class="cs-section-label">My Role</p>
-            <h2 class="cs-section-title" id="my-role-title">Design lead across core product, reporting, and design systems</h2>
-            <p class="cs-body-text">
-              The AI Assistant is a cross-functional initiative with multiple designers contributing across the product. My mandate is to <strong>own the AI experience in core product and reporting</strong>, and to ensure those patterns are built into the design system so they scale consistently across the product. That means driving design decisions in my areas end-to-end, while staying tightly aligned with the broader AIA effort.
-            </p>
-
-            <div class="role-list" role="list">
-              <div class="role-item" role="listitem"><strong>Reporting &amp; Performance Insights</strong> &mdash; Designing AI-generated plain-language summaries and conversational analytics embedded in campaign and audience reporting dashboards.</div>
-              <div class="role-item" role="listitem"><strong>Core Product</strong> &mdash; Shaping how AI surfaces show up across the main product experience &mdash; recommendation patterns, AI-generated content, and conversational entry points.</div>
-              <div class="role-item" role="listitem"><strong>Design Systems</strong> &mdash; Building the AI component patterns and interaction standards into Summit so every team building on top of the AI Assistant works from a shared foundation.</div>
-              <div class="role-item" role="listitem"><strong>Cross-functional collaboration</strong> &mdash; Working closely with the broader AIA design team, product managers, data science, and engineering to align on shared patterns, terminology, and trust principles.</div>
-            </div>
-          </section>
-
-          <!-- PRODUCT CONTEXT -->
-          <section class="cs-section fade-up" id="product-context" aria-labelledby="context-title">
-            <p class="cs-section-label">Product Context</p>
-            <h2 class="cs-section-title" id="context-title">A mature product with a new capability that didn&rsquo;t fit old patterns</h2>
-            <p class="cs-body-text">
-              Constant Contact is not a startup. It&rsquo;s a product used by hundreds of thousands of people who have expectations, habits, and workflows built over years. Introducing AI into a mature product is different from designing it green-field.
-            </p>
-            <p class="cs-body-text">
-              We had to answer questions that a startup doesn&rsquo;t face: <strong>How do you introduce AI-generated content into a surface users already trust?</strong> What happens when the AI is wrong? How do you establish credibility with users who are skeptical of &ldquo;AI hype&rdquo; but are also not going to read a tooltip?
-            </p>
-            <p class="cs-body-text">
-              The existing reporting UI was dense, legacy, and engineering-constrained. That created real tension &mdash; we wanted AI insights to feel native, not bolted on.
-            </p>
-
-            <figure class="cs-image-figure fade-up">
-              <span class="cs-figure-badge">Before</span>
-              <a href="images/ai-assistant/before.png" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/before.png" alt="The legacy email reporting page: raw performance stats, a marketing funnel, and open and click rate comparisons — data without guidance on what to do next." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The legacy reporting experience &mdash; accurate data, but no interpretation. Users see what the numbers are, not what they mean or what to do about them.</figcaption>
-            </figure>
-
-            <figure class="cs-image-figure fade-up">
-              <span class="cs-figure-badge cs-figure-badge-accent">After &mdash; in progress</span>
-              <a href="images/ai-assistant/after.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/after.jpg" alt="The redesigned Reporting Hub: at-a-glance metric cards with trends, a 'What to do next' section with AI-generated guidance on what's working and what needs attention, sent email performance, best time to send, link-level insights, and industry benchmarks." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The redesigned Reporting Hub &mdash; the same data, now paired with an interpretation layer: &ldquo;What to do next&rdquo; guidance, best-time-to-send recommendations, link-level insights, and benchmarks that give every number context. Click to view full size.</figcaption>
-            </figure>
-          </section>
-
-          <!-- DESIGN CHALLENGE -->
-          <section class="cs-section fade-up" id="design-challenge" aria-labelledby="challenge-title">
-            <p class="cs-section-label">Design Challenge</p>
-            <h2 class="cs-section-title-lg" id="challenge-title">How do you make AI feel earned, not imposed?</h2>
-            <p class="cs-body-text">
-              The central design challenge wasn&rsquo;t technical. It was about perception and trust. AI-generated content in a context where real money is on the line &mdash; marketing budgets, customer relationships, brand reputation &mdash; has to earn the right to be there.
-            </p>
-            <p class="cs-body-text">
-              We identified three tensions that shaped every design decision:
-            </p>
-
-            <div class="numbered-list" role="list">
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Confidence vs. Accuracy</strong> &mdash; AI insights need to sound confident enough to be useful, but humble enough to acknowledge they&rsquo;re probabilistic. Writing for that register &mdash; and designing the visual container around it &mdash; required sustained iteration.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>Ambient vs. Intrusive</strong> &mdash; Insights that surface at the wrong moment &mdash; or that feel like they&rsquo;re interrupting the user&rsquo;s task &mdash; erode trust faster than no AI at all. Placement, timing, and dismissibility were non-negotiable design requirements.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>Novelty vs. Familiarity</strong> &mdash; Users needed to encounter AI in ways that felt natural to existing mental models of the product. We couldn&rsquo;t re-educate users &mdash; we had to meet them where they were.</div>
-              </div>
-            </div>
-          </section>
-
-          <!-- KEY WORKFLOWS -->
-          <section class="cs-section fade-up" id="workflows" aria-labelledby="workflows-title">
-            <p class="cs-section-label">Key Workflows I Influenced</p>
-            <h2 class="cs-section-title" id="workflows-title">Where the AI actually touched users&rsquo; decisions</h2>
-
-            <div class="workflow-grid" role="list">
-
-              <div class="workflow-card fade-up" role="listitem">
-                <div class="workflow-card-header">
-                  <div class="workflow-icon" aria-hidden="true">&#128200;</div>
-                  <div>
-                    <div class="workflow-card-title">Campaign Performance Summary</div>
-                    <div class="workflow-card-subtitle">Reporting &mdash; Post-send experience</div>
-                  </div>
-                </div>
-                <p class="workflow-card-body">
-                  After a campaign sends, users land in a results view full of metrics. I&rsquo;m designing an AI-generated &ldquo;How did this campaign do?&rdquo; summary card that renders at the top of the view in plain language &mdash; benchmarking against the user&rsquo;s own history and industry averages, and surfacing one clear recommendation. The summary is dismissible, and users can expand for more detail.
-                </p>
-              </div>
-
-              <div class="workflow-card fade-up" role="listitem">
-                <div class="workflow-card-header">
-                  <div class="workflow-icon" aria-hidden="true">&#128161;</div>
-                  <div>
-                    <div class="workflow-card-title">Next Best Action Recommendations</div>
-                    <div class="workflow-card-subtitle">Core product &mdash; Homepage &amp; post-send</div>
-                  </div>
-                </div>
-                <p class="workflow-card-body">
-                  Drawing on AI analysis of past performance, audience behavior, and best-practice patterns, I&rsquo;m designing recommendation surfaces for the campaign creation flow and the product homepage. Recommendations are specific, ranked, and linked directly to the relevant action &mdash; not just generic tips. The component system is built to handle varying confidence levels and data availability states.
-                </p>
-              </div>
-
-            </div>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/workflow.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/workflow.jpg" alt="The Constant Contact Email Reporting dashboard showing at-a-glance metrics — open rate 37%, click rate 4.6%, bounce rate 1.18%, traffic to website — alongside an AI-powered detail panel that surfaces bounce rate trends, hard vs. soft bounce breakdowns, a paginated bounced contacts list, and a 'Clean up hard bounces' action." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The reporting hub with AI-powered detail drill-down &mdash; clicking a metric surfaces contextual analysis, bounce breakdowns, and a direct action to resolve the issue. Click to view full size.</figcaption>
-            </figure>
-          </section>
-
-          <!-- TRUST AND CONTROL -->
-          <section class="cs-section fade-up" id="trust" aria-labelledby="trust-title">
-            <p class="cs-section-label">Trust &amp; User Control</p>
-            <h2 class="cs-section-title" id="trust-title">Designing for skepticism, not just delight</h2>
-            <p class="cs-body-text">
-              One thing I push hard for across all four workstreams: users should always feel in control of the AI. This isn&rsquo;t just a product values stance &mdash; it&rsquo;s a usability requirement. Small business owners are often skeptical of technology that &ldquo;does things for them&rdquo; without explanation.
-            </p>
-            <p class="cs-body-text">
-              I&rsquo;ve established a set of design principles for AI-generated content that I apply consistently across my surfaces and advocate for across the broader AI Assistant initiative:
-            </p>
-
-            <div class="numbered-list fade-up" role="list">
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Always attribute AI</strong> &mdash; Every AI-generated insight, summary, or recommendation was visually labeled as AI-generated. No ambiguity about where the content came from.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>Always dismissible</strong> &mdash; Users could close, hide, or skip any AI surface. We never trapped people in AI-generated content or made it required to proceed.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>Show the reasoning, briefly</strong> &mdash; Where possible, AI insights included a one-line explanation (&ldquo;based on your last 5 campaigns&rdquo;) so users could evaluate whether the context made sense for them.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">4</div>
-                <div><strong>Graceful degradation</strong> &mdash; When there wasn&rsquo;t enough data to generate a meaningful insight, the surface either hid itself or showed a neutral state &mdash; never hallucinated confidence.</div>
-              </div>
-            </div>
-
-            <div class="callout fade-up">
-              <p>These principles aren&rsquo;t just ethical guardrails. They&rsquo;re what makes the AI surfaces feel <strong>trustworthy rather than gimmicky</strong> &mdash; which is ultimately what determines whether users engage with them at all.</p>
-            </div>
-          </section>
-
-          <!-- DESIGNING FOR DELEGATION -->
-          <section class="cs-section fade-up" id="delegation" aria-labelledby="delegation-title">
-            <p class="cs-section-label">Designing for Delegation</p>
-            <h2 class="cs-section-title" id="delegation-title">The real design challenge isn&rsquo;t capability &mdash; it&rsquo;s earned autonomy</h2>
-            <p class="cs-body-text">
-              Most AI product design conversations focus on what the AI can do. The harder question &mdash; and the one I keep returning to at Constant Contact &mdash; is how much of that the user should actually let it do. That&rsquo;s not a technical question. It&rsquo;s a design question.
-            </p>
-            <p class="cs-body-text">
-              The distinction I think about constantly is the difference between <strong>human-in-the-loop</strong> and <strong>human-out-of-the-loop</strong> systems. Human-in-the-loop means the AI proposes and the human decides. Human-out-of-the-loop means the AI acts and the human reviews after the fact, or not at all. Both are valid in the right context. The mistake is deploying one when users expect the other.
-            </p>
-
-            <div class="reflection-box fade-up">
-              <h3 class="reflection-box-title">The spectrum isn&rsquo;t binary &mdash; it&rsquo;s a trust ladder</h3>
-              <p class="cs-body-text">
-                A user who has seen the AI get it right a dozen times is ready to delegate more than a user who just encountered it for the first time. The UI that serves both users the same way &mdash; always asking for approval, or never asking at all &mdash; is wrong for at least one of them. Designing for delegation means designing a system that can move users along that ladder, not one that freezes them at the first rung.
-              </p>
-            </div>
-
-            <p class="cs-body-text" style="margin-top: 32px;">
-              In practice, this plays out as a set of questions I ask about every AI action surface:
-            </p>
-
-            <div class="numbered-list fade-up" role="list">
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Should the AI recommend or act?</strong> &mdash; Recommending is always safer from a trust standpoint but extracts less value from the capability. Acting autonomously delivers more value but requires the user to already trust the outcome. The answer depends on the stakes of the action and how well-established that trust is.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>When is explicit approval required?</strong> &mdash; Irreversibility is the key signal. Sending an email to 50,000 contacts requires explicit confirmation regardless of how confident the AI is. Surfacing a suggested subject line does not. The design should match the approval friction to the consequence of being wrong.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>What does the user need to see before they&rsquo;ll delegate?</strong> &mdash; Transparency isn&rsquo;t just ethical hygiene; it&rsquo;s the mechanism by which trust accumulates. A user who can see why the AI made a recommendation, and check it against their own judgment, is building the mental model that eventually lets them skip that check. Hiding the reasoning short-circuits the process.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">4</div>
-                <div><strong>How do we signal growing confidence without being presumptuous?</strong> &mdash; As a user&rsquo;s track record with the AI builds, the system should subtly adapt &mdash; defaulting to accept rather than review, reducing friction on routine AI actions &mdash; without ever taking that trust for granted or acting without the user&rsquo;s awareness.</div>
-              </div>
-            </div>
-
-            <div class="callout fade-up">
-              <p>The goal isn&rsquo;t to maximize AI autonomy. It&rsquo;s to give users the confidence to delegate the right things &mdash; and the control to pull back when they need to. <strong>Autonomy, confidence, transparency, and control</strong> aren&rsquo;t in tension; they&rsquo;re the four variables that have to be in balance for the system to work.</p>
-            </div>
-          </section>
-
-          <!-- REPORTING INSIGHTS -->
-          <section class="cs-section fade-up" id="reporting" aria-labelledby="reporting-title">
-            <p class="cs-section-label">Reporting &amp; Plain-Language Insights</p>
-            <h2 class="cs-section-title" id="reporting-title">Making data speak in plain English</h2>
-            <p class="cs-body-text">
-              The reporting AI work is the most technically complex surface I own. Campaign reporting in Constant Contact surfaces a lot of data &mdash; open rates, click rates, bounces, unsubscribes, revenue attribution, list growth. Most users look at one or two numbers and leave.
-            </p>
-            <p class="cs-body-text">
-              I&rsquo;m partnering closely with data science and engineering to design an insight layer that generates natural-language summaries of what a campaign&rsquo;s results mean &mdash; not just what they are. This involves:
-            </p>
-
-            <div class="role-list fade-up" role="list">
-              <div class="role-item" role="listitem">Defining the taxonomy of insight types (performance vs. anomaly vs. recommendation) and how each should render visually.</div>
-              <div class="role-item" role="listitem">Designing for confidence tiers &mdash; how the UI communicates high-confidence vs. lower-confidence AI conclusions without confusing or alarming users.</div>
-              <div class="role-item" role="listitem">Working with content and AI teams on the exact language register: specific enough to be useful, humble enough to be honest.</div>
-              <div class="role-item" role="listitem">Designing empty and error states for when the AI doesn&rsquo;t have enough data to generate a reliable insight.</div>
-              <div class="role-item" role="listitem">Advocating for the reporting AI surface in roadmap conversations to keep it prioritized as the initiative evolves.</div>
-            </div>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/insight-cards.png" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/insight-cards.png" alt="AI insight component states: default card with thumbs up/down feedback actions; expanded feedback state with 'Tell us more (optional)' text field, Skip and Submit buttons; and confirmed state showing 'Thanks for your feedback!' — each shown with and without a dismiss X button." loading="lazy" style="background: #f5f7fa;" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI insight card component across all states &mdash; default, feedback expanded, and confirmed &mdash; with thumbs feedback, optional freetext, and graceful dismissal. Click to view full size.</figcaption>
-            </figure>
-          </section>
-
-          <!-- CONVERSATIONAL ANALYTICS FLOW -->
-          <section class="cs-section fade-up" id="conversation-flow" aria-labelledby="flow-title">
-            <p class="cs-section-label">Conversational Analytics in Practice</p>
-            <h2 class="cs-section-title" id="flow-title">From raw data to coached action &mdash; in one conversation</h2>
-            <p class="cs-body-text">
-              The video below documents the AI Assistant panel as it actually works in the product today. What it shows isn&rsquo;t a prototype &mdash; it&rsquo;s the live experience. Watching how users move through it reveals the design patterns I&rsquo;ve been most focused on: how the AI earns the right to guide, not just inform.
-            </p>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/aia-panel-welcome.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/aia-panel-welcome.jpg" alt="The Constant Contact homepage with the AI Assistant panel open on the right, showing a welcome message and three suggested entry points: Create an email, Add my contacts, and Check my results — with Try asking me prompts below." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI Assistant welcome state &mdash; contextual prompts tuned to where the user is in their account, not generic suggestions. The panel is always available in the top nav and never interrupts the user&rsquo;s main task.</figcaption>
-            </figure>
-
-            <h3 class="cs-section-subtitle" style="margin-top: 40px;">Entry point: &ldquo;Check my results&rdquo;</h3>
-            <p class="cs-body-text">
-              One of the most deliberate design decisions was how the AI Assistant opens. The welcome state doesn&rsquo;t drop users into a blank chat. It offers three anchored actions tied to the user&rsquo;s actual account state &mdash; <em>Create an email</em>, <em>Add my contacts</em>, <em>Check my results</em> &mdash; alongside suggested questions calibrated to where most users get stuck. This isn&rsquo;t a chatbot that waits to be discovered. It&rsquo;s a prompt at the moment of hesitation.
-            </p>
-            <p class="cs-body-text">
-              The &ldquo;Check my results&rdquo; path is where the reporting AI work lives. Selecting it triggers the AI to pull the user&rsquo;s actual campaign data, generate a 90-day summary, and return a plain-language analysis &mdash; not a chart dump.
-            </p>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/aia-performance-analysis.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/aia-performance-analysis.jpg" alt="The AI Assistant panel showing a 90-day performance summary: a line chart of email open and click rates over time, followed by bullet stats (11 campaigns sent, 262 total sends, 6.1% open rate, 6.1% click rate, 5.7% bounce rate, 1.2% unsubscribe rate) and a plain-language 'What it means' interpretation explaining that uneven results likely point to subject line, targeting, or content issues." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The 90-day performance summary &mdash; a chart paired with bullet stats and a &ldquo;What it means&rdquo; plain-language interpretation. The AI doesn&rsquo;t just surface numbers; it names the pattern and names likely causes. Click to view full size.</figcaption>
-            </figure>
-
-            <h3 class="cs-section-subtitle" style="margin-top: 40px;">The analysis pattern: data, meaning, one next step</h3>
-            <p class="cs-body-text">
-              Every AI response in the reporting flow follows a three-part structure I helped define: <strong>here&rsquo;s what happened</strong> (the data), <strong>here&rsquo;s what it means</strong> (plain-language interpretation), and <strong>one specific thing to do</strong> (a single, actionable recommendation). The AI never buries the recommendation at the end of a wall of text. The structure is consistent enough that users learn to expect it &mdash; which is how you build a mental model of what the AI is for.
-            </p>
-            <p class="cs-body-text">
-              The &ldquo;See the thinking&rdquo; disclosure lets users expand to see the AI&rsquo;s reasoning before the final output arrives. This serves two purposes: it reduces the perceived latency of a slow response, and it gives skeptical users a way to audit the logic before they act on it.
-            </p>
-
-            <div class="callout fade-up">
-              <p>A small detail with outsized trust implications: when a campaign name didn&rsquo;t come through cleanly in the data, the AI left the field blank and noted, <em>&ldquo;I left it blank rather than guess.&rdquo;</em> That sentence &mdash; unprompted, unsolicited &mdash; is the kind of moment that makes a product feel honest. I advocated hard for this kind of epistemic humility to be a first-class behavior, not an edge case.</p>
-            </div>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/aia-chart-expand.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/aia-chart-expand.jpg" alt="An expanded modal showing 'Open Rates and Sends by Email Over the Last 90 Days' — a dual-line chart with open rate in blue and sends in orange, plotted from April through July. The user had asked the AI to add send counts to an existing chart, and the AI updated it in the same conversation thread." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The user asked the AI to overlay send counts on an existing open rate chart. The AI updated the visualization in-thread and surfaced it in an expandable modal for full-size review &mdash; conversational iteration, not a form rebuild. Click to view full size.</figcaption>
-            </figure>
-
-            <h3 class="cs-section-subtitle" style="margin-top: 40px;">Iterative refinement: the conversation earns depth</h3>
-            <p class="cs-body-text">
-              One of the clearest validations of the conversational model is watching what users do after the first response. In this session: the user asked for a chart, then asked to add send counts to the chart, then asked for a table with email names, then pivoted entirely to ask &ldquo;What can I do to improve my click rates?&rdquo; Each turn built on the previous one. The AI held the full context of the account data across the whole conversation.
-            </p>
-            <p class="cs-body-text">
-              This is the product behavior that static reporting dashboards can&rsquo;t replicate: the ability to follow a user&rsquo;s actual question, not just surface the data they might ask about. A user who wants to understand their results doesn&rsquo;t want five more charts. They want one answer, and then the next question answered, and then the next.
-            </p>
-
-            <figure class="cs-image-figure fade-up">
-              <a href="images/ai-assistant/aia-click-coaching.jpg" target="_blank" rel="noopener">
-                <img src="images/ai-assistant/aia-click-coaching.jpg" alt="The AI Assistant responding to 'What can I do to improve my click rates?' with a 4-point coaching framework: make the CTA obvious, match the click to the subject line, cut down on competing links, and segment to the most interested contacts first — each with specific sub-bullet guidance." loading="lazy" />
-              </a>
-              <figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The pivot from reporting to coaching: after analyzing campaign data, the user asked for advice. The AI delivered a structured, account-contextualized 4-point framework &mdash; not generic tips, but guidance grounded in what the data showed about this user&rsquo;s specific pattern. Click to view full size.</figcaption>
-            </figure>
-
-            <h3 class="cs-section-subtitle" style="margin-top: 40px;">From analytics to coaching</h3>
-            <p class="cs-body-text">
-              The most significant moment in the flow is the pivot at the end: &ldquo;What can I do to improve my click rates?&rdquo; The user isn&rsquo;t asking for more data. They&rsquo;re asking for judgment. And the AI delivers it &mdash; not as generic best practices, but as a framework anchored to what the data showed about their specific account: which emails performed, why the recent sends likely dropped off, and what one thing to change on the next send.
-            </p>
-            <p class="cs-body-text">
-              This is the distinction I keep returning to in the design work: the goal was never to surface data more clearly. It was to get users to act. A user who leaves the reporting surface knowing what to do differently has had a fundamentally different experience than one who just saw their numbers. The conversational model is what makes that possible at scale.
-            </p>
-          </section>
-
-          <!-- OUTCOME AND IMPACT -->
-          <section class="cs-section fade-up" id="outcome" aria-labelledby="outcome-title">
-            <p class="cs-section-label">Outcome &amp; Impact</p>
-            <h2 class="cs-section-title" id="outcome-title">Early signals, and how we&rsquo;re measuring what matters</h2>
-            <p class="cs-body-text">
-              This work is actively rolling out, so the honest answer on impact is: it&rsquo;s early. Because the AI features are embedded across a mature product used by hundreds of thousands of customers, we&rsquo;re instrumenting carefully rather than declaring victory on launch metrics. The measures we&rsquo;re tracking:
-            </p>
-
-            <div class="outcome-grid fade-up">
-              <div class="outcome-card">
-                <div class="outcome-value">Action</div>
-                <div class="outcome-label">Do users take a meaningful next step within 48 hours of viewing an AI summary?</div>
-              </div>
-              <div class="outcome-card">
-                <div class="outcome-value">Trust</div>
-                <div class="outcome-label">Insight engagement and thumbs-up/down ratings over time &mdash; do users keep coming back?</div>
-              </div>
-              <div class="outcome-card">
-                <div class="outcome-value">Activation</div>
-                <div class="outcome-label">Time-to-first-send and early engagement for users in the AI-guided onboarding flow</div>
-              </div>
-            </div>
-
-            <p class="cs-body-text" style="margin-top: 24px;">
-              The early qualitative signal is encouraging: in concept testing and beta feedback, users describe the conversational analytics experience as &ldquo;actually helpful&rdquo; rather than gimmicky &mdash; and the recurring theme is feeling more confident about what to do next. For AI features in a mature product with a skeptical audience, that&rsquo;s the signal that matters most at this stage.
-            </p>
-            <p class="cs-body-text">
-              I&rsquo;ll update this section with quantitative results as the rollout matures and the data is real enough to stand behind.
-            </p>
-            <p class="cs-body-text">
-              <strong>Core design principles established:</strong> Explainability, progressive trust, contextual recommendations, user control, and AI-assisted decision making.
-            </p>
-          </section>
-
-          <!-- WHAT I WOULD DO NEXT -->
-          <section class="cs-section fade-up" id="next" aria-labelledby="next-title">
-            <p class="cs-section-label">What&rsquo;s Next</p>
-            <h2 class="cs-section-title" id="next-title">Where I want to take this work</h2>
-
-            <div class="numbered-list fade-up" role="list">
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">1</div>
-                <div><strong>Deeper integration with the core AI Assistant</strong> &mdash; The reporting AI and the conversational AI Assistant still operate somewhat independently. A user who asks the Assistant about their campaign results should seamlessly land in the reporting surface with their question answered in-context. Designing that handoff is high on my list.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">2</div>
-                <div><strong>Longitudinal insight threads</strong> &mdash; Right now, AI insights are per-campaign. The more interesting product would track patterns across campaigns over time &mdash; &ldquo;Your Tuesday sends consistently outperform your Friday sends.&rdquo; This requires different data infrastructure, but it&rsquo;s where real strategic value lives.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">3</div>
-                <div><strong>Feedback loops for AI correction</strong> &mdash; We have basic thumbs up/down on insights, but I want a richer feedback mechanism: &ldquo;This insight doesn&rsquo;t apply to me because&hellip;&rdquo; That data would improve model performance and give users a stronger sense of agency.</div>
-              </div>
-              <div class="numbered-item" role="listitem">
-                <div class="numbered-item-num" aria-hidden="true">4</div>
-                <div><strong>AI in list health and audience intelligence</strong> &mdash; There&rsquo;s a significant opportunity to bring AI-generated insights to the contact and audience side of the product &mdash; not just campaign performance. Segment health, list decay, re-engagement signals. That territory is next to explore.</div>
-              </div>
-            </div>
-          </section>
-
-          <!-- REFLECTION -->
-          <section class="cs-section fade-up" id="reflection" aria-labelledby="reflection-title">
-            <p class="cs-section-label">Reflection &amp; Key Learnings</p>
-            <h2 class="cs-section-title" id="reflection-title">What designing AI systems has actually taught me</h2>
-
-            <div class="reflection-box fade-up">
-              <h3 class="reflection-box-title">AI adoption is a trust problem. Not a technology problem.</h3>
-              <p class="cs-body-text">
-                The question I hear most in AI product conversations is some version of &ldquo;how do we get users to use it more?&rdquo; The assumption baked into that question is that adoption is a discoverability problem, or a feature problem, or a marketing problem. In my experience, it&rsquo;s almost always a trust problem. Users don&rsquo;t avoid AI features because they don&rsquo;t know they exist. They avoid them because they&rsquo;ve been surprised before, or they don&rsquo;t know what the AI will do, or they tried it once and it was wrong in a way that felt embarrassing. The design work that actually moves adoption isn&rsquo;t adding more capabilities. It&rsquo;s reducing the cost of being wrong and making it safe to try again.
-              </p>
-            </div>
-
-            <div class="reflection-box fade-up" style="margin-top: 24px;">
-              <h3 class="reflection-box-title">The most valuable AI systems are not the smartest ones.</h3>
-              <p class="cs-body-text">
-                I&rsquo;ve seen very capable AI fail to get traction because users couldn&rsquo;t evaluate its outputs. And I&rsquo;ve seen more modest AI become deeply embedded in how people work because they understood what it was doing and why. The intelligence of the underlying model matters far less to adoption than the legibility of the experience. A system that explains itself at the right level of detail, in the right moment, will outperform a technically superior system that doesn&rsquo;t &mdash; because users will actually use it.
-              </p>
-            </div>
-
-            <div class="reflection-box fade-up" style="margin-top: 24px;">
-              <h3 class="reflection-box-title">Users delegate work when they understand what the AI is doing and why.</h3>
-              <p class="cs-body-text">
-                Delegation is not the same as automation. Automation removes the human from the loop. Delegation is a conscious transfer of a task from a person to a system &mdash; and it requires that the person trusts the system enough to let go. What I&rsquo;ve learned is that transparency is the mechanism that enables delegation. When a user can see the reasoning behind a recommendation, they can evaluate it. When they can evaluate it and it holds up, they build a mental model of when to trust it. That mental model is what eventually lets them skip the check. Hiding the reasoning to keep the interface clean short-circuits the whole process.
-              </p>
-            </div>
-
-            <div class="reflection-box fade-up" style="margin-top: 24px;">
-              <h3 class="reflection-box-title">Trust compounds &mdash; but only through successful outcomes, not through promises.</h3>
-              <p class="cs-body-text">
-                Early in a user&rsquo;s relationship with an AI feature, every interaction is an audition. They&rsquo;re not evaluating the feature on its long-term potential; they&rsquo;re evaluating whether this specific output was right, useful, and honest about its confidence. Get it right enough times and trust accumulates. Get it wrong in a surprising way &mdash; especially on something that cost the user something &mdash; and you&rsquo;re starting over. This means the most important design decisions in an AI product aren&rsquo;t about the happy path. They&rsquo;re about what happens at the edges: low data, ambiguous inputs, uncertain outputs. A graceful uncertain state builds more trust than a confident wrong answer ever can.
-              </p>
-            </div>
-
-            <p class="cs-body-text" style="margin-top: 32px;">
-              The throughline across all of this: <strong>designing intelligent systems is fundamentally about designing relationships between people and software.</strong> The AI is the capability. The design is the relationship. And relationships &mdash; between people or between a person and a product &mdash; are built on consistency, honesty, and the accumulation of small kept promises. That framing has changed how I approach every AI surface I touch.
-            </p>
-
-            <div class="hero-actions" style="margin-top: 48px; padding-bottom: 0;">
-              <a href="index.html" class="btn-secondary">
-                <span>&#8592;</span> Back to portfolio
-              </a>
-              <a href="mailto:kcrodelle@gmail.com" class="btn-primary">
-                Discuss this work <span class="btn-arrow">→</span>
-              </a>
-            </div>
-          </section>
-
-        </div>
-      </div>
-    </div>
-  </main>
-  <site-footer back></site-footer>
-  <script src="js/site.js?v=6"></script>
-  <script src="js/main.js"></script>
+<site-nav progress=""></site-nav>
+<!-- CASE STUDY HERO -->
+<header class="cs-hero">
+<div class="container">
+<nav aria-label="Breadcrumb" class="cs-breadcrumb">
+<a href="index.html">Home</a>
+<span aria-hidden="true" class="cs-breadcrumb-sep">/</span>
+<span>Case Study</span>
+</nav>
+<div class="cs-meta">
+<span class="cs-badge">Case study</span>
+<span class="cs-company">Constant Contact</span>
+<span class="cs-year">2026 · Constant Contact</span>
+</div>
+<h1 class="cs-title">Helping marketers decide what to do next.</h1>
+<p class="cs-subtitle">At Constant Contact, I designed AI-assisted reporting and guidance for small business owners, connecting campaign results to an explanation they could question and an action they could choose.</p>
+<div class="cs-stat-row">
+<div class="cs-stat">
+<div class="cs-stat-value">~385K</div>
+<div class="cs-stat-label">Product customer base at the time</div>
+</div>
+<div class="cs-stat">
+<div class="cs-stat-value">3 areas</div>
+<div class="cs-stat-label">Core product, reporting, design systems</div>
+</div>
+<div class="cs-stat">
+<div class="cs-stat-value">0 → 1</div>
+<div class="cs-stat-label">AI-in-reporting design patterns</div>
+</div>
+<div class="cs-stat">
+<div class="cs-stat-value">Lead</div>
+<div class="cs-stat-label">Design owner across core product, reporting &amp; design systems</div>
+</div>
+</div>
+</div>
+<!-- HERO IMAGE -->
+<div class="container" style="margin-top: 0;">
+<figure class="cs-hero-image cs-hero-photo">
+<img alt="The AI Assistant panel open beside the Constant Contact dashboard, answering 'Where are my email subscribers coming from?' with a subscriber-source donut chart and a plain-language explanation of its analysis." loading="eager" src="images/ai-assistant/reporting.jpg"/>
+<figcaption class="placeholder-caption" style="padding: 12px 0 16px;">The AI Assistant answering a subscriber-growth question with visualized data and explained reasoning — conversational analytics embedded in reporting.</figcaption>
+</figure>
+</div>
+</header>
+<!-- CASE STUDY BODY -->
+<main class="cs-body">
+<div class="container">
+<div class="cs-layout">
+<!-- TABLE OF CONTENTS -->
+<aside aria-label="Table of contents" class="cs-toc">
+<p class="cs-toc-title">Contents</p>
+<nav class="cs-toc-list">
+<a href="#overview">Overview</a>
+<a href="#problem">The Problem</a>
+<a href="#my-role">My Role</a>
+<a href="#workflows">Key Workflows</a>
+<a href="#trust">Trust &amp; Control</a>
+<a href="#delegation">Designing for Delegation</a>
+<a href="#reporting">Reporting Insights</a>
+<a href="#conversation-flow">Conversation Flow</a>
+<a href="#outcome">Outcome &amp; Impact</a>
+<a href="#next">What’s Next</a>
+<a href="#reflection">Reflection</a>
+</nav>
+</aside>
+<!-- CONTENT -->
+<div class="cs-content">
+<!-- OVERVIEW -->
+<section aria-labelledby="overview-title" class="cs-section fade-up" id="overview">
+<p class="cs-section-label">Overview</p>
+<h2 class="cs-section-title" id="overview-title">Reporting needed to support a decision.</h2>
+<p class="cs-body-text">Small business owners could see their campaign metrics in Constant Contact, but research showed that understanding a change—and deciding what to do about it—was still difficult.</p>
+<p class="cs-body-text">I owned design for the AI experience in core product and reporting, partnering with the broader AI Assistant team. My scope connected the reporting interaction to reusable Summit patterns so the experience could be applied consistently across product surfaces.</p>
+<p class="cs-body-text">I focused on a short sequence: explain the result, support a follow-up question, and connect the answer to a useful next step.</p>
+</section>
+<!-- THE PROBLEM -->
+<section aria-labelledby="problem-title" class="cs-section fade-up" id="problem">
+<p class="cs-section-label">The Problem</p>
+<h2 class="cs-section-title" id="problem-title">A metric could tell someone what happened, but leave the next step unclear.</h2>
+<p class="cs-body-text">The reporting experience contained open rates, click rates, bounces, and other campaign measures. For people without an analytics background, the difficult task was interpreting those numbers in the context of their own business.</p>
+<p class="cs-body-text">The design problem was to help someone move from “my click rate fell” to a question they could investigate and an action they could evaluate.</p>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/journey-map.png" rel="noopener" target="_blank">
+<img alt="Reporting Hub user journey map organized by lifecycle cohort — Onboarding, Growing, Steady, and Declining — with rows for jobs in reporting, user actions, hub surfaces, what the hub must support, in-app flows, emotion, and signals." loading="lazy" src="images/ai-assistant/journey-map.png"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">Reporting Hub user journey by lifecycle cohort — mapping jobs, actions, surfaces, emotions, and signals across ~385K active users to ground where AI guidance matters most. Click to view full size.</figcaption>
+</figure>
+<p class="cs-body-text">Research pointed to a need for explanations tied to the account and campaign, rather than another layer of general marketing advice.</p></section>
+<!-- WHY AI -->
+<!-- MY ROLE -->
+<section aria-labelledby="my-role-title" class="cs-section fade-up" id="my-role">
+<p class="cs-section-label">My Role</p>
+<h2 class="cs-section-title" id="my-role-title">Own the reporting experience and connect it to the broader assistant.</h2>
+<p class="cs-body-text">Multiple designers contributed to the AI Assistant initiative. I owned the UX and UI in core product and reporting, worked with data science and engineering on the insight experience, and brought the resulting patterns into Summit.</p>
+<div class="role-list" role="list">
+<div class="role-item" role="listitem"><strong>Reporting &amp; Performance Insights</strong> — Designing AI-generated plain-language summaries and conversational analytics embedded in campaign and audience reporting dashboards.</div>
+<div class="role-item" role="listitem"><strong>Core Product</strong> — Shaping how AI surfaces show up across the main product experience — recommendation patterns, AI-generated content, and conversational entry points.</div>
+<div class="role-item" role="listitem"><strong>Design Systems</strong> — Building the AI component patterns and interaction standards into Summit so every team building on top of the AI Assistant works from a shared foundation.</div>
+<div class="role-item" role="listitem"><strong>Cross-functional collaboration</strong> — Working closely with the broader AIA design team, product managers, data science, and engineering to align on shared patterns, terminology, and trust principles.</div>
+</div>
+</section>
+<!-- PRODUCT CONTEXT -->
+<!-- DESIGN CHALLENGE -->
+<!-- KEY WORKFLOWS -->
+<section aria-labelledby="workflows-title" class="cs-section fade-up" id="workflows">
+<p class="cs-section-label">Key Workflows I Influenced</p>
+<h2 class="cs-section-title" id="workflows-title">Meet the marketer at the point of interpretation.</h2>
+<div class="workflow-grid" role="list">
+<div class="workflow-card fade-up" role="listitem">
+<div class="workflow-card-header">
+<div aria-hidden="true" class="workflow-icon">📈</div>
+<div>
+<div class="workflow-card-title">Campaign Performance Summary</div>
+<div class="workflow-card-subtitle">Reporting — Post-send experience</div>
+</div>
+</div>
+<p class="workflow-card-body">I designed a dismissible campaign summary with relevant comparisons, an explanation people could expand, and a specific recommendation.</p>
+</div>
+<div class="workflow-card fade-up" role="listitem">
+<div class="workflow-card-header">
+<div aria-hidden="true" class="workflow-icon">💡</div>
+<div>
+<div class="workflow-card-title">Next Best Action Recommendations</div>
+<div class="workflow-card-subtitle">Core product — Homepage &amp; post-send</div>
+</div>
+</div>
+<p class="workflow-card-body">I explored recommendations within campaign creation and the homepage, with paths to the relevant action and states for limited account data.</p>
+</div>
+</div>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/workflow.jpg" rel="noopener" target="_blank">
+<img alt="The Constant Contact Email Reporting dashboard showing at-a-glance metrics — open rate 37%, click rate 4.6%, bounce rate 1.18%, traffic to website — alongside an AI-powered detail panel that surfaces bounce rate trends, hard vs. soft bounce breakdowns, a paginated bounced contacts list, and a 'Clean up hard bounces' action." loading="lazy" src="images/ai-assistant/workflow.jpg"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The reporting hub with AI-powered detail drill-down — clicking a metric surfaces contextual analysis, bounce breakdowns, and a direct action to resolve the issue. Click to view full size.</figcaption>
+</figure>
+</section>
+<!-- TRUST AND CONTROL -->
+<section aria-labelledby="trust-title" class="cs-section fade-up" id="trust">
+<p class="cs-section-label">Trust &amp; User Control</p>
+<h2 class="cs-section-title" id="trust-title">Give the person a way to check the answer.</h2>
+<p class="cs-body-text">I used the same review model across the surfaces I owned: distinguish the source data from its interpretation, explain the recommendation, and let the person choose whether to continue.</p>
+<p class="cs-body-text">The interaction rules covered the cases where an answer would be difficult to judge:</p>
+<div class="numbered-list fade-up" role="list">
+<div class="numbered-item" role="listitem">
+<div aria-hidden="true" class="numbered-item-num">1</div>
+<div><strong>Always attribute AI</strong> — Every AI-generated insight, summary, or recommendation was visually labeled as AI-generated. No ambiguity about where the content came from.</div>
+</div>
+<div class="numbered-item" role="listitem">
+<div aria-hidden="true" class="numbered-item-num">2</div>
+<div><strong>Always dismissible</strong> — Users could close, hide, or skip any AI surface. We never trapped people in AI-generated content or made it required to proceed.</div>
+</div>
+<div class="numbered-item" role="listitem">
+<div aria-hidden="true" class="numbered-item-num">3</div>
+<div><strong>Show the reasoning, briefly</strong> — Where possible, AI insights included a one-line explanation (“based on your last 5 campaigns”) so users could evaluate whether the context made sense for them.</div>
+</div>
+<div class="numbered-item" role="listitem">
+<div aria-hidden="true" class="numbered-item-num">4</div>
+<div><strong>Graceful degradation</strong> — When there wasn’t enough data to generate a meaningful insight, the surface either hid itself or showed a neutral state — never hallucinated confidence.</div>
+</div>
+</div>
+<p class="cs-body-text">These states mattered as much as the successful response. An incomplete answer should be visible as incomplete, rather than polished into a confident recommendation.</p></section>
+<!-- DESIGNING FOR DELEGATION -->
+<section aria-labelledby="delegation-title" class="cs-section fade-up" id="delegation">
+<p class="cs-section-label">Designing for Delegation</p>
+<h2 class="cs-section-title" id="delegation-title">Separate advice from permission to act.</h2>
+<p class="cs-body-text">In reporting, asking for an explanation does not grant permission to change a campaign. I kept the recommendation and the action separate so someone could investigate before committing.</p><p class="cs-body-text">For each proposed action, I considered what the person needed to review, whether it could be undone, and how to return to the reporting context. That made control a property of the workflow rather than an extra confirmation added at the end.</p></section>
+<!-- REPORTING INSIGHTS -->
+<section aria-labelledby="reporting-title" class="cs-section fade-up" id="reporting">
+<p class="cs-section-label">Reporting &amp; Plain-Language Insights</p>
+<h2 class="cs-section-title" id="reporting-title">Make the data and its interpretation work together.</h2>
+<p class="cs-body-text">I partnered with data science and engineering on the relationship between campaign data and the generated summary. The interaction needed to support comparisons, missing-data states, and a useful amount of explanation without burying the recommendation.</p>
+<p class="cs-body-text">The design work included:</p>
+<div class="role-list fade-up" role="list">
+<div class="role-item" role="listitem">Defining the taxonomy of insight types (performance vs. anomaly vs. recommendation) and how each should render visually.</div>
+<div class="role-item" role="listitem">Designing for confidence tiers — how the UI communicates high-confidence vs. lower-confidence AI conclusions without confusing or alarming users.</div>
+<div class="role-item" role="listitem">Working with content and AI teams on the exact language register: specific enough to be useful, humble enough to be honest.</div>
+<div class="role-item" role="listitem">Designing empty and error states for when the AI doesn’t have enough data to generate a reliable insight.</div>
+<div class="role-item" role="listitem">Advocating for the reporting AI surface in roadmap conversations to keep it prioritized as the initiative evolves.</div>
+</div>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/insight-cards.png" rel="noopener" target="_blank">
+<img alt="AI insight component states: default card with thumbs up/down feedback actions; expanded feedback state with 'Tell us more (optional)' text field, Skip and Submit buttons; and confirmed state showing 'Thanks for your feedback!' — each shown with and without a dismiss X button." loading="lazy" src="images/ai-assistant/insight-cards.png" style="background: #f5f7fa;"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI insight card component across all states — default, feedback expanded, and confirmed — with thumbs feedback, optional freetext, and graceful dismissal. Click to view full size.</figcaption>
+</figure>
+</section>
+<!-- CONVERSATIONAL ANALYTICS FLOW -->
+<section aria-labelledby="flow-title" class="cs-section fade-up" id="conversation-flow">
+<p class="cs-section-label">Conversational Analytics in Practice</p>
+<h2 class="cs-section-title" id="flow-title">Follow one question through the reporting flow.</h2>
+<p class="cs-body-text">The sequence below shows the reporting interaction: enter through Check my results, review a summary, ask for a chart or table, and follow up with a question about improving click rates.</p>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/aia-panel-welcome.jpg" rel="noopener" target="_blank">
+<img alt="The Constant Contact homepage with the AI Assistant panel open on the right, showing a welcome message and three suggested entry points: Create an email, Add my contacts, and Check my results — with Try asking me prompts below." loading="lazy" src="images/ai-assistant/aia-panel-welcome.jpg"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The AI Assistant welcome state — contextual prompts tuned to where the user is in their account, not generic suggestions. The panel is always available in the top nav and never interrupts the user’s main task.</figcaption>
+</figure>
+<h3 class="cs-section-subtitle" style="margin-top: 40px;">Start with a familiar task</h3>
+<p class="cs-body-text">The welcome state offered account-related starting points—Create an email, Add my contacts, and Check my results—so people did not have to invent a prompt before seeing what the assistant could help with.</p>
+<p class="cs-body-text">Choosing Check my results opened a 90-day account summary. The first response needed to be useful on its own while leaving room for a more specific question.</p>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/aia-performance-analysis.jpg" rel="noopener" target="_blank">
+<img alt="The AI Assistant panel showing a 90-day performance summary: a line chart of email open and click rates over time, followed by bullet stats (11 campaigns sent, 262 total sends, 6.1% open rate, 6.1% click rate, 5.7% bounce rate, 1.2% unsubscribe rate) and a plain-language 'What it means' interpretation explaining that uneven results likely point to subject line, targeting, or content issues." loading="lazy" src="images/ai-assistant/aia-performance-analysis.jpg"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The 90-day performance summary — a chart paired with bullet stats and a “What it means” plain-language interpretation. The AI doesn’t just surface numbers; it names the pattern and names likely causes. Click to view full size.</figcaption>
+</figure>
+<h3 class="cs-section-subtitle" style="margin-top: 40px;">Connect the evidence to the recommendation</h3>
+<p class="cs-body-text">I worked toward a response structure that connects the data, its interpretation, and a next step. Keeping those parts identifiable helps the person see what supports the recommendation.</p>
+<p class="cs-body-text">The expandable explanation gave people more context without requiring every response to begin with a long technical account.</p>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/aia-chart-expand.jpg" rel="noopener" target="_blank">
+<img alt="An expanded modal showing 'Open Rates and Sends by Email Over the Last 90 Days' — a dual-line chart with open rate in blue and sends in orange, plotted from April through July. The user had asked the AI to add send counts to an existing chart, and the AI updated it in the same conversation thread." loading="lazy" src="images/ai-assistant/aia-chart-expand.jpg"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The user asked the AI to overlay send counts on an existing open rate chart. The AI updated the visualization in-thread and surfaced it in an expandable modal for full-size review — conversational iteration, not a form rebuild. Click to view full size.</figcaption>
+</figure>
+<h3 class="cs-section-subtitle" style="margin-top: 40px;">Keep context across follow-up questions</h3>
+<p class="cs-body-text">Missing information needed a visible treatment too. In the captured flow, a campaign name was left blank rather than guessed. The design principle was to preserve that uncertainty instead of disguising it.</p>
+<p class="cs-body-text">The follow-up sequence moved from a chart to send counts, then a table of email names. That illustrates why the conversation needed to retain context across turns.</p>
+<figure class="cs-image-figure fade-up">
+<a href="images/ai-assistant/aia-click-coaching.jpg" rel="noopener" target="_blank">
+<img alt="The AI Assistant responding to 'What can I do to improve my click rates?' with a 4-point coaching framework: make the CTA obvious, match the click to the subject line, cut down on competing links, and segment to the most interested contacts first — each with specific sub-bullet guidance." loading="lazy" src="images/ai-assistant/aia-click-coaching.jpg"/>
+</a>
+<figcaption class="placeholder-caption" style="padding: 12px 4px 0; font-style: normal;">The pivot from reporting to coaching: after analyzing campaign data, the user asked for advice. The AI delivered a structured, account-contextualized 4-point framework — not generic tips, but guidance grounded in what the data showed about this user’s specific pattern. Click to view full size.</figcaption>
+</figure>
+<h3 class="cs-section-subtitle" style="margin-top: 40px;">Move from interpretation to a next step</h3>
+<p class="cs-body-text">Each request changed the presentation of the same underlying question. The interaction needed to support that exploration without making the person start again.</p>
+<p class="cs-body-text">The final question—how to improve click rates—shifted from reporting to advice. The recommendation needed to remain grounded in the account data the person had just reviewed.</p>
+<p class="cs-body-text">That was the connection I wanted the experience to support: a marketer could understand the result, investigate it, and leave with a next step they had chosen.</p></section>
+<!-- OUTCOME AND IMPACT -->
+<section aria-labelledby="outcome-title" class="cs-section fade-up" id="outcome">
+<p class="cs-section-label">Outcome &amp; Impact</p>
+<h2 class="cs-section-title" id="outcome-title">A reporting flow people could question.</h2>
+<p class="cs-body-text">The work connected entry points, account summaries, follow-up questions, and recommendations within a single reporting experience. It also defined reusable treatments for explanation, limited data, and user control.</p>
+<div class="outcome-grid fade-up">
+<div class="outcome-card">
+<div class="outcome-value">Action</div>
+<div class="outcome-label">Do users take a meaningful next step within 48 hours of viewing an AI summary?</div>
+</div>
+<div class="outcome-card">
+<div class="outcome-value">Trust</div>
+<div class="outcome-label">Insight engagement and thumbs-up/down ratings over time — do users keep coming back?</div>
+</div>
+<div class="outcome-card">
+<div class="outcome-value">Activation</div>
+<div class="outcome-label">Time-to-first-send and early engagement for users in the AI-guided onboarding flow</div>
+</div>
+</div>
+<p class="cs-body-text" style="margin-top: 24px;">The design contribution was the connection between these moments. A chart request or a missing campaign name was part of the experience to resolve, not an exception outside the design.</p>
+<p class="cs-body-text">The next evaluation would need to follow the question through to a decision: could people reach a useful answer, choose a relevant action, and return when they had another question? Opening the assistant would not be enough to answer that.</p>
+<p class="case-evidence-note">This case covers my work at Constant Contact in 2026; verified post-rollout results are not available.</p></section>
+<!-- WHAT I WOULD DO NEXT -->
+<section aria-labelledby="next-title" class="cs-section fade-up" id="next">
+<p class="cs-section-label">What’s Next</p>
+<h2 class="cs-section-title" id="next-title">What I would evaluate next.</h2>
+<p class="cs-body-text">I would compare the reporting entry points, review the questions people ask after the first summary, and examine where they dismiss or abandon a recommendation. Those observations would help distinguish a content problem from a workflow problem.</p></section>
+<!-- REFLECTION -->
+<section aria-labelledby="reflection-title" class="cs-section fade-up" id="reflection">
+<p class="cs-section-label">Reflection &amp; Key Learnings</p>
+<h2 class="cs-section-title" id="reflection-title">The difficult work was in the handoffs.</h2>
+<p class="cs-body-text">This project connected several kinds of handoff: data to interpretation, interpretation to recommendation, and recommendation to action. Each could fail differently. A plausible summary was not enough if the user could not check it or understand the next step.</p><p class="cs-body-text">Working across product, data science, engineering, and the design system helped me keep those transitions visible. The shared patterns were useful because they carried the interaction rules—not only the visual treatment—into other surfaces.</p></section>
+</div>
+</div>
+</div>
+</main>
+<site-footer back=""></site-footer>
+<script src="js/site.js?v=7"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
