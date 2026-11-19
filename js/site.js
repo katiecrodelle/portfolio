@@ -121,7 +121,7 @@ const CASE_STUDIES = [
     badge: 'Case Study',
     companyYear: 'Ninety.io &middot; Updated 2026',
     title: 'Terra: Building Ninety&rsquo;s First Unified Design System',
-    description: 'Co-built Ninety’s first unified design system and led its continued evolution as Staff Product Designer: component audits, Figma and Storybook alignment, accessibility corrections, governance, and AI and mobile patterns.',
+    description: 'Sole designer responsible for Ninety’s first unified design system, partnering with engineers on implementation and continuing its evolution as Staff Product Designer: component audits, Figma and Storybook alignment, accessibility corrections, governance, and AI and mobile patterns.',
     chips: ['Design Systems', 'Design Tokens', 'Governance', 'Accessibility', '0&rarr;1'],
     image: 'images/terra/examples.png',
     imageAlt: 'Terra design system components: form fields, toggle switches, chips, avatars, and selection lists.',
