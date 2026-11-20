@@ -16,7 +16,7 @@ class AgentsWalkthrough extends HTMLElement {
       <div class="tour-progress" aria-hidden="true"><span></span></div>
       <div class="tour-steps" role="group" aria-label="Choose a walkthrough screen">${steps.map(([,title],i)=>`<button type="button" data-step="${i}" aria-pressed="${i===0}"><span>0${i+1}</span> ${title}</button>`).join('')}</div>
       <p class="tour-caption" aria-live="polite">${steps[0][2]}</p>
-      <p class="tour-disclaimer">Prototype walkthrough · Updated November 16, 2026 · Screens contain simulated data and illustrative counts.</p>
+      <p class="tour-disclaimer">Prototype walkthrough · October–November 2026 · Screens contain simulated data and illustrative counts.</p>
     </section>`;
     const frames = [...this.querySelectorAll('.tour-frame')];
     const buttons = [...this.querySelectorAll('[data-step]')];

@@ -47,10 +47,10 @@ customElements.define('site-footer', SiteFooter);
 // ============================================
 const CASE_STUDIES = [
   {
-    href: 'agents-case-study.html', badge: 'Shipped to alpha', companyYear: 'Ninety &middot; 2026',
+    href: 'agents-case-study.html', badge: 'Currently in beta', companyYear: 'Ninety &middot; 2026',
     title: 'Agents: making recurring work easier to delegate.',
-    description: 'I designed the complete UX and UI for recurring agents, partnering with product and engineering to simplify setup and make results reviewable. Shipped to alpha.',
-    chips: ['AI Agents', 'End-to-end UX/UI', 'Staff Product Designer, AI & Design Systems', 'Alpha Release'],
+    description: 'I designed the complete UX and UI for recurring agents, partnering with product and engineering to simplify setup and make results reviewable. Currently in beta.',
+    chips: ['AI Agents', 'End-to-end UX/UI', 'Staff Product Designer, AI & Design Systems', 'Beta'],
     image: 'images/agents/clean-v3/agents-nov16-overview.png?v=4',
     imageAlt: 'Ninety Agents interface showing recurring workflows, schedules, and attention states.',
     ariaLabel: 'Read case study: AI Agents at Ninety',
