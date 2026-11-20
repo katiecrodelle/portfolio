@@ -85,7 +85,7 @@ const CASE_STUDIES = [
     badge: 'Case Study',
     companyYear: 'Ninety.io &middot; 2023&ndash;2025',
     title: 'Ninety Mobile: choosing what belongs on a phone.',
-    description: 'I led design for Ninety’s first mobile app. Research helped us prioritize work away from a desk; mobile reached 52% adoption among active users within 90 days.',
+    description: 'I led design for Ninety’s first mobile app. Research helped me prioritize work away from a desk; mobile reached 52% adoption among active users within 90 days.',
     chips: ['Native Mobile', '0&rarr;1', 'iOS &amp; Android', 'UX Strategy', 'Product Vision'],
     image: 'images/ninety-mobile/hero.jpg',
     imageAlt: 'Two iPhones showing the Ninety mobile app and its App Store listing with a 4.9-star rating.',
