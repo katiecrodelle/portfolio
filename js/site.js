@@ -51,7 +51,7 @@ const CASE_STUDIES = [
     title: 'Agents: making recurring work easier to delegate.',
     description: 'I designed the complete UX and UI for recurring agents, partnering with product and engineering to simplify setup and make results reviewable. Currently in beta.',
     chips: ['AI Agents', 'End-to-end UX/UI', 'Staff Product Designer, AI & Design Systems', 'Beta'],
-    image: 'images/agents/clean-v3/agents-nov16-overview.png?v=4',
+    image: 'images/agents/beta/overview.jpg',
     imageAlt: 'Ninety Agents interface showing recurring workflows, schedules, and attention states.',
     ariaLabel: 'Read case study: AI Agents at Ninety',
     visualStyle: 'background: #11131c;', imageStyle: 'object-fit: contain;',

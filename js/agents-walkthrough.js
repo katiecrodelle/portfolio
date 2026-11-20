@@ -4,15 +4,17 @@ class AgentsWalkthrough extends HTMLElement {
     if (this.dataset.ready) return;
     this.dataset.ready = 'true';
     const steps = [
-      ['overview','Your agents','Design decision: bring exceptions and outcomes forward so people can review the work without checking every agent.'],
-      ['discover','Discover','Design decision: organize discovery around jobs people recognize, with starter choices and curated packs.'],
-      ['template','Preview','Design decision: explain the commitment before setup—when it runs, what it looks at, and what it can do.'],
-      ['setup','Review setup','Design decision: show instructions, access, and example output before a person turns the agent on.'],
-      ['results','Review results','Design decision: keep people in control of the response by making findings and proposed actions inspectable.']
+      ['overview','Your agents','I brought run outcomes and exceptions forward, with timestamps and distinct states.'],
+      ['discover','Discover','I organized discovery around familiar jobs, with starter choices and curated packs.'],
+      ['template','Preview','I made timing, access, and behavior visible before someone chooses a template.'],
+      ['setup','Review setup','I put the instructions and example output in the setup review before activation.'],
+      ['results','Review results','I made findings and proposed actions inspectable so people can choose how to respond.'],
+      ['upcoming','Upcoming runs','I gave upcoming work its own view, with scheduled times and updates that need attention.']
     ];
+    this.style.setProperty('--tour-progress',String(1/steps.length));
     this.innerHTML = `<section class="agents-tour" aria-label="Agents prototype walkthrough">
-      <div class="tour-top"><span>Inside the newer experience</span><button type="button" class="tour-play">Play walkthrough <span aria-hidden="true">▷</span></button></div>
-      <div class="tour-stage">${steps.map(([file,title,caption],i)=>`<figure class="tour-frame${i===0?' is-current':''}" ${i===0?'':'hidden'}><a href="images/agents/clean-v3/agents-nov16-${file}.png?v=4" target="_blank" rel="noopener" aria-label="Enlarge ${title} screen"><img src="images/agents/clean-v3/agents-nov16-${file}.png?v=4" width="1440" height="900" alt="${title}: ${caption}" loading="eager"></a></figure>`).join('')}</div>
+      <div class="tour-top"><span>Inside the current experience</span><button type="button" class="tour-play">Play walkthrough <span aria-hidden="true">▷</span></button></div>
+      <div class="tour-stage">${steps.map(([file,title,caption],i)=>`<figure class="tour-frame${i===0?' is-current':''}" ${i===0?'':'hidden'}><a href="images/agents/beta/${file}.jpg" target="_blank" rel="noopener" aria-label="Enlarge ${title} screen"><img src="images/agents/beta/${file}.jpg" width="1586" height="992" alt="${title}: ${caption}" loading="eager"></a></figure>`).join('')}</div>
       <div class="tour-progress" aria-hidden="true"><span></span></div>
       <div class="tour-steps" role="group" aria-label="Choose a walkthrough screen">${steps.map(([,title],i)=>`<button type="button" data-step="${i}" aria-pressed="${i===0}"><span>0${i+1}</span> ${title}</button>`).join('')}</div>
       <p class="tour-caption" aria-live="polite">${steps[0][2]}</p>
